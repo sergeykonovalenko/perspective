@@ -1,0 +1,25 @@
+.design-list ul {
+    padding: 0;
+    list-style: none;
+}
+
+.design-list li {
+    position: relative;
+    padding-left: 40px;
+    margin-bottom: 7px;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: 8px;
+        left: 20px;
+        width: 7px;
+        height: 7px;
+        background-color: $color-secondary;
+        border-radius: 50%;
+    }
+}
