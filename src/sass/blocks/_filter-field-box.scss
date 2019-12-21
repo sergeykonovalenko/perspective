@@ -1,0 +1,21 @@
+.filter-field-box {
+    position: relative;
+
+    &::after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        right: 20px;
+        width: 8px;
+        height: 12px;
+        background: url("img/bg/angle-right.svg") no-repeat center;
+        background-size: contain;
+        transform: translate(0, -50%);
+    }
+}
+
+.filter-field-box__field {
+    padding-right: 44px;
+    cursor: pointer;
+    appearance: none;
+}

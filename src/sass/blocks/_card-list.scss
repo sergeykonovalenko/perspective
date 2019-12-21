@@ -1,0 +1,19 @@
+.card-list {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0;
+    list-style: none;
+}
+
+.card-list__item {
+    display: flex;
+    margin-right: 30px;
+
+    &:nth-child(3n) {
+        margin-right: 0;
+    }
+
+    &:nth-child(n + 4) {
+        margin-top: 50px;
+    }
+}

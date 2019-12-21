@@ -1,0 +1,39 @@
+.terms-card-item {
+    padding: 0;
+    list-style: none;
+}
+
+.terms-card-item__item {
+    position: relative;
+    margin-bottom: 12px;
+    padding-left: 40px;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 0;
+        width: 13px;
+        height: 16px;
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: contain;
+        transform: translate(0, -50%);
+    }
+
+    &--author::before {
+        background-image: url("img/bg/user.svg");
+    }
+
+    &--country::before {
+        background-image: url("img/bg/maps.svg");
+    }
+
+    &--year {
+        font-size: 12px;
+    }
+}

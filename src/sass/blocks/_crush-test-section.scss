@@ -1,0 +1,59 @@
+.crush-test-section {
+    padding: 55px 0;
+    color: #fff;
+    background-color: #22273b;
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    background-size: cover;
+}
+
+.no-js .crush-test-section,
+.no-webp .crush-test-section {
+    background-image: url("img/bg/recommendations.jpg");
+}
+
+.webp .crush-test-section {
+    background-image: url("img/bg/recommendations.webp");
+}
+
+.crush-test-section .container {
+    display: flex;
+    align-items: center;
+}
+
+.crush-test-section__img-box {
+    flex-shrink: 0;
+    margin: 0 75px 0 -47px;
+}
+
+.crush-test-section__img {
+
+}
+
+.crush-test-section__right {
+    flex-grow: 1;
+}
+
+.crush-test-section__title {
+    margin-bottom: 24px;
+    padding-left: 65px;
+    text-align: left;
+}
+
+.crush-test-section__right p:not(.heading-2) {
+    line-height: 1.9375;
+    margin: 16px 0;
+}
+
+.crush-test-section__right *:first-child {
+    margin-top: 0;
+}
+
+.crush-test-section__right *:last-child {
+    margin-bottom: 0;
+}
+
+.crush-test-section__button {
+    min-width: 180px;
+    margin-top: 30px;
+}

@@ -1,0 +1,36 @@
+.recommendations {
+    padding-top: 55px;
+    padding-bottom: 80px;
+    background-color: #22273b;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+
+.no-js .recommendations,
+.no-webp .recommendations {
+    background-image: url("img/bg/recommendations.jpg");
+}
+
+.webp .recommendations {
+    background-image: url("img/bg/recommendations.webp");
+}
+
+.recommendations__title {
+    margin-top: 0;
+    margin-bottom: 35px;
+    color: #fff;
+}
+
+.recommendations__list {
+    margin: 0 0 40px 0;
+}
+
+.recommendations__button-box {
+    margin: 0;
+    text-align: center;
+}
+
+.recommendations__button {
+
+}

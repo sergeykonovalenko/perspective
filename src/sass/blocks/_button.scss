@@ -2,62 +2,69 @@
     position: relative;
     display: inline-block;
     max-width: 100%;
+    padding: 21px 30px;
     user-select: none;
     touch-action: manipulation;
     vertical-align: middle;
+    font-size: 14px;
     line-height: 1;
     text-align: center;
     white-space: normal;
     word-wrap: normal;
+    border-radius: 30px;
     cursor: pointer;
-    transition: all .3s ease;
-    transform: perspective(1px);
+    transition: all .15s ease-in;
 
-    &::after {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        z-index: -1;
-        width: 0;
-        height: 100%;
-        transition: all .3s ease;
+    &--fill-one {
+        padding: 25px 35px;
+        font-weight: 600;
+        color: #000;
+        background-color: $color-accent;
+        border-radius: 35px;
+        box-shadow: 0 2px 15px rgba(9, 12, 18, .15);
+
+        &:hover,
+        &:focus {
+            background-color: #fedf7a;
+            box-shadow: 0 2px 15px rgba(9, 12, 18, 0);
+        }
+    }
+
+    &--fill-two {
+        color: $color-main--dark;
+        background-color: #fff;
+
+        &:hover,
+        &:focus {
+            color: #fff;
+            background-color: $color-secondary;
+        }
+    }
+
+    &--with-arrow {
+        padding-right: 80px;
+
+        &::after {
+            content: "";
+            position: absolute;
+            top: 50%;
+            right: 40px;
+            width: 8px;
+            height: 12px;
+            background: url("img/bg/angle-right--black.svg") no-repeat center;
+            background-size: contain;
+            transform: translate(0, -50%);
+        }
     }
 
     &--stroke {
-        padding: 14px 43px 22px;
-        font-size: 24px;
-        font-family: "Poiret One", Tahoma, sans-serif;
-        color: $color-secondary;
-        background-color: transparent;
-        border: 2px solid $color-secondary;
-
-        &::after {
-            background-color: $color-secondary;
-        }
+        padding: 20px 30px;
+        border: 1px solid $color-secondary;
 
         &:hover,
-        &:focus,
-        &:active {
+        &:focus {
             color: #fff;
+            background-color: $color-secondary;
         }
-    }
-
-    &--fill {
-        padding: 20px 34px;
-        font-size: 16px;
-        color: #fff;
-        background-color: $color-secondary;
-        border: none;
-
-        &::after {
-            background-color: $color-secondary--light;
-        }
-    }
-
-    &:hover::after,
-    &:focus::after,
-    &:active::after {
-        width: 100%;
     }
 }

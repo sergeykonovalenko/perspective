@@ -13,9 +13,9 @@ body {
     padding: 0;
     font-weight: 400;
     font-size: 16px;
-    line-height: 1.15;
+    line-height: 1.5;
     font-family: "Montserrat", Tahoma, sans-serif;
-    color: $color-main;
+    color: $color-main--dark;
     word-wrap: break-word;
     background-color: #fff;
 }
@@ -44,21 +44,22 @@ select,
 textarea {
     display: block;
     width: 100%;
-    padding: 0 0 15px 0;
-    font-family: inherit;
-    font-style: italic;
-    font-weight: 300;
+    padding: 14px 25px;
     font-size: 14px;
+    font-family: inherit;
     color: $color-main;
-    background-color: transparent;
-    border-width: 0 0 1px 0;
-    border-style: solid;
-    border-radius: 0;
-    border-color: $color-secondary;
+    background-color: #fff;
+    border: 1px solid $color-secondary;
+    border-radius: 25px;
+    transition: all .15s ease-in;
 
     &:hover,
     &:focus {
         outline: none;
+    }
+
+    &:focus {
+        box-shadow: 0 0 10px rgba(81, 98, 144, .7);
     }
 }
 
@@ -82,36 +83,43 @@ textarea.error {
     padding: 0 15px;
 }
 
-.heading-2,
-.heading-3 {
-    display: block;
-    font-weight: 400;
-    font-family: "Poiret One", Tahoma, sans-serif;
-    text-transform: uppercase;
-
-    &--no-uppercase {
-        text-transform: none;
-    }
-    
-    &--has-underline::after {
-        content: "";
-        display: block;
-        width: 26px;
-        height: 2px;
-        margin: 15px auto 0;
-        background-color: #815f2a;
-    }
-}
-
 .heading-2 {
-    font-size: 46px;
-    line-height: 1.413em;
+    font-weight: 300;
+    font-size: 38px;
+    text-transform: uppercase;
+    text-align: center;
 }
 
-.heading-3 {
-    font-size: 27px;
-    line-height: 1.5185em;
-}
+//.heading-2,
+//.heading-3 {
+//    display: block;
+//    font-weight: 400;
+//    font-family: "Poiret One", Tahoma, sans-serif;
+//    text-transform: uppercase;
+//
+//    &--no-uppercase {
+//        text-transform: none;
+//    }
+//
+//    &--has-underline::after {
+//        content: "";
+//        display: block;
+//        width: 26px;
+//        height: 2px;
+//        margin: 15px auto 0;
+//        background-color: #815f2a;
+//    }
+//}
+//
+//.heading-2 {
+//    font-size: 46px;
+//    line-height: 1.413em;
+//}
+//
+//.heading-3 {
+//    font-size: 27px;
+//    line-height: 1.5185em;
+//}
 
 @media (min-width: 576px) {
     .container {
@@ -138,12 +146,12 @@ textarea.error {
 }
 
 
-@media screen and (max-width: 576px) {
-    .heading-2 {
-        font-size: 32px;
-    }
-
-    .heading-3 {
-        font-size: 22px;
-    }
-}
+//@media screen and (max-width: 576px) {
+//    .heading-2 {
+//        font-size: 32px;
+//    }
+//
+//    .heading-3 {
+//        font-size: 22px;
+//    }
+//}
