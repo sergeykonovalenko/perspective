@@ -1,0 +1,55 @@
+.task-list {
+    padding: 0;
+    list-style: none;
+}
+
+.task-list__item {
+    display: flex;
+    padding: 20px 0;
+    border-bottom: 1px solid #c2c2c2;
+
+    &:first-child {
+        padding-top: 0;
+    }
+
+    &:last-child {
+        padding-bottom: 0;
+        border-bottom: none;
+    }
+}
+
+.task-list__text {
+    position: relative;
+    padding-left: 40px;
+    
+    &::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        width: 14px;
+        height: 14px;
+        background-repeat: no-repeat;
+        background-position: 0 0;
+        background-size: contain;
+    }
+    
+    &--left {
+        width: 40%;
+        padding-right: 60px;
+        font-weight: 500;
+
+        &::before {
+            top: 8px;
+            background-image: url("img/bg/question.svg");
+        }
+    }
+    
+    &--right {
+        width: 60%;
+
+        &::before {
+            top: 9px;
+            background-image: url("img/bg/check.svg");
+        }
+    }
+}

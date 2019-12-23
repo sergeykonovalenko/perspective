@@ -1,5 +1,35 @@
 .main-header {
+    margin-bottom: -90px;
+    //padding: 10px 0;
+}
 
+.main-header__wr {
+    position: relative;
+    z-index: 1;
+    height: 90px;
+    padding-top: 40px;
+    background-color: #fff;
+
+    .main-header--transparent &:not(&--sticky) {
+        background-color: transparent;
+    }
+    
+    &--sticky {
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 3;
+        width: 100%;
+        height: auto;
+        padding: 10px 0;
+        box-shadow: 0 -2px 12px rgba(0, 0, 0, .3);
+        animation: smooth-scroll-down 1s forwards;
+    }
+
+    &--end-sticky {
+        top: 118.8px;
+        animation: smooth-scroll-up 1s forwards;
+    }
 }
 
 .main-header .container {
@@ -13,4 +43,10 @@
 
 .main-header__search {
     width: 215px;
+    transition: all .3s ease-in;
+
+    &:focus-within {
+        width: auto;
+        flex-grow: .5;
+    }
 }

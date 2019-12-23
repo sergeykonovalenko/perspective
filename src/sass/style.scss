@@ -36,10 +36,36 @@ Version: 1.0
 @import "blocks/filter-field-box";
 @import "blocks/card-list";
 @import "blocks/card-item";
-@import "blocks/terms-card-item";
+@import "blocks/terms-list";
 @import "blocks/recommendations";
 @import "blocks/main-footer";
 @import "blocks/contacts-list";
 @import "blocks/social-links";
 
-
+/* ==========================================================================
+   PROJECT PAGE
+   ========================================================================== */
+@import "blocks/offer-project";
+@import "blocks/modal-video";
+@import "blocks/project-entry";
+@import "blocks/bg-img";
+@import "blocks/content";
+@import "blocks/design-list";
+@import "blocks/clearfix";
+@import "blocks/about-project";
+@import "blocks/video-block";
+@import "blocks/authors";
+@import "blocks/authors-tabs";
+@import "blocks/body-authors-tabs";
+@import "blocks/nav-authors-tabs";
+@import "blocks/tabs-steps-section";
+@import "blocks/tabs-steps";
+@import "blocks/nav-tabs-steps";
+@import "blocks/body-tabs-steps";
+@import "blocks/format";
+@import "blocks/features";
+@import "blocks/useful-experience";
+@import "blocks/task-list";
+@import "blocks/insiders";
+@import "blocks/insider";
+@import "blocks/similar-projects";

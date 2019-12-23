@@ -1,0 +1,15 @@
+.tabs-steps {
+
+}
+
+.tabs-steps__nav {
+    margin: -7.5px 0 -7.5px 0;
+
+    .tabs-steps-section--left & {
+        margin-left: auto;
+    }
+}
+
+.tabs-steps__body {
+    margin-top: 23px;
+}

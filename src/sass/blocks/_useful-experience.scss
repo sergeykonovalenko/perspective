@@ -1,0 +1,33 @@
+.useful-experience {
+    padding-top: 65px;
+    background-color: #f5f5f5;
+}
+
+.useful-experience__text {
+    margin-bottom: 33px;
+}
+
+.useful-experience__head {
+    display: flex;
+    margin-bottom: 23px;
+}
+
+.useful-experience__subtitle {
+    margin: 0;
+    font-weight: 300;
+    font-size: 20px;
+    text-transform: uppercase;
+
+    &--left {
+        width: 40%;
+        padding-right: 60px;
+    }
+
+    &--right {
+        width: 60%;
+    }
+}
+
+.useful-experience__tasks {
+    margin: 0;
+}

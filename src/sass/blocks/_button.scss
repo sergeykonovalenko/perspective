@@ -53,7 +53,13 @@
             height: 12px;
             background: url("img/bg/angle-right--black.svg") no-repeat center;
             background-size: contain;
+            transition: all .15s ease-in;
             transform: translate(0, -50%);
+        }
+
+        &:hover::after,
+        &:focus::after {
+            transform: translate(5px, -50%);
         }
     }
 

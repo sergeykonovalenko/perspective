@@ -7,6 +7,10 @@
     padding-right: 66px;
     font-style: italic;
     appearance: none;
+
+    .main-header--transparent .main-header__wr:not(.main-header__wr--sticky) & {
+        border: none;
+    }
 }
 
 .search__field::-ms-clear {

@@ -1,0 +1,17 @@
+.tabs-steps-section {
+    padding-top: 65px;
+    background-color: #f5f5f5;
+    overflow: hidden;
+}
+
+.tabs-steps-section__title {
+    margin-top: 0;
+    margin-right: 390px;
+    margin-bottom: 35px;
+    text-align: left;
+
+    .tabs-steps-section--left & {
+        margin-right: 0;
+        margin-left: 390px;
+    }
+}

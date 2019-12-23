@@ -1,0 +1,49 @@
+.features {
+
+}
+
+.features__title {
+    margin-top: 0;
+    margin-bottom: 23px;
+    font-weight: 300;
+    font-size: 20px;
+    text-transform: uppercase;
+}
+
+.features__list {
+    @include reset-list;
+}
+
+.features__item {
+    position: relative;
+    margin-bottom: 15px;
+    padding-left: 40px;
+    font-weight: 500;
+    text-align: justify;
+
+    &::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        width: 14px;
+        height: 14px;
+        background-repeat: no-repeat;
+        background-position: 0 0;
+        background-size: contain;
+        
+        .features--advantages & {
+            top: 6px;
+            background-image: url("img/bg/check.svg");
+        }
+        
+        .features--limitations & {
+            top: 7px;
+            background-size: 10px;
+            background-image: url("img/bg/times.svg");
+        }
+    }
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+}

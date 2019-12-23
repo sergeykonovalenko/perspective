@@ -26,6 +26,17 @@
     border-radius: 25px;
     transition: all .15s ease-in;
 
+    .main-header--transparent .main-header__wr:not(.main-header__wr--sticky) & {
+        color: $color-main--dark;
+        background-color: #fff;
+
+        &:hover,
+        &:focus {
+            color: #fff;
+            background-color: $color-secondary;
+        }
+    }
+    
     &:hover,
     &:focus {
         background-color: #879dd7;

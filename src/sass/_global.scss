@@ -83,43 +83,25 @@ textarea.error {
     padding: 0 15px;
 }
 
-.heading-2 {
+.heading-2,
+.heading-3,
+.heading-4 {
     font-weight: 300;
-    font-size: 38px;
     text-transform: uppercase;
     text-align: center;
 }
 
-//.heading-2,
-//.heading-3 {
-//    display: block;
-//    font-weight: 400;
-//    font-family: "Poiret One", Tahoma, sans-serif;
-//    text-transform: uppercase;
-//
-//    &--no-uppercase {
-//        text-transform: none;
-//    }
-//
-//    &--has-underline::after {
-//        content: "";
-//        display: block;
-//        width: 26px;
-//        height: 2px;
-//        margin: 15px auto 0;
-//        background-color: #815f2a;
-//    }
-//}
-//
-//.heading-2 {
-//    font-size: 46px;
-//    line-height: 1.413em;
-//}
-//
-//.heading-3 {
-//    font-size: 27px;
-//    line-height: 1.5185em;
-//}
+.heading-2 {
+    font-size: 38px;
+}
+
+.heading-3 {
+    font-size: 28px;
+}
+
+.heading-4 {
+    font-size: 22px;
+}
 
 @media (min-width: 576px) {
     .container {

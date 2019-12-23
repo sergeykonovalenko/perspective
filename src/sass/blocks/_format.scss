@@ -1,0 +1,21 @@
+.format {
+    padding-top: 65px;
+    background-color: #f5f5f5;
+}
+
+.format__text {
+    margin-bottom: 33px;
+}
+
+.format__features-box {
+    display: flex;
+}
+
+.format__features {
+    width: 50%;
+    margin-right: 60px;
+
+    &:nth-child(2n) {
+        margin-right: 0;
+    }
+}

@@ -1,0 +1,59 @@
+.body-tabs-steps {
+    position: relative;
+    padding: 90px 30px 35px 55px;
+    background-color: #fff;
+
+    &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 100%;
+        z-index: 1;
+        width: 100vw;
+        background-color: #fff;
+    }
+}
+
+.body-tabs-steps__wr {
+
+}
+
+.body-tabs-steps__wr * {
+    position: relative;
+    z-index: 2;
+}
+
+.body-tabs-steps__number {
+    position: absolute;
+    top: 40px;
+    left: 55px;
+    z-index: 1;
+    font-size: 150px;
+    line-height: .8;
+    color: #e4e4e4;
+
+    .tabs-steps-section--left & {
+        left: 390px;
+    }
+
+    & + p {
+        margin-top: 0;
+    }
+}
+
+.body-tabs-steps .body-tabs-steps__img-box {
+    position: relative;
+    float: right;
+    width: calc((100vw - var(--scrollbar-width) - 1170px)/2 + 375px);
+    margin: -270px (calc(((100vw - var(--scrollbar-width) - 1140px)/-2 - 30px))) 15px 30px;
+
+    .tabs-steps-section--left & {
+        float: left;
+        margin: -270px 30px 15px (calc(((100vw - var(--scrollbar-width) - 1140px)/-2 - 55px)));
+    }
+}
+
+.body-tabs-steps__img {
+    width: 100%;
+}

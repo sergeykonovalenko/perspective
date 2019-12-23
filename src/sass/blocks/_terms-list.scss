@@ -1,12 +1,25 @@
-.terms-card-item {
+.terms-list {
     padding: 0;
     list-style: none;
+
+    &--row {
+        display: flex;
+    }
 }
 
-.terms-card-item__item {
+.terms-list__item {
     position: relative;
     margin-bottom: 12px;
     padding-left: 40px;
+
+    .terms-list--row & {
+        margin-right: 80px;
+        margin-bottom: 0;
+
+        &:last-child {
+            margin-right: 0;
+        }
+    }
 
     &:last-child {
         margin-bottom: 0;
@@ -23,6 +36,11 @@
         background-position: center center;
         background-size: contain;
         transform: translate(0, -50%);
+
+        .terms-list--row & {
+            width: 17px;
+            height: 17px;
+        }
     }
 
     &--author::before {
@@ -31,9 +49,17 @@
 
     &--country::before {
         background-image: url("img/bg/maps.svg");
+
+        .terms-list--white & {
+            background-image: url("img/bg/maps--white.svg");
+        }
     }
 
-    &--year {
-        font-size: 12px;
+    &--time::before {
+        background-image: url("img/bg/calendar.svg");
+
+        .terms-list--white & {
+            background-image: url("img/bg/calendar--white.svg");
+        }
     }
 }

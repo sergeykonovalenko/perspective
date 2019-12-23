@@ -1,0 +1,22 @@
+.video-block {
+    position: relative;
+    float: right;
+    margin: 10px 0 15px 30px;
+    padding-left: 80px;
+    padding-bottom: 20px;
+}
+
+.video-block__img-box {
+    width: calc((100vw - var(--scrollbar-width) - 1170px)/2 + 385px);
+    margin-right: calc(((100vw - var(--scrollbar-width) - 1140px)/-2));
+}
+
+.video-block__img {
+    width: 100%;
+}
+
+.video-block__modal {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
