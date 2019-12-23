@@ -32,6 +32,7 @@
     <link rel="stylesheet" href="css/jquery.fancybox.min.css">
     <link rel="stylesheet" href="style.css">
     <style>
+        /* offer-project */
         .no-js .offer-project,
         .no-webp .offer-project {
             background-image: url("img/bg/offer-project.jpg");
@@ -41,6 +42,7 @@
             background-image: url("img/bg/offer-project.webp");
         }
 
+        /* bg-img */
         .no-js .bg-img,
         .no-webp .bg-img {
             background-image: url("img/bg/offer-project.jpg");
@@ -49,18 +51,29 @@
         .webp .bg-img {
             background-image: url("img/bg/offer-project.webp");
         }
+
+        /* offer-inner */
+        .no-js .offer-inner,
+        .no-webp .offer-inner {
+            background-image: url("img/bg/recommendations.jpg");
+        }
+
+        .webp .offer-inner {
+            background-image: url("img/bg/recommendations.webp");
+        }
     </style>
 </head>
 <body>
 
     <div class="blur-wr">
-        <header class="main-header main-header--transparent" id="main-header">
+        <header class="main-header main-header--transparent">
             <div class="main-header__wr">
                 <div class="container">
                     <nav class="main-header__nav main-nav">
                         <ul class="main-nav__list">
-                            <li><a href="#">Кейсы</a></li>
-                            <li><a href="#">Полезное</a></li>
+                            <li class="main-nav__item--to-home"><a href="index.html">На главную</a></li>
+                            <li><a href="cases.html">Кейсы</a></li>
+                            <li><a href="articles.html">Полезное</a></li>
                         </ul>
                     </nav><!-- / .main-nav -->
                     <form class="main-header__search search" action="#" method="GET">
@@ -771,7 +784,7 @@
                 <p class="similar-projects__title heading-2">Похожие проекты</p>
                 <ul class="similar-projects__list card-list">
                     <li class="card-list__item">
-                        <a class="card-item" href="#">
+                        <a class="card-item" href="case.html">
                             <p class="card-item__img-box">
                                 <picture>
                                     <source srcset="img/base/project-1.webp" type="image/webp">
@@ -793,7 +806,7 @@
                         </a><!-- / .card-item -->
                     </li>
                     <li class="card-list__item">
-                        <a class="card-item" href="#">
+                        <a class="card-item" href="case.html">
                             <p class="card-item__img-box">
                                 <picture>
                                     <source srcset="img/base/project-2.webp" type="image/webp">
@@ -815,7 +828,7 @@
                         </a><!-- / .card-item -->
                     </li>
                     <li class="card-list__item">
-                        <a class="card-item" href="#">
+                        <a class="card-item" href="case.html">
                             <p class="card-item__img-box">
                                 <picture>
                                     <source srcset="img/base/project-1.webp" type="image/webp">
@@ -846,7 +859,7 @@
                     <div class="main-footer__left">
                         <ul class="main-footer__nav">
                             <li><a href="#">О нас</a></li>
-                            <li><a href="#">Проекты</a></li>
+                            <li><a href="cases.html">Кейсы</a></li>
                             <li><a href="#">Контакты</a></li>
                         </ul>
                     </div>

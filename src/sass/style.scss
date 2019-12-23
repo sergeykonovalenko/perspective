@@ -69,3 +69,20 @@ Version: 1.0
 @import "blocks/insiders";
 @import "blocks/insider";
 @import "blocks/similar-projects";
+
+/* ==========================================================================
+   ARTICLE PAGE
+   ========================================================================== */
+@import "blocks/offer-inner";
+@import "blocks/article";
+
+/* ==========================================================================
+   POSTS PAGE
+   ========================================================================== */
+@import "blocks/posts";
+@import "blocks/actions-posts";
+@import "blocks/wp-pagenavi";
+@import "blocks/filter";
+@import "blocks/show-filter";
+@import "blocks/blur-wr";
+@import "blocks/drawer-backdrop";

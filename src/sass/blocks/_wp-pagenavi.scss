@@ -1,0 +1,98 @@
+.wp-pagenavi {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+
+    & *:last-child {
+        margin-right: 0;
+    }
+}
+
+.wp-pagenavi a,
+.wp-pagenavi span {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 55px;
+    height: 55px;
+    margin-right: 15px;
+    font-size: 14px;
+    line-height: 1;
+    color: #000;
+    background-color: transparent;
+    border: 1px solid $color-secondary;
+    border-radius: 50%;
+    user-select: none;
+}
+
+.wp-pagenavi .current {
+    color: #fff;
+    background-color: $color-secondary;
+}
+
+.wp-pagenavi .extend {
+    border: none;
+
+    &:hover {
+        cursor: not-allowed;
+    }
+}
+
+.wp-pagenavi a {
+    cursor: pointer;
+    transition: all .15s ease-in;
+
+    &:hover,
+    &:focus {
+        color: #fff;
+        background-color: $color-secondary;
+    }
+}
+
+a.previouspostslink,
+a.nextpostslink {
+    font-size: 0;
+    color: transparent;
+    background-color: #fff;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 8px 13px;
+    border: none;
+
+    &:hover,
+    &:focus {
+        color: #fff;
+        background-color: $color-secondary;
+    }
+}
+
+a.previouspostslink {
+    background-image: url("img/bg/angle-left.svg");
+    background-position: calc(50% - 2px) center;
+
+    &:hover,
+    &:focus {
+        background-image: url("img/bg/angle-left--white.svg");
+    }
+}
+
+a.nextpostslink {
+    background-image: url("img/bg/angle-right.svg");
+    background-position: calc(50% + 2px) center;
+
+    &:hover,
+    &:focus {
+        background-image: url("img/bg/angle-right--white.svg");
+    }
+}
+
+//@media screen and (max-width: 992px) {
+//    .wp-pagenavi a,
+//    .wp-pagenavi span,
+//    .wp-pagenavi *:last-child {
+//        margin: 14px 7px 0;
+//    }
+//}

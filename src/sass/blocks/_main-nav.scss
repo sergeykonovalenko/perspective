@@ -39,6 +39,24 @@
     
     &:hover,
     &:focus {
-        background-color: #879dd7;
+        background-color: $color-secondary--light;
     }
+
+    //.main-nav__item--to-home & {
+    //
+    //}
+}
+
+//.main-nav__item--to-home + li {
+//    margin-left: auto;
+//}
+
+/* styles for the current menu item */
+.main-header--transparent .main-header__wr:not(.main-header__wr--sticky) .main-nav__list .current-menu-item a {
+    color: #fff;
+    background-color: $color-secondary;
+}
+
+.main-header--transparent .main-header__wr.main-header__wr--sticky .main-nav__list .current-menu-item a {
+    background-color: $color-main;
 }

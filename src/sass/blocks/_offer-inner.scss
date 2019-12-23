@@ -1,0 +1,25 @@
+.offer-inner {
+    display: flex;
+    color: #fff;
+    min-height: 400px;
+    padding-top: calc(90px + 50px);
+    padding-bottom: 90px;
+    background-color: #1e2542;
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    background-size: cover;
+}
+
+.offer-inner .container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.offer-inner__title {
+    margin: 0;
+    font-weight: 700;
+    font-size: 48px;
+    text-transform: uppercase;
+    text-align: center;
+}

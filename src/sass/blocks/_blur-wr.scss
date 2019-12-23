@@ -1,0 +1,7 @@
+.blur-wr {
+    transition: all .15s ease-in;
+
+    .show-filter & {
+        filter: blur(4px);
+    }
+}

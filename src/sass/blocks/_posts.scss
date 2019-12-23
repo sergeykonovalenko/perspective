@@ -1,0 +1,44 @@
+.posts {
+    position: relative;
+    padding-top: 65px;
+    padding-bottom: 80px;
+    background-color: #f5f5f5;
+}
+
+.posts__title {
+    margin-top: 0;
+    margin-bottom: 35px;
+}
+
+.posts__actions {
+    margin-bottom: 13px;
+}
+
+.posts__filter-show-button {
+    position: absolute;
+    top: 115px;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 70px;
+    height: 70px;
+    padding: 0;
+    background-color: #000;
+    border: none;
+    cursor: pointer;
+    transition: all .15s ease-in;
+
+    .show-filter & {
+        left: -70px;
+    }
+
+    &:hover,
+    &:focus {
+        background-color: $color-secondary;
+    }
+
+    &:focus {
+
+    }
+}

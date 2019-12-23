@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="format-detection" content="telephone=no">
     <!-- SEO -->
-    <title>Перспектива –  Lorem ipsum dolor sit amet, consectetur adipisicing elit</title>
+    <title>Кейсы – Перспектива</title>
     <meta name="description" content="">
     <meta name="keywords" content="">
     <!-- Favicon -->
@@ -66,12 +66,13 @@
 <body>
 
     <div class="blur-wr">
-        <header class="main-header main-header--home">
+        <header class="main-header main-header--transparent">
             <div class="main-header__wr">
                 <div class="container">
                     <nav class="main-header__nav main-nav">
                         <ul class="main-nav__list">
-                            <li><a href="cases.html">Кейсы</a></li>
+                            <li class="main-nav__item--to-home"><a href="index.html">На главную</a></li>
+                            <li class="current-menu-item"><a href="cases.html">Кейсы</a></li>
                             <li><a href="articles.html">Полезное</a></li>
                         </ul>
                     </nav><!-- / .main-nav -->
@@ -86,104 +87,19 @@
             </div>
         </header><!-- .main-header -->
 
-        <section class="offer-home">
+        <section class="offer-inner">
             <div class="container">
-                <div class="offer-home__left">
-                    <h1 class="offer-home__title">Условный заголовок для приветственной страницы</h1>
-                    <p class="offer-home__text">Опыт тысяч людей, советы и наставление<br> мастеров своего дела в свободном доступе</p>
-                    <a class="offer-home__button button button--fill-one" href="cases.html">Смотреть реализованные проекты</a>
-                </div>
-                <p class="offer-home__right js-scene">
-                    <img class="offer-home__img"
-                         src="img/base/offer-home.svg"
-                         width="586"
-                         height="502"
-                         data-depth="0.3"
-                         alt="">
-                </p>
+                <h1 class="offer-inner__title">Кейсы</h1>
             </div>
-        </section><!-- / .offer-home -->
+        </section><!-- / .offer-inner -->
 
-        <section class="crush-test-section">
+        <section class="posts">
             <div class="container">
-                <p class="crush-test-section__img-box js-scene">
-                    <img class="crush-test-section__img"
-                         src="img/base/crush-test-section.svg"
-                         width="363"
-                         height="283"
-                         data-depth="0.3"
-                         alt="">
-                </p>
-                <div class="crush-test-section__right">
-                    <p class="crush-test-section__title heading-2">Краш тест</p>
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore
-                        et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-                        aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
-                        dolore eu
-                    </p>
-                    <a class="crush-test-section__button button button--fill-one button--with-arrow" href="#">Пройти</a>
-                </div>
-            </div>
-        </section><!-- / .crush-test-section -->
-
-        <section class="implemented-cases">
-            <div class="container">
-                <p class="implemented-cases__title heading-2">Реализованные кейсы</p>
-                <form class="implemented-cases__filter filter-row" action="#" method="post">
-                    <ul class="filter-row__list">
-                        <li class="filter-row__item">
-                            <label class="filter-row__label" for="filter-row-platform">Выберите платформу</label>
-                            <p class="filter-row__field-box filter-field-box">
-                                <select class="filter-field-box__field" id="filter-row-platform" name="filter-row-platform">
-                                    <option value="Все платформы">Все</option>
-                                    <option value="Платформа номер 1">Платформа номер 1</option>
-                                    <option value="Платформа номер 2">Платформа номер 2</option>
-                                    <option value="Платформа номер 3">Платформа номер 3</option>
-                                    <option value="Платформа номер 4">Платформа номер 4</option>
-                                    <option value="Платформа номер 5">Платформа номер 5</option>
-                                    <option value="Платформа номер 6">Платформа номер 6</option>
-                                    <option value="Платформа номер 7">Платформа номер 7</option>
-                                    <option value="Платформа номер 8">Платформа номер 8</option>
-                                </select>
-                            </p><!-- / .filter-field-box -->
-                        </li>
-                        <li class="filter-row__item">
-                            <label class="filter-row__label" for="filter-row-country">Выберите страну</label>
-                            <p class="filter-row__field-box filter-field-box">
-                                <select class="filter-field-box__field" id="filter-row-country" name="filter-row-country">
-                                    <option value="Все страны">Все</option>
-                                    <option value="Россия">Россия</option>
-                                    <option value="Австрия">Австрия</option>
-                                    <option value="Чехия">Чехия</option>
-                                    <option value="Германия">Германия</option>
-                                    <option value="Люксембург">Люксембург</option>
-                                    <option value="Швейцария">Швейцария</option>
-                                    <option value="Италия">Италия</option>
-                                    <option value="Франция">Франция</option>
-                                    <option value="Испания">Испания</option>
-                                </select>
-                            </p><!-- / .filter-field-box -->
-                        </li>
-                        <li class="filter-row__item">
-                            <label class="filter-row__label" for="filter-row-scope">Выберите сферу</label>
-                            <p class="filter-row__field-box filter-field-box">
-                                <select class="filter-field-box__field" id="filter-row-scope" name="filter-row-scope">
-                                    <option value="Все сферы">Все</option>
-                                    <option value="Условная сфера 1">Условная сфера 1</option>
-                                    <option value="Условная сфера 2">Условная сфера 2</option>
-                                    <option value="Условная сфера 3">Условная сфера 3</option>
-                                    <option value="Условная сфера 4">Условная сфера 4</option>
-                                    <option value="Условная сфера 5">Условная сфера 5</option>
-                                    <option value="Условная сфера 6">Условная сфера 6</option>
-                                    <option value="Условная сфера 7">Условная сфера 7</option>
-                                    <option value="Условная сфера 8">Условная сфера 8</option>
-                                </select>
-                            </p><!-- / .filter-field-box -->
-                        </li>
-                    </ul>
-                </form><!-- / .filter-row -->
-                <ul class="implemented-cases__list card-list">
+                <p class="posts__title heading-2">Реализованные кейсы</p>
+                <div class="posts__actions actions-posts">
+                    <p class="actions-posts__number-of-posts">12 из 95</p>
+                </div><!-- / .actions-posts -->
+                <ul class="posts__list card-list">
                     <li class="card-list__item">
                         <a class="card-item" href="case.html">
                             <p class="card-item__img-box">
@@ -317,82 +233,20 @@
                         </a><!-- / .card-item -->
                     </li>
                 </ul><!-- / .card-list -->
-                <p class="implemented-cases__button-box">
-                    <a class="implemented-cases__button button button--stroke" href="cases.html">Смотреть больше проектов</a>
-                </p>
+                <div class="wp-pagenavi" role="navigation">
+                    <span aria-current="page" class="current">1</span>
+                    <a class="page larger" href="#">2</a>
+                    <a class="page larger" href="#">3</a>
+                    <span class="extend">...</span>
+                    <a class="nextpostslink" rel="next" href="#"></a>
+                    <a class="last" href="#">8</a>
+                </div><!-- / .wp-pagenavi -->
             </div>
-        </section><!-- / .implemented-cases -->
-
-        <section class="recommendations">
-            <div class="container">
-                <p class="recommendations__title heading-2">Рекомендации</p>
-                <ul class="recommendations__list card-list">
-                    <li class="card-list__item">
-                        <a class="card-item card-item--terms-above" href="article.html">
-                            <p class="card-item__img-box">
-                                <picture>
-                                    <source srcset="img/base/recommendations-1.webp" type="image/webp">
-                                    <img class="card-item__img" src="img/base/recommendations-1.jpg" alt="">
-                                </picture>
-                            </p>
-                            <div class="card-item__body">
-                                <p class="card-item__title">Условное название статьи</p>
-                                <ul class="card-item__terms terms-list">
-                                    <li class="terms-list__item terms-list__item--author">Иванов Иван Иванович</li>
-                                </ul><!-- / .terms-list -->
-                                <div class="card-item__excerpt">
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor</p>
-                                </div>
-                                <p class="card-item__button button button--stroke">Подробнее</p>
-                            </div>
-                        </a><!-- / .card-item -->
-                    </li>
-                    <li class="card-list__item">
-                        <a class="card-item card-item--terms-above" href="article.html">
-                            <p class="card-item__img-box">
-                                <picture>
-                                    <source srcset="img/base/recommendations-2.webp" type="image/webp">
-                                    <img class="card-item__img" src="img/base/recommendations-2.jpg" alt="">
-                                </picture>
-                            </p>
-                            <div class="card-item__body">
-                                <p class="card-item__title">Условное название статьи</p>
-                                <ul class="card-item__terms terms-list">
-                                    <li class="terms-list__item terms-list__item--author">Иванов Иван Иванович</li>
-                                </ul><!-- / .terms-list -->
-                                <div class="card-item__excerpt">
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor</p>
-                                </div>
-                                <p class="card-item__button button button--stroke">Подробнее</p>
-                            </div>
-                        </a><!-- / .card-item -->
-                    </li>
-                    <li class="card-list__item">
-                        <a class="card-item card-item--terms-above" href="article.html">
-                            <p class="card-item__img-box">
-                                <picture>
-                                    <source srcset="img/base/recommendations-1.webp" type="image/webp">
-                                    <img class="card-item__img" src="img/base/recommendations-1.jpg" alt="">
-                                </picture>
-                            </p>
-                            <div class="card-item__body">
-                                <p class="card-item__title">Условное название статьи</p>
-                                <ul class="card-item__terms terms-list">
-                                    <li class="terms-list__item terms-list__item--author">Иванов Иван Иванович</li>
-                                </ul><!-- / .terms-list -->
-                                <div class="card-item__excerpt">
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor</p>
-                                </div>
-                                <p class="card-item__button button button--stroke">Подробнее</p>
-                            </div>
-                        </a><!-- / .card-item -->
-                    </li>
-                </ul><!-- / .card-list -->
-                <p class="recommendations__button-box">
-                    <a class="recommendations__button button button--fill-two" href="articles.html">Смотреть больше статей</a>
-                </p>
-            </div>
-        </section><!-- / .recommendations -->
+            <button class="posts__filter-show-button" type="button" title="Фильтр">
+                <span class="visually-hidden">Показать фильтр</span>
+                <svg width="24" height="24" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg" fill="#fff"><path d="M487.976 0H24.028C2.71 0-8.047 25.866 7.058 40.971L192 225.941V432c0 7.831 3.821 15.17 10.237 19.662l80 55.98C298.02 518.69 320 507.493 320 487.98V225.941l184.947-184.97C520.021 25.896 509.338 0 487.976 0z"/></svg>
+            </button>
+        </section><!-- / .posts -->
 
         <footer class="main-footer">
             <div class="container">
@@ -468,6 +322,104 @@
             </div>
         </footer><!-- / .main-footer -->
     </div><!-- / .blur-wr -->
+
+    <!-- Filter -->
+    <div class="filter">
+        <button class="filter__close-button" type="button" title="Закрыть">
+            <span class="visually-hidden">Закрыть фильтр</span>
+            <svg width="18" height="18" viewBox="0 0 319.99 319.99" xmlns="http://www.w3.org/2000/svg" fill="#fff"><path d="M193.94 160L296.5 57.44l21.15-21.15a8.003 8.003 0 0 0 0-11.31L295.02 2.35a8.003 8.003 0 0 0-11.31 0L160 126.06 36.29 2.34a8.003 8.003 0 0 0-11.31 0L2.34 24.97a8.003 8.003 0 0 0 0 11.31L126.06 160 2.34 283.71a8.003 8.003 0 0 0 0 11.31l22.63 22.63a8.003 8.003 0 0 0 11.31 0L160 193.94 262.56 296.5l21.15 21.15a8.003 8.003 0 0 0 11.31 0l22.63-22.63a8.003 8.003 0 0 0 0-11.31z"/></svg>
+        </button>
+        <p class="filter__title">Фильтр</p>
+        <form class="filter__form" action="#" method="post">
+            <ul class="filter__list">
+                <li class="filter__item">
+                    <label class="filter__label" for="filter-platform">Платформа</label>
+                    <p class="filter__field-box filter-field-box">
+                        <select class="filter-field-box__field" id="filter-platform" name="filter-platform">
+                            <option value="Все платформы">Все</option>
+                            <option value="Платформа номер 1">Платформа номер 1</option>
+                            <option value="Платформа номер 2">Платформа номер 2</option>
+                            <option value="Платформа номер 3">Платформа номер 3</option>
+                            <option value="Платформа номер 4">Платформа номер 4</option>
+                            <option value="Платформа номер 5">Платформа номер 5</option>
+                            <option value="Платформа номер 6">Платформа номер 6</option>
+                            <option value="Платформа номер 7">Платформа номер 7</option>
+                            <option value="Платформа номер 8">Платформа номер 8</option>
+                        </select>
+                    </p><!-- / .filter-field-box -->
+                </li>
+                <li class="filter__item">
+                    <label class="filter__label" for="filter-country">Страна</label>
+                    <p class="filter__field-box filter-field-box">
+                        <select class="filter-field-box__field" id="filter-country" name="filter-country">
+                            <option value="Все страны">Все</option>
+                            <option value="Россия">Россия</option>
+                            <option value="Австрия">Австрия</option>
+                            <option value="Чехия">Чехия</option>
+                            <option value="Германия">Германия</option>
+                            <option value="Люксембург">Люксембург</option>
+                            <option value="Швейцария">Швейцария</option>
+                            <option value="Италия">Италия</option>
+                            <option value="Франция">Франция</option>
+                            <option value="Испания">Испания</option>
+                        </select>
+                    </p><!-- / .filter-field-box -->
+                </li>
+                <li class="filter__item">
+                    <label class="filter__label" for="filter-scope">Сфера</label>
+                    <p class="filter__field-box filter-field-box">
+                        <select class="filter-field-box__field" id="filter-scope" name="filter-scope">
+                            <option value="Все сферы">Все</option>
+                            <option value="Условная сфера 1">Условная сфера 1</option>
+                            <option value="Условная сфера 2">Условная сфера 2</option>
+                            <option value="Условная сфера 3">Условная сфера 3</option>
+                            <option value="Условная сфера 4">Условная сфера 4</option>
+                            <option value="Условная сфера 5">Условная сфера 5</option>
+                            <option value="Условная сфера 6">Условная сфера 6</option>
+                            <option value="Условная сфера 7">Условная сфера 7</option>
+                            <option value="Условная сфера 8">Условная сфера 8</option>
+                        </select>
+                    </p><!-- / .filter-field-box -->
+                </li>
+                <li class="filter__item">
+                    <label class="filter__label" for="filter-theme">Тематика</label>
+                    <p class="filter__field-box filter-field-box">
+                        <select class="filter-field-box__field" id="filter-theme" name="filter-theme">
+                            <option value="Все тематики">Все</option>
+                            <option value="Тематика 1">Тематика 1</option>
+                            <option value="Тематика 2">Тематика 2</option>
+                            <option value="Тематика 3">Тематика 3</option>
+                            <option value="Тематика 4">Тематика 4</option>
+                            <option value="Тематика 5">Тематика 5</option>
+                            <option value="Тематика 6">Тематика 6</option>
+                            <option value="Тематика 7">Тематика 7</option>
+                            <option value="Тематика 8">Тематика 8</option>
+                        </select>
+                    </p><!-- / .filter-field-box -->
+                </li>
+                <li class="filter__item">
+                    <label class="filter__label" for="filter-conditional-filter">Условный фильтр</label>
+                    <p class="filter__field-box filter-field-box">
+                        <select class="filter-field-box__field" id="filter-conditional-filter" name="filter-conditional-filter">
+                            <option value="Все">Все</option>
+                            <option value="Условный фильтр 1">Условный фильтр 1</option>
+                            <option value="Условный фильтр 2">Условный фильтр 2</option>
+                            <option value="Условный фильтр 3">Условный фильтр 3</option>
+                            <option value="Условный фильтр 4">Условный фильтр 4</option>
+                            <option value="Условный фильтр 5">Условный фильтр 5</option>
+                            <option value="Условный фильтр 6">Условный фильтр 6</option>
+                            <option value="Условный фильтр 7">Условный фильтр 7</option>
+                            <option value="Условный фильтр 8">Условный фильтр 8</option>
+                        </select>
+                    </p><!-- / .filter-field-box -->
+                </li>
+            </ul>
+            <button class="filter__button button">Показать</button>
+        </form>
+    </div><!-- / .filter -->
+
+    <!-- Drawer backdrop -->
+    <div class="drawer-backdrop"></div>
 
     <!-- jQuery -->
     <script src="js/jquery-3.4.1.min.js"></script>

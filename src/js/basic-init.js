@@ -44,6 +44,36 @@ $(document).ready(function () {
     $('.authors-tabs').tabs();
     $('.tabs-steps').tabs();
 
+    // show / hide filter
+    let element = document.documentElement;
+    let filterShowButton = document.querySelector('.posts__filter-show-button');
+    let filterCloseButton = document.querySelector('.filter__close-button');
+    let drawerBackdrop = document.querySelector('.drawer-backdrop');
+
+    if (filterShowButton) {
+        filterShowButton.addEventListener('click', function () {
+            element.classList.add('show-filter');
+        });
+
+        filterCloseButton.addEventListener('click', function () {
+            element.classList.remove('show-filter');
+        });
+
+        drawerBackdrop.addEventListener('click', function () {
+            element.classList.remove('show-filter');
+        });
+    }
+
+
+
+    // function showHideFilter() {
+    //     if (element.classList.contains('show-filter')) {
+    //         element.classList.remove('show-filter');
+    //     } else {
+    //         element.classList.add('show-filter');
+    //     }
+    // }
+
     // masked input
     $('input[type="tel"]').mask('+7 (999) 999-99-99 ');
 

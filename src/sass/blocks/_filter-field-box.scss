@@ -8,9 +8,16 @@
         right: 20px;
         width: 8px;
         height: 12px;
+        margin-top: -6px;
         background: url("img/bg/angle-right.svg") no-repeat center;
         background-size: contain;
-        transform: translate(0, -50%);
+        pointer-events: none;
+        transition: all .3s ease-in;
+        transform-origin: center;
+    }
+
+    &:focus-within::after {
+        transform: rotate(90deg);
     }
 }
 

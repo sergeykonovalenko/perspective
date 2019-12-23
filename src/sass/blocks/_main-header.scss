@@ -37,16 +37,22 @@
 }
 
 .main-header__nav {
+    //flex-grow: 1;
     margin-right: 20px;
     margin-left: auto;
+
+    //.main-header--home & {
+    //    flex-grow: 0;
+    //}
 }
 
 .main-header__search {
+    flex-shrink: 0;
     width: 215px;
     transition: all .3s ease-in;
 
     &:focus-within {
         width: auto;
-        flex-grow: .5;
+        flex-grow: 1;
     }
 }
