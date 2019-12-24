@@ -95,6 +95,41 @@
     color: $color-secondary;
 }
 
+/* blockquote */
+.content blockquote {
+    position: relative;
+    clear: both;
+    margin: 16px 0;
+    padding: 16px 70px;
+    text-align: center;
+
+    &::before,
+    &::after {
+        position: absolute;
+        font-size: 100px;
+        line-height: 100px;
+        font-family: Times, sans-serif;
+        color: $color-secondary;
+    }
+
+    &::before {
+        content: '“';
+        top: -7px;
+        left: 0;
+    }
+    &::after {
+        content: '”';
+        right: 0;
+        bottom: -7px;
+    }
+}
+
+.content blockquote cite {
+    display: block;
+    font-size: 15px;
+    color: $color-secondary;
+}
+
 .content *:first-child {
     margin-top: 0;
 }

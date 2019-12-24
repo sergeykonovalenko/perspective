@@ -32,14 +32,6 @@ $(document).ready(function () {
         });
     }
 
-    // parallax
-    if (!is_mobile) {
-        let scene = document.querySelectorAll('.js-scene');
-        scene.forEach(function (sceneItem) {
-            let parallaxInstance = scene ? new Parallax(sceneItem) : '';
-        });
-    }
-
     // init tabs
     $('.authors-tabs').tabs();
     $('.tabs-steps').tabs();
@@ -65,14 +57,78 @@ $(document).ready(function () {
     }
 
 
+    /////////////////////////////////////////////////////////////////////////
+    // CRUSH TEST
+    let stepForm = $('.step-form');
 
-    // function showHideFilter() {
-    //     if (element.classList.contains('show-filter')) {
-    //         element.classList.remove('show-filter');
-    //     } else {
-    //         element.classList.add('show-filter');
-    //     }
-    // }
+    stepForm.validate({
+        // errorLabelContainer: $('.error-holder'),
+        // errorPlacement: function errorPlacement(error, element) { element.before(error); },
+        rules: {
+            'number-of-people': 'required',
+            'subjects': 'required',
+            'platform': 'required',
+            'scope': 'required'
+        },
+        messages: {
+            'number-of-people': '',
+            'subjects': '',
+            'platform': '',
+            'scope': '',
+        }
+    });
+
+    $('#smartwizard').smartWizard({
+        transitionEffect: 'fade',
+        lang: {
+            next: 'Далее',
+            previous: 'Назад'
+        },
+        // toolbarExtraButtons: [
+        //     $('<button></button>').text('Finish')
+        //         .addClass('btn btn-info')
+        //         .on('click', function(){
+        //             alert('Finsih button click');
+        //         }),
+        //     $('<button></button>').text('Cancel')
+        //         .addClass('btn btn-danger')
+        //         .on('click', function(){
+        //             alert('Cancel button click');
+        //         })
+        // ]
+    });
+
+    $('#smartwizard').on('leaveStep', function (e, anchorObject, stepNumber, stepDirection) {
+
+        stepForm.validate().settings.ignore = ":disabled,:hidden";
+        return stepForm.valid();
+    });
+
+    /*
+    * Translated default messages for the jQuery validation plugin.
+    * Locale: RU (Russian; русский язык)
+    */
+    $.extend( $.validator.messages, {
+        required: "Это поле необходимо заполнить.",
+        remote: "Пожалуйста, введите правильное значение.",
+        email: "Пожалуйста, введите корректный адрес электронной почты.",
+        url: "Пожалуйста, введите корректный URL.",
+        date: "Пожалуйста, введите корректную дату.",
+        dateISO: "Пожалуйста, введите корректную дату в формате ISO.",
+        number: "Пожалуйста, введите число.",
+        digits: "Пожалуйста, вводите только цифры.",
+        creditcard: "Пожалуйста, введите правильный номер кредитной карты.",
+        equalTo: "Пожалуйста, введите такое же значение ещё раз.",
+        extension: "Пожалуйста, выберите файл с правильным расширением.",
+        maxlength: $.validator.format( "Пожалуйста, введите не больше {0} символов." ),
+        minlength: $.validator.format( "Пожалуйста, введите не меньше {0} символов." ),
+        rangelength: $.validator.format( "Пожалуйста, введите значение длиной от {0} до {1} символов." ),
+        range: $.validator.format( "Пожалуйста, введите число от {0} до {1}." ),
+        max: $.validator.format( "Пожалуйста, введите число, меньшее или равное {0}." ),
+        min: $.validator.format( "Пожалуйста, введите число, большее или равное {0}." )
+    } );
+    /////////////////////////////////////////////////////////////////////////
+
 
     // masked input
     $('input[type="tel"]').mask('+7 (999) 999-99-99 ');

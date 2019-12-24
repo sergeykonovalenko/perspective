@@ -1,13 +1,16 @@
 .main-header {
-    margin-bottom: -90px;
+    //margin-bottom: -90px;
+    margin-bottom: -51px;
     //padding: 10px 0;
 }
 
 .main-header__wr {
     position: relative;
     z-index: 1;
-    height: 90px;
-    padding-top: 40px;
+    //height: 90px;
+    height: 51px;
+    //padding-top: 40px;
+    padding-top: 10px;
     background-color: #fff;
 
     .main-header--transparent &:not(&--sticky) {

@@ -1,17 +1,24 @@
 .offer-inner {
     display: flex;
     color: #fff;
-    min-height: 400px;
-    padding-top: calc(90px + 50px);
-    padding-bottom: 90px;
+    //min-height: 400px;
+    //padding-top: calc(90px + 50px);
+    padding-top: calc(90px + 30px);
+    //padding-bottom: 90px;
+    padding-bottom: 70px;
     background-color: #1e2542;
     background-repeat: no-repeat;
     background-position: center bottom;
     background-size: cover;
+
+    &--article {
+        padding-bottom: 30px;
+    }
 }
 
 .offer-inner .container {
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
 }
@@ -22,4 +29,13 @@
     font-size: 48px;
     text-transform: uppercase;
     text-align: center;
+
+    .offer-inner--article & {
+        margin-bottom: 30px;
+    }
+}
+
+.offer-inner__terms {
+    align-self: flex-start;
+    margin: 0;
 }

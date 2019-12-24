@@ -1,0 +1,52 @@
+.step-field-list {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0;
+    list-style: none;
+}
+
+.step-field-list .step-field-list__item {
+    margin-right: 20px;
+    margin-bottom: 0;
+    padding-left: 0;
+
+    &:last-child {
+        margin-right: 0;
+    }
+
+    &::before {
+        display: none;
+    }
+}
+
+.step-field-list__field {
+
+}
+
+.step-field-list__label {
+
+    .step-field-list__field:checked + & {
+        color: #fff;
+        background-color: $color-secondary;
+    }
+
+    .step-field-list__field.error ~ & {
+        background-color: rgba(251, 82, 88, .1);
+        border-color: $color-warning;
+        color: $color-warning;
+
+        &:hover,
+        &:focus {
+            background-color: #fff;
+        }
+    }
+}
+
+.step-field-list label.error {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 1;
+    padding-top: 3px;
+}

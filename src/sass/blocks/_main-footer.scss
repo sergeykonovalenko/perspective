@@ -63,8 +63,24 @@
 
 .main-footer__copyright {
     margin-top: 0;
-    margin-bottom: 0;
+    margin-bottom: 15px;
     font-weight: 400;
     font-size: 12px;
     text-align: center;
+}
+
+.main-footer__author {
+    display: block;
+    font-size: 12px;
+    text-align: center;
+}
+
+.main-footer__author a {
+    font-weight: 700;
+    color: #c20815;
+
+    &:hover,
+    &:focus {
+        text-decoration: underline;
+    }
 }

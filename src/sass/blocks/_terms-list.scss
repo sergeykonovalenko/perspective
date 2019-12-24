@@ -10,11 +10,12 @@
 .terms-list__item {
     position: relative;
     margin-bottom: 12px;
-    padding-left: 40px;
+    padding-left: 30px;
 
     .terms-list--row & {
         margin-right: 80px;
         margin-bottom: 0;
+        padding-left: 40px;
 
         &:last-child {
             margin-right: 0;
@@ -61,5 +62,9 @@
         .terms-list--white & {
             background-image: url("img/bg/calendar--white.svg");
         }
+    }
+
+    &--year::before {
+        background-image: url("img/bg/calendar.svg");
     }
 }

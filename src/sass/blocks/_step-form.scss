@@ -1,0 +1,241 @@
+.step-form {
+
+}
+
+.sw-theme-default {
+    box-shadow: none;
+}
+
+// nav-tabs
+.step-form__nav {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -7.5px 0 -7.5px 0;
+    padding: 0 0 0 15px;
+    list-style: none;
+}
+
+.step-form__nav li {
+    flex-grow: 1;
+    margin: 7.5px 15px 7.5px 0;
+    background-color: #fff;
+    transform: skewX(20deg);
+
+    &.active {
+        background-color: $color-main;
+    }
+
+    &.done {
+        background-color: rgba(53, 57, 74, .1);
+    }
+}
+
+.sw-theme-default > ul.step-anchor > li {
+    margin-right: 15px;
+}
+
+.step-form__nav a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 80px;
+    padding: 15px 20px;
+    font-weight: 700;
+    color: #35394a;
+    text-align: center;
+    transform: skewX(-20deg);
+}
+
+.sw-theme-default>ul.step-anchor>li>a::after {
+    display: none;
+}
+
+.sw-theme-default>ul.step-anchor>li.active>a {
+    color: #fff;
+}
+
+.step-form__nav .active .flagpole {
+    fill: #fff;
+}
+
+// sw-container
+.step-form__sw-container {
+    position: relative;
+    background-color: #fff;
+
+    &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 100%;
+        width: 100vw;
+        height: 100%;
+        background-color: #fff;
+    }
+}
+
+.sw-main .sw-container {
+    margin-top: 23px;
+    padding-bottom: 20px;
+}
+
+// step-content
+.step-form__step-content {
+
+}
+
+.sw-theme-default .step-content {
+    padding: 33px 0 0 55px;
+}
+
+.step-form__text {
+    font-weight: 300;
+    line-height: 1.9;
+}
+
+.step-form__text strong {
+    display: block;
+    margin-bottom: 16px;
+    font-weight: 300;
+    font-size: 30px;
+    line-height: 1.5;
+}
+
+.step-form__text p {
+    margin: 16px 0;
+}
+
+.step-form__text *:first-child {
+    margin-top: 0;
+}
+
+.step-form__text *:last-child {
+    margin-bottom: 0;
+}
+
+.step-form__field-list {
+    margin: 40px 0 0;
+}
+
+// sw-toolbar
+.sw-theme-default .sw-toolbar {
+    position: relative;
+    padding: 0 0 50px 55px;
+    background-color: #fff;
+
+    &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 100%;
+        width: 100vw;
+        height: 100%;
+        background-color: #fff;
+    }
+}
+
+.sw-btn-group {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+}
+
+.step-form .btn {
+    position: relative;
+    z-index: 1;
+    display: inline-block;
+    max-width: 100%;
+    user-select: none;
+    touch-action: manipulation;
+    vertical-align: middle;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 1;
+    text-align: center;
+    white-space: normal;
+    word-wrap: normal;
+    border: none;
+    border-radius: 35px;
+    cursor: pointer;
+    transition: all .15s ease-in;
+
+    &:focus {
+        outline: none;
+    }
+
+    &.sw-btn-prev {
+        margin-right: 20px;
+        padding: 25px 35px 25px 80px;
+        background-color: #f0f0f0;
+
+        &::after {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 40px;
+            width: 8px;
+            height: 12px;
+            background: url("img/bg/angle-left--black.svg") no-repeat center;
+            background-size: contain;
+            transition: all .15s ease-in;
+            transform: translate(0, -50%);
+        }
+
+        &:hover::after,
+        &:focus::after {
+            transform: translate(-5px, -50%);
+        }
+
+        &:hover,
+        &:focus {
+            background-color: #d7d7d7;
+        }
+
+        &.disabled {
+            background-color: #f0f0f0;
+
+            &:hover,
+            &:focus {
+                background-color: #f0f0f0;
+            }
+
+            &:hover::after,
+            &:focus::after {
+                transform: translate(0, -50%);
+            }
+        }
+    }
+
+    &.sw-btn-next {
+        padding: 25px 80px 25px 35px;
+        color: #000;
+        background-color: $color-accent;
+        box-shadow: 0 2px 15px rgba(9, 12, 18, .15);
+
+        &::after {
+            content: "";
+            position: absolute;
+            top: 50%;
+            right: 40px;
+            width: 8px;
+            height: 12px;
+            background: url("img/bg/angle-right--black.svg") no-repeat center;
+            background-size: contain;
+            transition: all .15s ease-in;
+            transform: translate(0, -50%);
+        }
+
+        &:hover::after,
+        &:focus::after {
+            transform: translate(5px, -50%);
+        }
+
+        &:hover,
+        &:focus {
+            background-color: #fedf7a;
+            box-shadow: 0 2px 15px rgba(9, 12, 18, 0);
+        }
+    }
+}

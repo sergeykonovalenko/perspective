@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="format-detection" content="telephone=no">
     <!-- SEO -->
-    <title>Статья – Перспектива</title>
+    <title>Краш тест – Перспектива</title>
     <meta name="description" content="">
     <meta name="keywords" content="">
     <!-- Favicon -->
@@ -30,6 +30,8 @@
     <!-- Styles -->
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/jquery.fancybox.min.css">
+    <link rel="stylesheet" href="css/smart_wizard.min.css">
+<!--    <link rel="stylesheet" href="css/smart_wizard_theme_arrows.min.css">-->
     <link rel="stylesheet" href="style.css">
     <style>
         /* offer-project */
@@ -37,7 +39,7 @@
         .no-webp .offer-project {
             background-image: url("img/bg/offer-project.jpg");
         }
-        
+
         .webp .offer-project {
             background-image: url("img/bg/offer-project.webp");
         }
@@ -57,7 +59,7 @@
         .no-webp .offer-inner {
             background-image: url("img/bg/recommendations.jpg");
         }
-        
+
         .webp .offer-inner {
             background-image: url("img/bg/recommendations.webp");
         }
@@ -72,7 +74,7 @@
                     <nav class="main-header__nav main-nav">
                         <ul class="main-nav__list">
                             <li class="main-nav__item--to-home"><a href="index.html">На главную</a></li>
-                            <li><a href="cases.html">Кейсы</a></li>
+                            <li class="current-menu-item"><a href="cases.html">Кейсы</a></li>
                             <li><a href="articles.html">Полезное</a></li>
                         </ul>
                     </nav><!-- / .main-nav -->
@@ -87,168 +89,157 @@
             </div>
         </header><!-- .main-header -->
 
-        <section class="offer-inner offer-inner--article">
+        <section class="offer-inner">
             <div class="container">
-                <h1 class="offer-inner__title">Условная статья</h1>
-                <ul class="offer-inner__terms terms-list terms-list--row terms-list--white">
-                    <li class="terms-list__item terms-list__item--time">25.12.2019</li>
-                </ul>
+                <h1 class="offer-inner__title">Краш тест</h1>
             </div>
         </section><!-- / .offer-inner -->
 
-        <article class="article">
+        <section class="crush-test">
             <div class="container">
-                <div class="article__content content">
-                    <h2>Условный заголовок</h2>
-                    <p>
-                        Loremem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt
-                        ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                        laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
-                        voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
-                        non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis
-                        unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam,
-                        eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
-                        Nemo enim ipsam voluptatem quia voluptas sit aspernatur
-                    </p>
-                    <picture class="article__img-box">
-                        <source srcset="img/base/article.webp" type="image/webp">
-                        <img class="article__img" src="img/base/article.jpg" alt="">
-                    </picture>
-                    <h2>Заголовок</h2>
-                    <p>
-                        Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
-                        est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque
-                        laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae
-                        vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur.
-                    </p>
-                    <blockquote class="wp-block-quote">
-                        <p>
-                            Учиться нам нужно, учиться и учиться, а с глубокими общественными течениями погодим:
-                            мы ещё не доросли до них и, по совести, ничего в них не понимаем.
-                        </p>
-                        <cite>А. П. Чехов. Моя жизнь</cite>
-                    </blockquote>
-                    <div class="video-block">
-                        <picture class="video-block__img-box">
-                            <source srcset="img/base/about-project.jpg" type="image/webp">
-                            <img class="video-block__img" src="img/base/about-project.webp" alt="">
-                        </picture>
-                        <a class="video-block__modal modal-video" data-fancybox href="https://youtu.be/aN51_dkVyhc">
-                            <picture>
-                                <source srcset="img/base/about-project-video.webp" type="image/webp">
-                                <img class="modal-video__img" src="img/base/about-project-video.jpg" alt="">
-                            </picture>
-                            <button class="modal-video__button" type="button" aria-label="Запустить видео">
-                                <svg class="modal-video__button-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="27.688" fill="#516290"><path d="M23.99 13.844L-.01 27.7V-.014z" fill-rule="evenodd"/></svg>
-                            </button>
-                        </a><!-- / .modal-video -->
-                    </div><!-- / .video-block -->
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore
-                        et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-                        aliquip ex ea commodo consequat.
-                    </p>
-                    <p>
-                        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-                        Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est
-                        laborum. Sed ut perspiciatis unde omnis iste natus error sit Lorem ipsum dolor sit amet, consectetur
-                        adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-                        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                    </p>
-                    <p>
-                        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-                        Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est
-                        laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.
-                        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-                        Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est
-                        laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.
-                    </p>
-                    <h2>Еще заголовок</h2>
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
-                        dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-                        ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-                        fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
-                        mollit anim id est laborum.
-                    </p>
-                    <blockquote class="wp-block-quote">
-                        <p>
-                            Учиться нам нужно, учиться и учиться, а с глубокими общественными течениями погодим:
-                            мы ещё не доросли до них и, по совести, ничего в них не понимаем.
-                        </p>
-                        <cite>А. П. Чехов. Моя жизнь</cite>
-                    </blockquote>
-                    <p>
-                        Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium,
-                        totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt
-                        explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur
-                        magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia
-                        dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et
-                        dolore magnam aliquam quaerat voluptatem.
-                    </p>
-                </div>
-                <a class="article__back-button button button--stroke" href="articles.html">Назад к статьям</a>
-            </div>
-        </article><!-- / .article -->
+                <form class="step-form" action="#" method="post">
+                    <!-- SmartWizard html -->
+                    <div class="step-form__sw-main" id="smartwizard">
+                        <ul class="step-form__nav">
+                            <li><a href="#step-1">Шаг 1</a></li>
+                            <li><a href="#step-2">Шаг 2</a></li>
+                            <li><a href="#step-3">Шаг 3</a></li>
+                            <li><a href="#step-4">Шаг 4</a></li>
+                            <li>
+                                <a href="#step-5">
+                                    <svg width="21" height="30" viewBox="0 0 21.25 30" xmlns="http://www.w3.org/2000/svg"><defs><clipPath><path fill="none" d="M4 0h17.25v19.94H4z"></path></clipPath></defs><path class="flagpole" fill="#35394a" d="M0 0h2v30H0z"></path><g clip-path="url(#a)"><path fill="#b54545" d="M4 19.939L21.25 9.98 4 .02v19.919z"></path></g></svg>
+                                </a>
+                            </li>
+                        </ul>
 
-        <section class="featured-articles">
-            <div class="container">
-                <p class="featured-articles__title heading-2">Рекомендации</p>
-                <ul class="featured-articles__list card-list">
-                    <li class="card-list__item">
-                        <a class="card-item" href="article.html">
-                            <p class="card-item__img-box">
-                                <picture>
-                                    <source srcset="img/base/recommendations-1.webp" type="image/webp">
-                                    <img class="card-item__img" src="img/base/recommendations-1.jpg" alt="">
-                                </picture>
-                            </p>
-                            <div class="card-item__body">
-                                <p class="card-item__title">Условное название статьи</p>
-                                <div class="card-item__excerpt">
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor</p>
+                        <div class="step-form__sw-container">
+                            <div class="step-form__step-content" id="step-1">
+                                <div class="step-form__text">
+                                    <strong>Сколько людей вам необходимо для сюжета?</strong>
+                                    <p>
+                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt
+                                        ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                                        laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
+                                        voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                                    </p>
                                 </div>
-                                <p class="card-item__button button button--stroke">Подробнее</p>
-                            </div>
-                        </a><!-- / .card-item -->
-                    </li>
-                    <li class="card-list__item">
-                        <a class="card-item" href="article.html">
-                            <p class="card-item__img-box">
-                                <picture>
-                                    <source srcset="img/base/recommendations-2.webp" type="image/webp">
-                                    <img class="card-item__img" src="img/base/recommendations-2.jpg" alt="">
-                                </picture>
-                            </p>
-                            <div class="card-item__body">
-                                <p class="card-item__title">Условное название статьи</p>
-                                <div class="card-item__excerpt">
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor</p>
+                                <ul class="step-form__field-list step-field-list">
+                                    <li class="step-field-list__item">
+                                        <input class="step-field-list__field visually-hidden" id="people-up-to-5" type="radio" name="number-of-people" value="people-up-to-5">
+                                        <label class="step-field-list__label button button--stroke" for="people-up-to-5">До 5</label>
+                                    </li>
+                                    <li class="step-field-list__item">
+                                        <input class="step-field-list__field visually-hidden" id="more-than-5-people" type="radio" name="number-of-people" value="more-than-5-people">
+                                        <label class="step-field-list__label button button--stroke" for="more-than-5-people">Больше 5</label>
+                                    </li>
+                                    <li class="step-field-list__item">
+                                        <input class="step-field-list__field visually-hidden" id="unknown-people" type="radio" name="number-of-people" value="unknown-people">
+                                        <label class="step-field-list__label button button--stroke" for="unknown-people">Не знаю</label>
+                                    </li>
+                                </ul><!-- / .step-field-list -->
+                            </div><!-- / .step-form -->
+
+                            <div class="step-form__step-content" id="step-2">
+                                <div class="step-form__text">
+                                    <strong>Какая необходимая тематика сюжета?</strong>
+                                    <p>
+                                        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                                        Excepteur sint occaecat cupidatat non Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+                                        eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                                        exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                                    </p>
                                 </div>
-                                <p class="card-item__button button button--stroke">Подробнее</p>
+                                <ul class="step-form__field-list step-field-list">
+                                    <li class="step-field-list__item">
+                                        <input class="step-field-list__field visually-hidden" id="subjects-1" type="radio" name="subjects" value="subjects-1">
+                                        <label class="step-field-list__label button button--stroke" for="subjects-1">Тематика 1</label>
+                                    </li>
+                                    <li class="step-field-list__item">
+                                        <input class="step-field-list__field visually-hidden" id="subjects-2" type="radio" name="subjects" value="subjects-2">
+                                        <label class="step-field-list__label button button--stroke" for="subjects-2">Тематика 2</label>
+                                    </li>
+                                    <li class="step-field-list__item">
+                                        <input class="step-field-list__field visually-hidden" id="subjects-3" type="radio" name="subjects" value="subjects-3">
+                                        <label class="step-field-list__label button button--stroke" for="subjects-3">Тематика 3</label>
+                                    </li>
+                                </ul><!-- / .step-field-list -->
                             </div>
-                        </a><!-- / .card-item -->
-                    </li>
-                    <li class="card-list__item">
-                        <a class="card-item" href="article.html">
-                            <p class="card-item__img-box">
-                                <picture>
-                                    <source srcset="img/base/recommendations-1.webp" type="image/webp">
-                                    <img class="card-item__img" src="img/base/recommendations-1.jpg" alt="">
-                                </picture>
-                            </p>
-                            <div class="card-item__body">
-                                <p class="card-item__title">Условное название статьи</p>
-                                <div class="card-item__excerpt">
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor</p>
+
+                            <div class="step-form__step-content" id="step-3">
+                                <div class="step-form__text">
+                                    <strong>Какая предполагается платформа?</strong>
+                                    <p>
+                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt
+                                        ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                                        laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
+                                        voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                                    </p>
                                 </div>
-                                <p class="card-item__button button button--stroke">Подробнее</p>
+                                <ul class="step-form__field-list step-field-list">
+                                    <li class="step-field-list__item">
+                                        <input class="step-field-list__field visually-hidden" id="platform-1" type="radio" name="platform" value="platform-1">
+                                        <label class="step-field-list__label button button--stroke" for="platform-1">Платформа 1</label>
+                                    </li>
+                                    <li class="step-field-list__item">
+                                        <input class="step-field-list__field visually-hidden" id="platform-2" type="radio" name="platform" value="platform-2">
+                                        <label class="step-field-list__label button button--stroke" for="platform-2">Платформа 2</label>
+                                    </li>
+                                    <li class="step-field-list__item">
+                                        <input class="step-field-list__field visually-hidden" id="platform-3" type="radio" name="platform" value="platform-3">
+                                        <label class="step-field-list__label button button--stroke" for="platform-3">Платформа 3</label>
+                                    </li>
+                                </ul><!-- / .step-field-list -->
                             </div>
-                        </a><!-- / .card-item -->
-                    </li>
-                </ul><!-- / .card-list -->
+
+                            <div class="step-form__step-content" id="step-4">
+                                <div class="step-form__text">
+                                    <strong>Какая предполагается сфера деятельности?</strong>
+                                    <p>
+                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt
+                                        ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                                        laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
+                                        voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                                    </p>
+                                </div>
+                                <ul class="step-form__field-list step-field-list">
+                                    <li class="step-field-list__item">
+                                        <input class="step-field-list__field visually-hidden" id="scope-1" type="radio" name="scope" value="scope-1">
+                                        <label class="step-field-list__label button button--stroke" for="scope-1">Сфера 1</label>
+                                    </li>
+                                    <li class="step-field-list__item">
+                                        <input class="step-field-list__field visually-hidden" id="scope-2" type="radio" name="scope" value="scope-2">
+                                        <label class="step-field-list__label button button--stroke" for="scope-2">Сфера 2</label>
+                                    </li>
+                                    <li class="step-field-list__item">
+                                        <input class="step-field-list__field visually-hidden" id="scope-3" type="radio" name="scope" value="scope-3">
+                                        <label class="step-field-list__label button button--stroke" for="scope-3">Сфера 3</label>
+                                    </li>
+                                </ul><!-- / .step-field-list -->
+                            </div>
+
+                            <div class="step-form__step-content" id="step-5">
+                                <div class="step-form__text">
+                                    <strong>Результаты</strong>
+                                    <p>
+                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt
+                                        ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                                        laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
+                                        voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                                    </p>
+                                    <p>
+                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt
+                                        ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                                        laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
+                                        voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </form><!-- / .step-form -->
             </div>
-        </section><!-- / .featured-articles -->
+        </section><!-- / .crush-test -->
 
         <footer class="main-footer">
             <div class="container">
