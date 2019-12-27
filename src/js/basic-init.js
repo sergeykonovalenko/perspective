@@ -79,6 +79,7 @@ $(document).ready(function () {
     });
 
     $('#smartwizard').smartWizard({
+        showStepURLhash: false,
         transitionEffect: 'fade',
         lang: {
             next: 'Далее',

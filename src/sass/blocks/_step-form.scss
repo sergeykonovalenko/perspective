@@ -183,26 +183,22 @@
             transform: translate(0, -50%);
         }
 
-        &:hover::after,
-        &:focus::after {
+        &:hover::after {
             transform: translate(-5px, -50%);
         }
 
-        &:hover,
-        &:focus {
+        &:hover {
             background-color: #d7d7d7;
         }
 
         &.disabled {
             background-color: #f0f0f0;
 
-            &:hover,
-            &:focus {
+            &:hover {
                 background-color: #f0f0f0;
             }
 
-            &:hover::after,
-            &:focus::after {
+            &:hover::after {
                 transform: translate(0, -50%);
             }
         }
@@ -227,13 +223,11 @@
             transform: translate(0, -50%);
         }
 
-        &:hover::after,
-        &:focus::after {
+        &:hover::after {
             transform: translate(5px, -50%);
         }
 
-        &:hover,
-        &:focus {
+        &:hover {
             background-color: #fedf7a;
             box-shadow: 0 2px 15px rgba(9, 12, 18, 0);
         }

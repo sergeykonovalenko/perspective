@@ -3,6 +3,10 @@
     background-color: #f5f5f5;
 }
 
+.format .container > *:last-child {
+    margin-bottom: 0;
+}
+
 .format__text {
     margin-bottom: 33px;
 }
@@ -12,10 +16,12 @@
 }
 
 .format__features {
+    flex-grow: 1;
     width: 50%;
     margin-right: 60px;
 
-    &:nth-child(2n) {
+    &:nth-child(2n),
+    &:last-child {
         margin-right: 0;
     }
 }

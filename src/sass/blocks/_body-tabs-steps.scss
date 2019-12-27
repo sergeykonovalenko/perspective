@@ -37,6 +37,10 @@
         left: 390px;
     }
 
+    .tabs-steps-section--left .body-tabs-steps--no-img & {
+        left: 55px;
+    }
+
     & + p {
         margin-top: 0;
     }

@@ -34,8 +34,11 @@
     font-weight: 400;
 }
 
-.insider__text h3 {
+.insider__text strong {
+    display: block;
     font-weight: 500;
     font-size: 22px;
+    line-height: 1.5;
     text-align: left;
+    color: $color-main--dark;
 }

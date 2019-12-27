@@ -11,7 +11,8 @@
     align-items: flex-start;
 }
 
-.offer-home__left {
+.offer-home__text {
+    flex-grow: 1;
     margin-right: 35px;
 }
 
@@ -28,7 +29,7 @@
     color: $color-secondary;
 }
 
-.offer-home__text {
+.offer-home__description {
     position: relative;
     margin-top: 0;
     //margin-bottom: 66px;
@@ -54,10 +55,11 @@
 }
 
 .offer-home__right {
-    flex-shrink: 0;
-    margin: 0 -130px 0 0;
+
 }
 
 .offer-home__img {
+    flex-shrink: 0;
+    //margin: 0 -130px 0 0;
     width: 400px;
 }

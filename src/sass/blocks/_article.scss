@@ -12,15 +12,10 @@
     min-width: 200px;
 }
 
-.article__img-box {
+.article__img {
+    max-width: none;
     width: calc(100vw - var(--scrollbar-width));
     margin-top: 30px;
-    margin-left: calc((100vw - var(--scrollbar-width) - 1140px)/-2);
     margin-bottom: 30px;
+    margin-left: calc((100vw - var(--scrollbar-width) - 1140px)/-2);
 }
-
-.article__img {
-    width: 100%;
-    object-fit: cover;
-}
-

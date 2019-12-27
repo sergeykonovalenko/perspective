@@ -3,6 +3,10 @@
     background-color: #f5f5f5;
 }
 
+.useful-experience .container > *:last-child {
+    margin-bottom: 0;
+}
+
 .useful-experience__text {
     margin-bottom: 33px;
 }

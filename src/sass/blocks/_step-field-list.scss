@@ -26,7 +26,8 @@
 
 .step-field-list__label {
 
-    .step-field-list__field:checked + & {
+    .step-field-list__field:checked ~ &,
+    &:focus {
         color: #fff;
         background-color: $color-secondary;
     }
@@ -34,10 +35,10 @@
     .step-field-list__field.error ~ & {
         background-color: rgba(251, 82, 88, .1);
         border-color: $color-warning;
-        color: $color-warning;
 
         &:hover,
         &:focus {
+            color: $color-main--dark;
             background-color: #fff;
         }
     }

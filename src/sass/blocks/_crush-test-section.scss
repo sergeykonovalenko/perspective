@@ -10,16 +10,13 @@
     align-items: center;
 }
 
-.crush-test-section__img-box {
+.crush-test-section__img {
     flex-shrink: 0;
+    width: 363px;
     margin: 0 75px 0 -47px;
 }
 
-.crush-test-section__img {
-
-}
-
-.crush-test-section__right {
+.crush-test-section__text {
     flex-grow: 1;
     text-align: justify;
 }
@@ -30,16 +27,16 @@
     text-align: left;
 }
 
-.crush-test-section__right p:not(.heading-2) {
+.crush-test-section__text p:not(.heading-2) {
     line-height: 1.9375;
     margin: 16px 0;
 }
 
-.crush-test-section__right *:first-child {
+.crush-test-section__text *:first-child {
     margin-top: 0;
 }
 
-.crush-test-section__right *:last-child {
+.crush-test-section__text *:last-child {
     margin-bottom: 0;
 }
 

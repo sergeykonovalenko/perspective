@@ -15,7 +15,6 @@
 
 .offer-project__left {
     flex-grow: 1;
-    margin-right: 180px;
 }
 
 .offer-project__text {
@@ -52,4 +51,9 @@
 
 .offer-project__right {
     flex-shrink: 0;
+    margin-left: 180px;
+}
+
+@media screen and (max-width: 1200px) {
+
 }
