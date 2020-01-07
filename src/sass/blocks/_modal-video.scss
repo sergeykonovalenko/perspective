@@ -66,3 +66,9 @@
     margin-left: 3px;
     transform: translate(-50%, -50%);
 }
+
+@media screen and (max-width: 390px) {
+    .modal-video {
+        width: 100%;
+    }
+}

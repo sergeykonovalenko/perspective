@@ -1,0 +1,40 @@
+.search-section {
+    padding-top: 120px;
+    padding-bottom: 80px;
+}
+
+.search-section__title {
+    margin-top: 0;
+    margin-bottom: 35px;
+    text-align: center;
+}
+
+.search-section__title span {
+    color: $color-secondary;
+}
+
+.search-section__box {
+    margin-bottom: 35px;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
+.search-section__subtitle {
+    margin-top: 0;
+    margin-bottom: 30px;
+    font-weight: 300;
+    font-size: 23px;
+    text-transform: uppercase;
+}
+
+.search-section__page-list {
+    margin: 0;
+}
+
+.search-section__search-box .search-form {
+    width: 500px;
+    max-width: 100%;
+    margin: 0 auto;
+}

@@ -23,6 +23,7 @@
 .content h1 {
     margin-top: 46px;
     margin-bottom: 23px;
+    font-weight: 700;
     font-size: 48px;
 }
 
@@ -100,8 +101,9 @@
     position: relative;
     clear: both;
     margin: 16px 0;
-    padding: 16px 70px;
+    padding: 35px 70px;
     text-align: center;
+    background-color: #bce8ea;
 
     &::before,
     &::after {
@@ -114,13 +116,13 @@
 
     &::before {
         content: '“';
-        top: -7px;
-        left: 0;
+        top: 12px;
+        left: 10px;
     }
     &::after {
         content: '”';
-        right: 0;
-        bottom: -7px;
+        right: 10px;
+        bottom: 12px;
     }
 }
 
@@ -136,4 +138,38 @@
 
 .content *:last-child {
     margin-bottom: 0;
+}
+
+@media screen and (max-width: 576px) {
+    .content h1 {
+        font-size: 35px;
+    }
+
+    .content h2,
+    .content .heading-2 {
+        font-size: 30px;
+    }
+
+    .content h3,
+    .content .heading-3 {
+        font-size: 24px;
+    }
+
+    .content blockquote {
+        padding-right: 15px;
+        padding-left: 15px;
+
+        &::before,
+        &::after {
+            font-size: 70px;
+        }
+
+        &::before {
+            top: -14px;
+        }
+
+        &::after {
+            bottom: -48px;
+        }
+    }
 }

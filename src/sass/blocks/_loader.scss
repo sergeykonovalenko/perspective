@@ -8,6 +8,13 @@
     background: rgba(240, 240, 240, .9);
     overflow: hidden;
     z-index: 10;
+    transition: all .15s ease-in;
+    opacity: 0;
+    
+    &--show {
+        display: block;
+        opacity: 1;
+    }
 }
 
 .loader__icon {

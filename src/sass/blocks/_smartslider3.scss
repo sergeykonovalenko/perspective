@@ -1,0 +1,14 @@
+.n2-ss-slide-background {
+    transition-duration: .3s;
+    transition-timing-function: ease-out;
+    transition-property: opacity, transform, filter;
+
+    &:hover {
+        transform: scale(1.1) rotate(3deg);
+    }
+}
+
+body .litebox-overlay .litebox-close {
+    background: url("img/bg/close.svg") no-repeat center;
+    background-size: 32px;
+}

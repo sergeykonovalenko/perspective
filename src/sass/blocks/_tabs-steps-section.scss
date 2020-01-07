@@ -14,4 +14,22 @@
         margin-right: 0;
         margin-left: 390px;
     }
+
+    &--without-steps,
+    .tabs-steps-section--left &--without-steps {
+        margin-right: 0;
+        margin-left: 0;
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .tabs-steps-section__title {
+        margin-right: 0;
+        text-align: center;
+
+        .tabs-steps-section--left & {
+            margin-left: 0;
+        }
+    }
 }

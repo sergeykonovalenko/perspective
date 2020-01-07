@@ -10,7 +10,7 @@
     transition: box-shadow .3s ease-in;
 
     &:hover {
-        box-shadow: 0 0 25px rgba(9, 12, 18, 0.25);
+        box-shadow: 0 0 25px rgba(9, 12, 18, 0.3);
     }
 }
 
@@ -88,3 +88,20 @@
     margin: auto auto 0;
 }
 
+@media screen and (max-width: 992px) {
+    .card-item {
+        width: 330px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .card-item {
+        width: 360px;
+    }
+}
+
+@media screen and (max-width: 390px) {
+    .card-item {
+        width: 100%;
+    }
+}

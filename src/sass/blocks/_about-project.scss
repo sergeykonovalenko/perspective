@@ -3,3 +3,43 @@
     background-color: #f5f5f5;
     overflow: hidden;
 }
+
+.about-project__img-box {
+    float: right;
+    //width: 40%;
+    margin-bottom: 15px;
+    margin-left: 30px;
+}
+
+.about-project__img {
+    width: 455px;
+}
+
+.about-project__modal-video {
+    float: right;
+    margin-bottom: 15px;
+    margin-left: 30px;
+}
+
+@media screen and (max-width: 992px) {
+    .about-project__img {
+        width: 400px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .about-project__img-box {
+        float: none;
+        margin-left: 0;
+        margin-bottom: 25px;
+    }
+
+    .about-project__img {
+        width: 100%;
+    }
+
+    .about-project__modal-video {
+        float: none;
+        margin: 0 auto 25px;
+    }
+}

@@ -35,3 +35,27 @@
 .useful-experience__tasks {
     margin: 0;
 }
+
+@media screen and (max-width: 992px) {
+    .useful-experience__head {
+        justify-content: center;
+    }
+
+    .useful-experience__subtitle {
+
+        &--left {
+            width: auto;
+            padding-right: 0;
+
+            &::after {
+                content: "/";
+                display: inline;
+                margin: 0 10px;
+            }
+        }
+
+        &--right {
+            width: auto;
+        }
+    }
+}

@@ -1,5 +1,6 @@
 html {
     box-sizing: border-box;
+    height: 100%;
 }
 
 html *,
@@ -9,6 +10,11 @@ html ::before {
 }
 
 body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-width: 320px;
+    min-height: 100vh;
     margin: 0;
     padding: 0;
     font-weight: 400;
@@ -83,6 +89,10 @@ textarea.error {
     padding: 0 15px;
 }
 
+h1,
+h2,
+h3,
+h4,
 .heading-2,
 .heading-3,
 .heading-4 {
@@ -91,16 +101,24 @@ textarea.error {
     text-align: center;
 }
 
+h1 {
+    font-weight: 700;
+    font-size: 48px;
+}
+
+h2,
 .heading-2 {
     font-size: 38px;
 }
 
+h3,
 .heading-3 {
     font-size: 28px;
 }
 
+h4,
 .heading-4 {
-    font-size: 22px;
+    font-size: 18px;
 }
 
 @media (min-width: 576px) {
@@ -127,13 +145,18 @@ textarea.error {
     }
 }
 
+@media screen and (max-width: 576px) {
+    h1 {
+        font-size: 35px;
+    }
 
-//@media screen and (max-width: 576px) {
-//    .heading-2 {
-//        font-size: 32px;
-//    }
-//
-//    .heading-3 {
-//        font-size: 22px;
-//    }
-//}
+    h2,
+    .heading-2 {
+        font-size: 30px;
+    }
+
+    h3,
+    .heading-3 {
+        font-size: 24px;
+    }
+}

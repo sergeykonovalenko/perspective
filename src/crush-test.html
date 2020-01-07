@@ -31,7 +31,6 @@
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/jquery.fancybox.min.css">
     <link rel="stylesheet" href="css/smart_wizard.min.css">
-<!--    <link rel="stylesheet" href="css/smart_wizard_theme_arrows.min.css">-->
     <link rel="stylesheet" href="style.css">
     <style>
         /* offer-project */
@@ -61,20 +60,59 @@
         <header class="main-header main-header--transparent">
             <div class="main-header__wr">
                 <div class="container">
-                    <nav class="main-header__nav main-nav">
-                        <ul class="main-nav__list">
-                            <li class="main-nav__item--to-home"><a href="index.html">Главная</a></li>
-                            <li class="current-menu-item"><a href="cases.html">Кейсы</a></li>
-                            <li><a href="articles.html">Полезное</a></li>
+                    <div class="main-header__nav-wr">
+                        <nav class="main-header__nav main-nav">
+                            <ul class="main-nav__list">
+                                <li class="main-nav__item--to-home"><a href="index.html">Главная</a></li>
+                                <li><a href="cases.html">Кейсы</a></li>
+                                <li><a href="articles.html">Полезное</a></li>
+                            </ul>
+                        </nav><!-- / .main-nav -->
+                        <ul class="main-header__social-mobile social-links">
+                            <li class="social-links__item">
+                                <a class="social-links__link" href="#" target="_blank" rel="noopener nofollow" title="Наш Фейсбук">
+                                    <span class="visually-hidden">Наша группа в Facebook</span>
+                                    <svg width="10" height="16" viewBox="0 0 320 512" xmlns="http://www.w3.org/2000/svg" fill="#fff"><path d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z"></path></svg>
+                                </a>
+                            </li>
+                            <li class="social-links__item">
+                                <a class="social-links__link" href="#" target="_blank" rel="noopener nofollow" title="Наш Инстаграм">
+                                    <span class="visually-hidden">Наша страница в Instagram</span>
+                                    <svg width="15" height="18" viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg" fill="#fff"><path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"></path></svg>
+                                </a>
+                            </li>
+                            <li class="social-links__item">
+                                <a class="social-links__link" href="#" target="_blank" rel="noopener nofollow" title="Наш Твитер">
+                                    <span class="visually-hidden">Наша страница в Twitter</span>
+                                    <svg width="15" height="15" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg" fill="#fff"><path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"></path></svg>
+                                </a>
+                            </li>
+                            <li class="social-links__item">
+                                <a class="social-links__link" href="#" target="_blank" rel="noopener nofollow" title="Наш Вконтакте">
+                                    <span class="visually-hidden">Наша группа в ВК</span>
+                                    <svg width="18" height="16" viewBox="0 0 576 512" xmlns="http://www.w3.org/2000/svg" fill="#fff"><path d="M545 117.7c3.7-12.5 0-21.7-17.8-21.7h-58.9c-15 0-21.9 7.9-25.6 16.7 0 0-30 73.1-72.4 120.5-13.7 13.7-20 18.1-27.5 18.1-3.7 0-9.4-4.4-9.4-16.9V117.7c0-15-4.2-21.7-16.6-21.7h-92.6c-9.4 0-15 7-15 13.5 0 14.2 21.2 17.5 23.4 57.5v86.8c0 19-3.4 22.5-10.9 22.5-20 0-68.6-73.4-97.4-157.4-5.8-16.3-11.5-22.9-26.6-22.9H38.8c-16.8 0-20.2 7.9-20.2 16.7 0 15.6 20 93.1 93.1 195.5C160.4 378.1 229 416 291.4 416c37.5 0 42.1-8.4 42.1-22.9 0-66.8-3.4-73.1 15.4-73.1 8.7 0 23.7 4.4 58.7 38.1 40 40 46.6 57.9 69 57.9h58.9c16.8 0 25.3-8.4 20.4-25-11.2-34.9-86.9-106.7-90.3-111.5-8.7-11.2-6.2-16.2 0-26.2.1-.1 72-101.3 79.4-135.6z"></path></svg>
+                                </a>
+                            </li>
+                            <li class="social-links__item">
+                                <a class="social-links__link" href="#" target="_blank" rel="noopener nofollow" title="Наш Однокласники">
+                                    <span class="visually-hidden">Наша страница в Однокласники</span>
+                                    <svg width="11" height="18" viewBox="0 0 320 512" xmlns="http://www.w3.org/2000/svg" fill="#fff"><path d="M275.1 334c-27.4 17.4-65.1 24.3-90 26.9l20.9 20.6 76.3 76.3c27.9 28.6-17.5 73.3-45.7 45.7-19.1-19.4-47.1-47.4-76.3-76.6L84 503.4c-28.2 27.5-73.6-17.6-45.4-45.7 19.4-19.4 47.1-47.4 76.3-76.3l20.6-20.6c-24.6-2.6-62.9-9.1-90.6-26.9-32.6-21-46.9-33.3-34.3-59 7.4-14.6 27.7-26.9 54.6-5.7 0 0 36.3 28.9 94.9 28.9s94.9-28.9 94.9-28.9c26.9-21.1 47.1-8.9 54.6 5.7 12.4 25.7-1.9 38-34.5 59.1zM30.3 129.7C30.3 58 88.6 0 160 0s129.7 58 129.7 129.7c0 71.4-58.3 129.4-129.7 129.4s-129.7-58-129.7-129.4zm66 0c0 35.1 28.6 63.7 63.7 63.7s63.7-28.6 63.7-63.7c0-35.4-28.6-64-63.7-64s-63.7 28.6-63.7 64z"></path></svg>
+                                </a>
+                            </li>
                         </ul>
-                    </nav><!-- / .main-nav -->
-                    <form class="main-header__search search" action="#" method="GET">
+                    </div>
+                    <form class="main-header__search-form search-form" action="#" method="GET">
                         <label class="visually-hidden" for="s">Поиск</label>
-                        <input class="search__field" id="s" type="search" name="s" placeholder="Поиск по сайту">
-                        <button class="search__button">
+                        <input class="search-form__field" id="s" type="search" name="s" placeholder="Поиск по сайту">
+                        <button class="search-form__button">
                             <span class="visually-hidden">Поиск</span>
                         </button>
-                    </form><!-- / .search -->
+                    </form><!-- / .search-form -->
+                    <button class="main-header__hamburger" type="button" title="Главное меню">
+                        <b></b>
+                        <b></b>
+                        <b></b>
+                    </button>
                 </div>
             </div>
         </header><!-- .main-header -->
@@ -95,8 +133,9 @@
                             <li><a href="#step-2">Шаг 2</a></li>
                             <li><a href="#step-3">Шаг 3</a></li>
                             <li><a href="#step-4">Шаг 4</a></li>
+                            <li><a href="#step-5">Шаг 5</a></li>
                             <li>
-                                <a href="#step-5">
+                                <a href="#step-6">
                                     <svg width="21" height="30" viewBox="0 0 21.25 30" xmlns="http://www.w3.org/2000/svg"><defs><clipPath><path fill="none" d="M4 0h17.25v19.94H4z"></path></clipPath></defs><path class="flagpole" fill="#35394a" d="M0 0h2v30H0z"></path><g clip-path="url(#a)"><path fill="#b54545" d="M4 19.939L21.25 9.98 4 .02v19.919z"></path></g></svg>
                                 </a>
                             </li>
@@ -104,129 +143,127 @@
 
                         <div class="step-form__sw-container">
                             <div class="step-form__step-content" id="step-1">
-                                <div class="step-form__text">
-                                    <strong>Сколько людей вам необходимо для сюжета?</strong>
+                                <div class="step-form__text content">
+                                    <p><strong>Есть ли у вас идея для проекта?</strong></p>
                                     <p>
-                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt
-                                        ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                                        laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
-                                        voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis commodi consequuntur corporis
+                                        harum molestiae officia quas quasi rem sint temporibus. Dolore earum odit quidem reprehenderit vel.
+                                        Accusantium commodi quos repellendus?
                                     </p>
                                 </div>
                                 <ul class="step-form__field-list step-field-list">
                                     <li class="step-field-list__item">
-                                        <input class="step-field-list__field visually-hidden" id="people-up-to-5" type="radio" name="number-of-people" value="people-up-to-5">
-                                        <label class="step-field-list__label button button--stroke" for="people-up-to-5">До 5</label>
+                                        <input class="step-field-list__field visually-hidden" id="question-1-yes" type="radio" name="question-1" value="yes">
+                                        <label class="step-field-list__label button button--stroke" for="question-1-yes">Да</label>
                                     </li>
                                     <li class="step-field-list__item">
-                                        <input class="step-field-list__field visually-hidden" id="more-than-5-people" type="radio" name="number-of-people" value="more-than-5-people">
-                                        <label class="step-field-list__label button button--stroke" for="more-than-5-people">Больше 5</label>
-                                    </li>
-                                    <li class="step-field-list__item">
-                                        <input class="step-field-list__field visually-hidden" id="unknown-people" type="radio" name="number-of-people" value="unknown-people">
-                                        <label class="step-field-list__label button button--stroke" for="unknown-people">Не знаю</label>
+                                        <input class="step-field-list__field visually-hidden" id="question-1-no" type="radio" name="question-1" value="no">
+                                        <label class="step-field-list__label button button--stroke" for="question-1-no">Нет</label>
                                     </li>
                                 </ul><!-- / .step-field-list -->
                             </div><!-- / .step-form -->
 
                             <div class="step-form__step-content" id="step-2">
-                                <div class="step-form__text">
-                                    <strong>Какая необходимая тематика сюжета?</strong>
+                                <div class="step-form__text content">
+                                    <p><strong>Сформулированы ли главные вопросы, на которые будет отвечать ваш проект? </strong></p>
                                     <p>
-                                        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-                                        Excepteur sint occaecat cupidatat non Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-                                        eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-                                        exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis commodi consequuntur corporis
+                                        harum molestiae officia quas quasi rem sint temporibus.
                                     </p>
                                 </div>
                                 <ul class="step-form__field-list step-field-list">
                                     <li class="step-field-list__item">
-                                        <input class="step-field-list__field visually-hidden" id="subjects-1" type="radio" name="subjects" value="subjects-1">
-                                        <label class="step-field-list__label button button--stroke" for="subjects-1">Тематика 1</label>
+                                        <input class="step-field-list__field visually-hidden" id="question-2-yes" type="radio" name="question-2" value="yes">
+                                        <label class="step-field-list__label button button--stroke" for="question-2-yes">Да</label>
                                     </li>
                                     <li class="step-field-list__item">
-                                        <input class="step-field-list__field visually-hidden" id="subjects-2" type="radio" name="subjects" value="subjects-2">
-                                        <label class="step-field-list__label button button--stroke" for="subjects-2">Тематика 2</label>
-                                    </li>
-                                    <li class="step-field-list__item">
-                                        <input class="step-field-list__field visually-hidden" id="subjects-3" type="radio" name="subjects" value="subjects-3">
-                                        <label class="step-field-list__label button button--stroke" for="subjects-3">Тематика 3</label>
+                                        <input class="step-field-list__field visually-hidden" id="question-2-no" type="radio" name="question-2" value="no">
+                                        <label class="step-field-list__label button button--stroke" for="question-2-no">Нет</label>
                                     </li>
                                 </ul><!-- / .step-field-list -->
                             </div>
 
                             <div class="step-form__step-content" id="step-3">
-                                <div class="step-form__text">
-                                    <strong>Какая предполагается платформа?</strong>
-                                    <p>
-                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt
-                                        ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                                        laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
-                                        voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                                    </p>
+                                <div class="step-form__text content">
+                                    <p><strong>Кто-то уже писал аналогичные статьи в вашей стране на эту тему?</strong></p>
                                 </div>
                                 <ul class="step-form__field-list step-field-list">
                                     <li class="step-field-list__item">
-                                        <input class="step-field-list__field visually-hidden" id="platform-1" type="radio" name="platform" value="platform-1">
-                                        <label class="step-field-list__label button button--stroke" for="platform-1">Платформа 1</label>
+                                        <input class="step-field-list__field visually-hidden" id="question-3-yes" type="radio" name="question-3" value="yes">
+                                        <label class="step-field-list__label button button--stroke" for="question-3-yes">Да</label>
                                     </li>
                                     <li class="step-field-list__item">
-                                        <input class="step-field-list__field visually-hidden" id="platform-2" type="radio" name="platform" value="platform-2">
-                                        <label class="step-field-list__label button button--stroke" for="platform-2">Платформа 2</label>
-                                    </li>
-                                    <li class="step-field-list__item">
-                                        <input class="step-field-list__field visually-hidden" id="platform-3" type="radio" name="platform" value="platform-3">
-                                        <label class="step-field-list__label button button--stroke" for="platform-3">Платформа 3</label>
+                                        <input class="step-field-list__field visually-hidden" id="question-3-no" type="radio" name="question-3" value="no">
+                                        <label class="step-field-list__label button button--stroke" for="question-3-no">Нет</label>
                                     </li>
                                 </ul><!-- / .step-field-list -->
                             </div>
 
                             <div class="step-form__step-content" id="step-4">
-                                <div class="step-form__text">
-                                    <strong>Какая предполагается сфера деятельности?</strong>
-                                    <p>
-                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt
-                                        ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                                        laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
-                                        voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                                    </p>
+                                <div class="step-form__text content">
+                                    <p><strong>Можно ли масштабировать вашу статью и тематику на другие страны бывшего СССР?</strong></p>
                                 </div>
                                 <ul class="step-form__field-list step-field-list">
                                     <li class="step-field-list__item">
-                                        <input class="step-field-list__field visually-hidden" id="scope-1" type="radio" name="scope" value="scope-1">
-                                        <label class="step-field-list__label button button--stroke" for="scope-1">Сфера 1</label>
+                                        <input class="step-field-list__field visually-hidden" id="question-4-yes" type="radio" name="question-4" value="yes">
+                                        <label class="step-field-list__label button button--stroke" for="question-4-yes">Да</label>
                                     </li>
                                     <li class="step-field-list__item">
-                                        <input class="step-field-list__field visually-hidden" id="scope-2" type="radio" name="scope" value="scope-2">
-                                        <label class="step-field-list__label button button--stroke" for="scope-2">Сфера 2</label>
-                                    </li>
-                                    <li class="step-field-list__item">
-                                        <input class="step-field-list__field visually-hidden" id="scope-3" type="radio" name="scope" value="scope-3">
-                                        <label class="step-field-list__label button button--stroke" for="scope-3">Сфера 3</label>
+                                        <input class="step-field-list__field visually-hidden" id="question-4-no" type="radio" name="question-4" value="no">
+                                        <label class="step-field-list__label button button--stroke" for="question-4-no">Нет</label>
                                     </li>
                                 </ul><!-- / .step-field-list -->
                             </div>
 
                             <div class="step-form__step-content" id="step-5">
-                                <div class="step-form__text">
-                                    <strong>Результаты</strong>
+                                <div class="step-form__text content">
                                     <p>
-                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt
-                                        ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                                        laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
-                                        voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                                    </p>
-                                    <p>
-                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt
-                                        ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                                        laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
-                                        voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                                        <strong>
+                                            Вы уверены, что ваша идея для статьи реализуема с практической точки зрения: вы сможете найти и взять интервью
+                                            у ее героев, взять комментарии у официальных лиц, собрать и отобразить мнения каждой стороны?
+                                        </strong>
                                     </p>
                                 </div>
+                                <ul class="step-form__field-list step-field-list">
+                                    <li class="step-field-list__item">
+                                        <input class="step-field-list__field visually-hidden" id="question-5-yes" type="radio" name="question-5" value="yes">
+                                        <label class="step-field-list__label button button--stroke" for="question-5-yes">Да</label>
+                                    </li>
+                                    <li class="step-field-list__item">
+                                        <input class="step-field-list__field visually-hidden" id="question-5-no" type="radio" name="question-5" value="no">
+                                        <label class="step-field-list__label button button--stroke" for="question-5-no">Нет</label>
+                                    </li>
+                                </ul><!-- / .step-field-list -->
+                            </div>
+
+                            <div class="step-form__step-content" id="step-6">
+                                <div class="step-form__text content test-result test-result--1">
+                                    <p><strong>Результаты</strong></p>
+                                    <p>
+                                        Вы молодец и тщательно все продумали. Скорее всего, вы контролируете весь процесс.
+                                        Чтобы избежать неприятных сюрпризов, советуем почитать наши <a href="#">подсказки</a>
+                                        и примеры удачно реализованных <a href="#">проектов</a>.
+                                    </p>
+                                </div><!-- / .test-result -->
+                                <div class="step-form__text content test-result test-result--2">
+                                    <p><strong>Результаты</strong></p>
+                                    <p>Вы готовы на "четверку".</p>
+                                </div><!-- / .test-result -->
+                                <div class="step-form__text content test-result test-result--3">
+                                    <p><strong>Результаты</strong></p>
+                                    <p>Вы на полпути к успешному проекту, но впереди ещё много работы.</p>
+                                </div><!-- / .test-result -->
+                                <div class="step-form__text content test-result test-result--4">
+                                    <p><strong>Результаты</strong></p>
+                                    <p>Впереди ещё много работы.</p>
+                                </div><!-- / .test-result -->
+                                <div class="step-form__text content test-result test-result--5">
+                                    <p><strong>Результаты</strong></p>
+                                    <p>Похоже, вы пока не знаете, с чего начать и как реализовать свою задумку.</p>
+                                </div><!-- / .test-result -->
                             </div>
                         </div>
                     </div>
-
                 </form><!-- / .step-form -->
             </div>
         </section><!-- / .crush-test -->

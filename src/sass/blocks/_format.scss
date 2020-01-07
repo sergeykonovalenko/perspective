@@ -25,3 +25,29 @@
         margin-right: 0;
     }
 }
+
+@media screen and (max-width: 992px) {
+    .format__features {
+        margin-right: 30px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .format__features-box {
+        display: block;
+    }
+
+    .format__features {
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 35px;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    .features__title {
+        text-align: center;
+    }
+}

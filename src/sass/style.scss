@@ -29,13 +29,16 @@ Version: 1.0
    ========================================================================== */
 @import "blocks/main-header";
 @import "blocks/main-nav";
+@import "blocks/show-main-nav";
 @import "blocks/only-on-internal-pages";
-@import "blocks/search";
+@import "blocks/search-form";
+@import "blocks/first-screen";
 @import "blocks/offer-home";
 @import "blocks/crush-test-section";
 @import "blocks/implemented-cases";
 @import "blocks/filter-row";
 @import "blocks/filter-field-box";
+@import "blocks/loader";
 @import "blocks/card-list";
 @import "blocks/card-item";
 @import "blocks/terms-list";
@@ -52,9 +55,13 @@ Version: 1.0
 @import "blocks/project-entry";
 @import "blocks/bg-img";
 @import "blocks/content";
+@import "blocks/alignright";
+@import "blocks/alignleft";
+@import "blocks/aligncenter";
 @import "blocks/design-list";
 @import "blocks/clearfix";
 @import "blocks/about-project";
+@import "blocks/smartslider3";
 @import "blocks/video-block";
 @import "blocks/authors";
 @import "blocks/authors-tabs";
@@ -70,6 +77,8 @@ Version: 1.0
 @import "blocks/task-list";
 @import "blocks/insiders";
 @import "blocks/insider";
+@import "blocks/budget";
+@import "blocks/quotes";
 @import "blocks/similar-projects";
 
 /* ==========================================================================
@@ -96,8 +105,24 @@ Version: 1.0
 @import "blocks/crush-test";
 @import "blocks/step-form";
 @import "blocks/step-field-list";
+@import "blocks/test-result";
+
+/* ==========================================================================
+   PRIVACY POLICY
+   ========================================================================== */
+@import "blocks/privacy-policy-section";
+
+/* ==========================================================================
+   SEARCH PAGE
+   ========================================================================== */
+@import "blocks/search-section";
 
 /* ==========================================================================
    ERROR 404
    ========================================================================== */
 @import "blocks/error-404";
+
+/* ==========================================================================
+   THE MAIN TEMPLATE FILE
+   ========================================================================== */
+@import "blocks/site-content";

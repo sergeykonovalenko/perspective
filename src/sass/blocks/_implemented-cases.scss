@@ -2,11 +2,12 @@
     padding-top: 65px;
     padding-bottom: 80px;
     background-color: #f5f5f5;
+    overflow: hidden;
 }
 
 .implemented-cases__title {
     margin-top: 0;
-    margin-bottom: 28px;
+    margin-bottom: 8px;
 }
 
 .implemented-cases__filter {
@@ -20,4 +21,17 @@
 .implemented-cases__button-box {
     margin: 0;
     text-align: center;
+}
+
+@media screen and (max-width: 992px) {
+    .implemented-cases__filter {
+        display: flex;
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .implemented-cases {
+        padding: 50px 0;
+    }
 }

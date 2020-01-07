@@ -53,3 +53,18 @@
         }
     }
 }
+
+@media screen and (max-width: 992px) {
+    .task-list__item {
+        display: block;
+    }
+
+    .task-list__text--left {
+        width: 100%;
+        margin-bottom: 15px;
+    }
+
+    .task-list__text--right {
+        width: 100%;
+    }
+}

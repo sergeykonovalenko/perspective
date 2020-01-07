@@ -1,6 +1,10 @@
 .crush-test-section {
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
     //padding: 55px 0;
-    padding: 50px 0;
+    padding-top: 20px;
+    padding-bottom: 50px;
     color: #fff;
     background: #22273b linear-gradient(45deg, rgba(25,28,43,1) 0%, rgba(62,65,86,1) 100%);
 }
@@ -12,8 +16,13 @@
 
 .crush-test-section__img {
     flex-shrink: 0;
-    width: 363px;
-    margin: 0 75px 0 -47px;
+    //width: 363px;
+    //margin: 0 75px 0 -47px;
+    margin-right: 50px;
+
+    &--mobile {
+        display: none;
+    }
 }
 
 .crush-test-section__text {
@@ -22,26 +31,93 @@
 }
 
 .crush-test-section__title {
-    margin-bottom: 24px;
+    margin-top: 0;
+    //margin-bottom: 24px;
+    margin-bottom: 10px;
     padding-left: 65px;
+    //font-size: 35px;
     text-align: left;
 }
 
-.crush-test-section__text p:not(.heading-2) {
-    line-height: 1.9375;
-    margin: 16px 0;
+.crush-test-section__description {
+    margin-bottom: 25px;
 }
-
-.crush-test-section__text *:first-child {
-    margin-top: 0;
-}
-
-.crush-test-section__text *:last-child {
-    margin-bottom: 0;
-}
+//.crush-test-section__text p:not(.heading-2) {
+//    line-height: 1.9375;
+//    margin: 16px 0;
+//}
+//
+//.crush-test-section__text *:first-child {
+//    margin-top: 0;
+//}
+//
+//.crush-test-section__text *:last-child {
+//    margin-bottom: 0;
+//}
 
 .crush-test-section__button {
     display: block;
     width: 180px;
-    margin-top: 30px;
+}
+
+@media screen and (max-width: 1200px) {
+    .crush-test-section {
+        padding-bottom: 30px;
+    }
+
+    .crush-test-section__text {
+        line-height: 1.25;
+    }
+
+    .crush-test-section__title {
+        font-size: 33px;
+    }
+
+    .crush-test-section__img {
+        width: 250px;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .crush-test-section__title {
+        font-size: 30px;
+    }
+
+    .crush-test-section__img {
+        width: 230px;
+        margin-right: 30px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .crush-test-section {
+        padding: 50px 0;
+    }
+
+    .crush-test-section .container {
+        display: block;
+    }
+
+    .crush-test-section__title {
+        margin-bottom: 25px;
+        padding-left: 0;
+        text-align: center;
+    }
+
+    .crush-test-section__img {
+
+        &--mobile {
+            display: block;
+            margin: 0 auto 20px;
+        }
+
+        &--desktop {
+            display: none;
+        }
+    }
+
+    .crush-test-section__button {
+        margin-right: auto;
+        margin-left: auto;
+    }
 }

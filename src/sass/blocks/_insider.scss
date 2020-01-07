@@ -1,20 +1,22 @@
 .insider {
-    display: flex;
-    align-items: flex-start;
-    padding: 34px 55px 55px 0;
+    position: relative;
+    padding: 34px 55px 55px 290px;
+    font-weight: 400;
     background-color: #fff;
 }
 
 .insider__number {
-    position: relative;
-    flex-shrink: 0;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    display: block;
     width: 260px;
-    margin-right: 30px;
     font-weight: 600;
     font-size: 180px;
     line-height: .8;
     text-align: center;
     color: #dbdbdb;
+    transform: translate(0, -50%);
 
     &::after {
         content: "";
@@ -29,16 +31,58 @@
     }
 }
 
-.insider__text {
-    flex-grow: 1;
-    font-weight: 400;
+.insider .insider__number + * {
+    margin-top: 0;
 }
 
-.insider__text strong {
+.insider strong {
     display: block;
     font-weight: 500;
     font-size: 22px;
     line-height: 1.5;
     text-align: left;
     color: $color-main--dark;
+}
+
+@media screen and (max-width: 1200px) {
+    .insider {
+        padding-left: 210px;
+    }
+
+    .insider__number {
+        width: 180px;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .insider {
+        padding-right: 30px;
+        padding-left: 30px;
+    }
+
+    .insider__number {
+        position: relative;
+        float: left;
+        width: 135px;
+        font-size: 130px;
+        transform: none;
+
+        &::after {
+            width: 50px;
+            height: 50px;
+        }
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .insider {
+        padding-right: 15px;
+        padding-left: 15px;
+    }
+
+    .insider__number {
+        float: none;
+        width: 100%;
+        margin-bottom: 25px;
+    }
 }

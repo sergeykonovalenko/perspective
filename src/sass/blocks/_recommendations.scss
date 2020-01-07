@@ -35,3 +35,9 @@
 .recommendations__button {
 
 }
+
+@media screen and (max-width: 768px) {
+    .recommendations {
+        padding: 50px 0;
+    }
+}

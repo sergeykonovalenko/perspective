@@ -46,3 +46,9 @@
 
     }
 }
+
+@media screen and (max-width: 1200px) {
+    .posts__filter-show-button {
+        display: none;
+    }
+}

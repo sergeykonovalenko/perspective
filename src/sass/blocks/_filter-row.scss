@@ -8,14 +8,13 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    margin-right: -35px;
 }
 
 .filter-row__item {
+    flex-grow: 1;
+    margin-top: 20px;
     margin-right: 35px;
-
-    &:last-child {
-        margin-right: 0;
-    }
 }
 
 .filter-row__label {
@@ -28,6 +27,16 @@
 }
 
 .filter-row__field-box {
-    width: 250px;
+    min-width: 250px;
     margin: 0;
+}
+
+@media screen and (max-width: 992px) {
+    .filter-row__list {
+        width: 570px;
+    }
+
+    .filter-row__label {
+        margin-bottom: 10px;
+    }
 }

@@ -40,3 +40,9 @@
 .nav-tabs-steps__item.ui-tabs-active .flagpole {
     fill: #fff;
 }
+
+@media screen and (max-width: 1200px) {
+    .nav-tabs-steps {
+        width: auto;
+    }
+}

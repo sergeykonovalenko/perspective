@@ -1,7 +1,12 @@
 .offer-home {
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
     //padding-top: 170px;
-    padding-top: 120px;
+    //padding-top: 120px;
+    padding-top: 90px;
     //padding-bottom: 85px;
+    //padding-bottom: 50px;
     padding-bottom: 50px;
     overflow-x: hidden;
 }
@@ -19,11 +24,11 @@
 .offer-home__title {
     margin-top: 0;
     //margin-bottom: 53px;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
     //padding-top: 17px;
     font-weight: 700;
     //font-size: 48px;
-    font-size: 40px;
+    font-size: 38px;
     line-height: 1.3333em;
     text-transform: uppercase;
     color: $color-secondary;
@@ -33,7 +38,8 @@
     position: relative;
     margin-top: 0;
     //margin-bottom: 66px;
-    margin-bottom: 50px;
+    //margin-bottom: 50px;
+    margin-bottom: 30px;
     padding-left: 100px;
     font-size: 18px;
     //line-height: 1.7222em;
@@ -50,6 +56,10 @@
     }
 }
 
+.offer-home__button-box {
+    margin: 0;
+}
+
 .offer-home__button {
 
 }
@@ -61,5 +71,97 @@
 .offer-home__img {
     flex-shrink: 0;
     //margin: 0 -130px 0 0;
-    width: 400px;
+    //width: 400px;
+
+    &--mobile {
+        display: none;
+        margin: 0 auto 20px;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .offer-home {
+        padding-top: 70px;
+        padding-bottom: 30px;
+    }
+
+    .offer-home__title {
+        font-size: 33px;
+        line-height: 1.25;
+    }
+
+    .offer-home__description {
+        margin-bottom: 20px;
+        line-height: 1.25;
+    }
+
+    .offer-home__img {
+        width: 250px;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .offer-home__title {
+        font-size: 30px;
+    }
+
+    .offer-home__text {
+        margin-right: 30px;
+    }
+
+    .offer-home__description br {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .offer-home {
+        padding-top: 80px;
+        padding-bottom: 50px;
+    }
+
+    .offer-home__text {
+        margin-right: 0;
+    }
+
+    .offer-home__title {
+        text-align: center;
+    }
+
+    .offer-home__img {
+
+        &--mobile {
+            display: block;
+        }
+
+        &--desktop {
+            display: none;
+        }
+    }
+
+    .offer-home__description {
+        padding-left: 80px;
+
+        &::before {
+            left: 0;
+        }
+    }
+
+    .offer-home__button-box {
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .offer-home__text {
+        width: 100%;
+    }
+
+    .offer-home__description {
+        padding-left: 45px;
+
+        &::before {
+            width: 25px;
+        }
+    }
 }

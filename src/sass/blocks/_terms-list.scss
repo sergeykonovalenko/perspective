@@ -4,6 +4,11 @@
 
     &--row {
         display: flex;
+        flex-wrap: wrap;
+    }
+
+    &--article {
+        justify-content: flex-end;
     }
 }
 
@@ -11,16 +16,6 @@
     position: relative;
     margin-bottom: 12px;
     padding-left: 30px;
-
-    .terms-list--row & {
-        margin-right: 80px;
-        margin-bottom: 0;
-        padding-left: 40px;
-
-        &:last-child {
-            margin-right: 0;
-        }
-    }
 
     &:last-child {
         margin-bottom: 0;
@@ -37,11 +32,33 @@
         background-position: center center;
         background-size: contain;
         transform: translate(0, -50%);
+    }
 
-        .terms-list--row & {
-            width: 17px;
-            height: 17px;
+    .terms-list--row & {
+        margin-right: 80px;
+        margin-bottom: 0;
+
+        &:last-child {
+            margin-right: 0;
         }
+    }
+
+    .terms-list--article & {
+        margin-right: 35px;
+        margin-bottom: 5px;
+        padding-left: 23px;
+
+        &:last-child {
+            margin-right: 35px;
+        }
+    }
+
+    .terms-list--offer-project & {
+        margin-bottom: 10px;
+    }
+
+    .terms-list--article & {
+        font-size: 13px;
     }
 
     &--author::before {
@@ -62,9 +79,21 @@
         .terms-list--white & {
             background-image: url("img/bg/calendar--white.svg");
         }
+
+        .terms-list--article & {
+            background-size: 12px;
+        }
     }
 
     &--year::before {
         background-image: url("img/bg/calendar.svg");
+    }
+
+    &--reading-time::before {
+        background-image: url("img/bg/clock.svg");
+    }
+
+    &--views::before {
+        background-image: url("img/bg/eye.svg");
     }
 }

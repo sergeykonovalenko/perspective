@@ -8,12 +8,8 @@
 
 .step-field-list .step-field-list__item {
     margin-right: 20px;
-    margin-bottom: 0;
+    margin-bottom: 15px;
     padding-left: 0;
-
-    &:last-child {
-        margin-right: 0;
-    }
 
     &::before {
         display: none;
@@ -25,9 +21,11 @@
 }
 
 .step-field-list__label {
+    min-width: 150px;
 
     .step-field-list__field:checked ~ &,
     &:focus {
+        font-weight: 700;
         color: #fff;
         background-color: $color-secondary;
     }
@@ -50,4 +48,20 @@
     left: 0;
     z-index: 1;
     padding-top: 3px;
+}
+
+@media screen and (max-width: 576px) {
+    .step-field-list .step-field-list__item {
+        flex-grow: 1;
+    }
+    
+    .step-field-list__label {
+        display: block;
+    }
+}
+
+@media screen and (max-width: 390px) {
+    .step-field-list .step-field-list__item {
+        margin-right: 15px;
+    }
 }

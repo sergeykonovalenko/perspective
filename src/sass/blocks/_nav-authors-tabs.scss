@@ -3,12 +3,15 @@
     flex-wrap: wrap;
     padding: 0;
     list-style: none;
+    border-top: 1px solid #bfbfbf;
+    border-left: 1px solid #bfbfbf;
 }
 
 .nav-authors-tabs__item {
     display: flex;
-    width: 190px;
-    border-width: 1px 1px 1px 0;
+    flex-grow: 1;
+    width: 189px;
+    border-width: 0 1px 1px 0;
     border-style: solid;
     border-color: #bfbfbf;
     background-color: #fff;
@@ -16,17 +19,10 @@
     &.ui-tabs-active {
         background-color: $color-main;
     }
-
-    &:nth-child(6n + 1) {
-        border-width: 1px;
-    }
-
-    &:nth-child(n + 7) {
-        margin-top: -1px;
-    }
 }
 
 .nav-authors-tabs__link {
+    width: 100%;
     padding: 40px 10px 30px;
     line-height: 1.5;
     text-align: center;
@@ -69,3 +65,15 @@
     margin-bottom: 0;
 }
 
+@media screen and (max-width: 1200px) {
+    .nav-authors-tabs {
+        flex-wrap: wrap;
+    }
+}
+
+@media screen and (max-width: 408px) {
+    .nav-authors-tabs__link {
+        padding-right: 15px;
+        padding-left: 15px;
+    }
+}

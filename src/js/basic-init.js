@@ -1,9 +1,11 @@
 $(document).ready(function () {
     'use strict';
 
+    const element = document.documentElement;
+
     // is mobile
     const is_mobile = isMobile();
-    if (is_mobile) document.documentElement.classList.add('is-mobile');
+    if (is_mobile) element.classList.add('is-mobile');
 
     // sticky menu
     let mainHeader = document.querySelector('.main-header');
@@ -32,18 +34,37 @@ $(document).ready(function () {
         });
     }
 
+    // show/hide mobile menu
+    let hamburger = document.querySelector('.main-header__hamburger');
+    hamburger.addEventListener('click', function () {
+        if ( element.classList.contains('show-main-nav') ) {
+            element.classList.remove('show-main-nav');
+        } else {
+            element.classList.add('show-main-nav');
+        }
+    });
+
+    $('.main-header__hamburger').on('click', function () {
+        $('body:not(.show-internal-nav)').toggleClass('show-main-nav');
+        $('body').removeClass('show-internal-nav');
+    });
+
     // init tabs
     $('.authors-tabs').tabs();
     $('.tabs-steps').tabs();
 
     // show / hide filter
-    let element = document.documentElement;
     let filterShowButton = document.querySelector('.posts__filter-show-button');
+    let filterShowButtonMobile = document.querySelector('.actions-posts__filter-show-button');
     let filterCloseButton = document.querySelector('.filter__close-button');
     let drawerBackdrop = document.querySelector('.drawer-backdrop');
 
-    if (filterShowButton) {
+    if (filterShowButton || filterShowButtonMobile) {
         filterShowButton.addEventListener('click', function () {
+            element.classList.add('show-filter');
+        });
+
+        filterShowButtonMobile.addEventListener('click', function () {
             element.classList.add('show-filter');
         });
 
@@ -65,16 +86,24 @@ $(document).ready(function () {
         // errorLabelContainer: $('.error-holder'),
         // errorPlacement: function errorPlacement(error, element) { element.before(error); },
         rules: {
-            'number-of-people': 'required',
-            'subjects': 'required',
-            'platform': 'required',
-            'scope': 'required'
+            'question-1': 'required',
+            'question-2': 'required',
+            'question-3': 'required',
+            'question-4': 'required',
+            'question-5': 'required',
+            'question-6': 'required',
+            'question-7': 'required',
+            'question-8': 'required',
         },
         messages: {
-            'number-of-people': '',
-            'subjects': '',
-            'platform': '',
-            'scope': '',
+            'question-1': '',
+            'question-2': '',
+            'question-3': '',
+            'question-4': '',
+            'question-5': '',
+            'question-6': '',
+            'question-7': '',
+            'question-8': '',
         }
     });
 
@@ -85,22 +114,47 @@ $(document).ready(function () {
             next: 'Далее',
             previous: 'Назад'
         },
-        // toolbarExtraButtons: [
-        //     $('<button></button>').text('Finish')
-        //         .addClass('btn btn-info')
-        //         .on('click', function(){
-        //             alert('Finsih button click');
-        //         }),
-        //     $('<button></button>').text('Cancel')
-        //         .addClass('btn btn-danger')
-        //         .on('click', function(){
-        //             alert('Cancel button click');
-        //         })
-        // ]
     });
 
-    $('#smartwizard').on('leaveStep', function (e, anchorObject, stepNumber, stepDirection) {
+    // Initialize the showStep event
+    $('#smartwizard').on('showStep', function(e, anchorObject, stepNumber, stepDirection) {
+        let totalSteps = anchorObject.prevObject.length;
 
+        // events for the last step
+        if ( (stepNumber + 1) === totalSteps ) {
+            let data = $('.step-form').serializeArray();
+            let totalPoints = 0;
+
+            $.each(data,function() {
+                totalPoints += (this.value === 'yes') ? 3.4 : 0.6;
+            });
+
+            if (totalPoints >= 17) {
+                showResults(1);
+            } else if (totalPoints >=12 && totalPoints < 17) {
+                showResults(2);
+            } else if (totalPoints >=9 && totalPoints < 12) {
+                showResults(3);
+            } else if (totalPoints >=4 && totalPoints < 9) {
+                showResults(4);
+            } else {
+                showResults(5);
+            }
+
+            function showResults(index) {
+                let resultModifier = `.test-result--${index}`;
+                $('.test-result').hide();
+                $(resultModifier).show();
+            }
+
+            $('.sw-btn-next').text('Финиш');
+        } else {
+            $('.sw-btn-next').text('Далее');
+        }
+    });
+
+    // Initialize the leaveStep event
+    $('#smartwizard').on('leaveStep', function (e, anchorObject, stepNumber, stepDirection) {
         stepForm.validate().settings.ignore = ":disabled,:hidden";
         return stepForm.valid();
     });
@@ -130,6 +184,46 @@ $(document).ready(function () {
     } );
     /////////////////////////////////////////////////////////////////////////
 
+    /////////////////////////////////////////////////////////////////////////
+    // Post Filter. jQuery script to Send a Request and to Receive Result Data
+    $('.js-filter-form').submit(function(){
+        let filter = $(this);
+        $.ajax({
+            url: filter.attr('action'),
+            data: filter.serialize(),
+            type: filter.attr('method'),
+            beforeSend:function(xhr){
+                filter.find('button').text('Загружаю...');
+            },
+            success:function(data){
+                //console.log(data);
+                element.classList.remove('show-filter');
+                filter.find('button').text('Показать');
+                $('.js-card-list').html(data);
+            }
+        });
+        return false;
+    });
+
+    // Post Filter Index. jQuery script to Send a Request and to Receive Result Data
+    $('.filter-row .filter-field-box__field').on('change', function () {
+        let filter = $('.js-implemented-cases-form');
+        $.ajax({
+            url: filter.attr('action'),
+            data: filter.serialize(),
+            type: filter.attr('method'),
+            beforeSend:function(xhr){
+                $('.loader').addClass('loader--show');
+            },
+            success:function(data){
+                //console.log(data);
+                $('.js-card-list').html(data);
+                $('.loader').removeClass('loader--show');
+            }
+        });
+        return false;
+    });
+    /////////////////////////////////////////////////////////////////////////
 
     // masked input
     $('input[type="tel"]').mask('+7 (999) 999-99-99 ');
