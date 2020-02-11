@@ -5,6 +5,7 @@
     &--row {
         display: flex;
         flex-wrap: wrap;
+        margin-right: -80px;
     }
 
     &--article {
@@ -38,9 +39,9 @@
         margin-right: 80px;
         margin-bottom: 0;
 
-        &:last-child {
-            margin-right: 0;
-        }
+        //&:last-child {
+        //    margin-right: 0;
+        //}
     }
 
     .terms-list--article & {
@@ -86,7 +87,12 @@
     }
 
     &--year::before {
+        margin-top: -1px;
         background-image: url("img/bg/calendar.svg");
+
+        .terms-list--white & {
+            background-image: url("img/bg/calendar--white.svg");
+        }
     }
 
     &--reading-time::before {

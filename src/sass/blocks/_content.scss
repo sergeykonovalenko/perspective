@@ -79,7 +79,7 @@
     }
 }
 
-.content a:not(.modal-video) {
+.content a:not(.modal-video):not(.button) {
     color: $color-secondary;
     border-bottom: 1px solid $color-secondary;
     transition: all .15s ease-in;
@@ -98,33 +98,43 @@
 
 /* blockquote */
 .content blockquote {
-    position: relative;
     clear: both;
     margin: 16px 0;
-    padding: 35px 70px;
+    padding: 60px 30px;
+    font-weight: 700;
+    font-size: 18px;
     text-align: center;
-    background-color: #bce8ea;
-
-    &::before,
-    &::after {
-        position: absolute;
-        font-size: 100px;
-        line-height: 100px;
-        font-family: Times, sans-serif;
-        color: $color-secondary;
-    }
-
-    &::before {
-        content: '“';
-        top: 12px;
-        left: 10px;
-    }
-    &::after {
-        content: '”';
-        right: 10px;
-        bottom: 12px;
-    }
+    border: 5px solid $color-accent;
 }
+
+//.content blockquote {
+//    position: relative;
+//    clear: both;
+//    margin: 16px 0;
+//    padding: 35px 70px;
+//    text-align: center;
+//    background-color: #bce8ea;
+//
+//    &::before,
+//    &::after {
+//        position: absolute;
+//        font-size: 100px;
+//        line-height: 100px;
+//        font-family: Times, sans-serif;
+//        color: $color-secondary;
+//    }
+//
+//    &::before {
+//        content: '“';
+//        top: 12px;
+//        left: 10px;
+//    }
+//    &::after {
+//        content: '”';
+//        right: 10px;
+//        bottom: 12px;
+//    }
+//}
 
 .content blockquote cite {
     display: block;

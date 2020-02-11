@@ -50,13 +50,13 @@ select,
 textarea {
     display: block;
     width: 100%;
-    padding: 14px 25px;
+    padding: 19px 25px;
     font-size: 14px;
     font-family: inherit;
     color: $color-main;
     background-color: #fff;
     border: 1px solid $color-secondary;
-    border-radius: 25px;
+    border-radius: 30px;
     transition: all .15s ease-in;
 
     &:hover,
@@ -74,8 +74,14 @@ textarea {
 }
 
 input.error,
-textarea.error {
+input.wpcf7-not-valid,
+textarea.error,
+textarea.wpcf7-not-valid {
     border-color: $color-warning !important;
+
+    &:focus {
+        box-shadow: 0 0 10px rgba(251, 82, 88, .7);
+    }
 }
 
 ::placeholder {
@@ -145,7 +151,7 @@ h4,
     }
 }
 
-@media screen and (max-width: 576px) {
+@media screen and (max-width: 768px) {
     h1 {
         font-size: 35px;
     }

@@ -16,7 +16,7 @@
     <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
     <link rel="manifest" href="img/favicon/site.webmanifest">
     <link rel="mask-icon" href="img/favicon/safari-pinned-tab.svg" color="#5bbad5">
-    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileColor" content="#da532c">
     <meta name="theme-color" content="#ffffff">
     <!-- OG -->
     <meta property="og:type" content="website">
@@ -65,6 +65,7 @@
                             <ul class="main-nav__list">
                                 <li><a href="cases.html">Кейсы</a></li>
                                 <li><a href="articles.html">Полезное</a></li>
+                                <li><a href="useful.html">Чек-листы</a></li>
                             </ul>
                         </nav><!-- / .main-nav -->
                         <ul class="main-header__social-mobile social-links">
@@ -120,9 +121,10 @@
             <section class="offer-home">
                 <div class="container">
                     <div class="offer-home__text">
-                        <h1 class="offer-home__title">Условный заголовок для приветственной страницы</h1>
+                        <h1 class="visually-hidden">Условный заголовок для приветственной страницы</h1>
+                        <img class="offer-home__title" width="350" src="img/base/logo-item.svg" alt="">
                         <img class="offer-home__img offer-home__img--mobile" src="img/base/offer-home.svg" width="300" alt="">
-                        <p class="offer-home__description">Опыт тысяч людей, советы и наставление<br> мастеров своего дела в свободном доступе</p>
+                        <p class="offer-home__description">Место, где идеи стирают границы</p>
                         <p class="offer-home__button-box">
                             <a class="offer-home__button button button--fill-one" href="cases.html">Смотреть реализованные проекты</a>
                         </p>
@@ -138,11 +140,7 @@
                         <p class="crush-test-section__title heading-2">Краш тест</p>
                         <img class="crush-test-section__img crush-test-section__img--mobile" src="img/base/crush-test-section.svg" width="250" alt="">
                         <div class="crush-test-section__description content">
-                            <p>
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore
-                                et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-                                aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum.
-                            </p>
+                            <p>Есть идея для журналистского трансграничного проекта? Пройди тест и проверь, можно ли ее воплотить в жизнь!</p>
                         </div>
                         <a class="crush-test-section__button button button--fill-one button--with-arrow" href="crush-test.html">Пройти</a>
                     </div>
@@ -207,7 +205,7 @@
                         </li>
                     </ul>
                 </form><!-- / .filter-row -->
-                <ul class="implemented-cases__list card-list">
+                <ul class="implemented-cases__list card-list js-card-list">
                     <li class="card-list__item">
                         <a class="card-item" href="case.html">
                             <p class="card-item__img-box">

@@ -2,11 +2,7 @@
     display: flex;
     align-items: center;
     flex-grow: 1;
-    //padding-top: 170px;
-    //padding-top: 120px;
     padding-top: 90px;
-    //padding-bottom: 85px;
-    //padding-bottom: 50px;
     padding-bottom: 50px;
     overflow-x: hidden;
 }
@@ -31,6 +27,7 @@
     font-size: 38px;
     line-height: 1.3333em;
     text-transform: uppercase;
+    text-align: left;
     color: $color-secondary;
 }
 
@@ -125,6 +122,8 @@
     }
 
     .offer-home__title {
+        margin-right: auto;
+        margin-left: auto;
         text-align: center;
     }
 

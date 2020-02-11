@@ -16,7 +16,7 @@
     <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
     <link rel="manifest" href="img/favicon/site.webmanifest">
     <link rel="mask-icon" href="img/favicon/safari-pinned-tab.svg" color="#5bbad5">
-    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileColor" content="#da532c">
     <meta name="theme-color" content="#ffffff">
     <!-- OG -->
     <meta property="og:type" content="website">
@@ -66,6 +66,7 @@
                                 <li class="main-nav__item--to-home"><a href="index.html">Главная</a></li>
                                 <li><a href="cases.html">Кейсы</a></li>
                                 <li><a href="articles.html">Полезное</a></li>
+                                <li><a href="useful.html">Чек-листы</a></li>
                             </ul>
                         </nav><!-- / .main-nav -->
                         <ul class="main-header__social-mobile social-links">
@@ -143,97 +144,236 @@
 
                         <div class="step-form__sw-container">
                             <div class="step-form__step-content" id="step-1">
-                                <div class="step-form__text content">
-                                    <p><strong>Есть ли у вас идея для проекта?</strong></p>
-                                    <p>
-                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis commodi consequuntur corporis
-                                        harum molestiae officia quas quasi rem sint temporibus. Dolore earum odit quidem reprehenderit vel.
-                                        Accusantium commodi quos repellendus?
-                                    </p>
-                                </div>
-                                <ul class="step-form__field-list step-field-list">
-                                    <li class="step-field-list__item">
-                                        <input class="step-field-list__field visually-hidden" id="question-1-yes" type="radio" name="question-1" value="yes">
-                                        <label class="step-field-list__label button button--stroke" for="question-1-yes">Да</label>
+                                <ul class="step-form__questions step-questions">
+                                    <li class="step-questions__item">
+                                        <p class="step-questions__question">Есть ли у вас идея для проекта?</p>
+                                        <ul class="step-form__field-list step-field-list">
+                                            <li class="step-field-list__item">
+                                                <input class="step-field-list__field visually-hidden" id="question-1-yes" type="radio" name="question-1" value="yes">
+                                                <label class="step-field-list__label button button--stroke" for="question-1-yes">Да</label>
+                                            </li>
+                                            <li class="step-field-list__item">
+                                                <input class="step-field-list__field visually-hidden" id="question-1-no" type="radio" name="question-1" value="no">
+                                                <label class="step-field-list__label button button--stroke" for="question-1-no">Нет</label>
+                                            </li>
+                                        </ul><!-- / .step-field-list -->
                                     </li>
-                                    <li class="step-field-list__item">
-                                        <input class="step-field-list__field visually-hidden" id="question-1-no" type="radio" name="question-1" value="no">
-                                        <label class="step-field-list__label button button--stroke" for="question-1-no">Нет</label>
+                                    <li class="step-questions__item">
+                                        <p class="step-questions__question">Сформулированы ли главные вопросы, на которые будет отвечать ваш проект?</p>
+                                        <ul class="step-form__field-list step-field-list">
+                                            <li class="step-field-list__item">
+                                                <input class="step-field-list__field visually-hidden" id="question-2-yes" type="radio" name="question-2" value="yes">
+                                                <label class="step-field-list__label button button--stroke" for="question-2-yes">Да</label>
+                                            </li>
+                                            <li class="step-field-list__item">
+                                                <input class="step-field-list__field visually-hidden" id="question-2-no" type="radio" name="question-2" value="no">
+                                                <label class="step-field-list__label button button--stroke" for="question-2-no">Нет</label>
+                                            </li>
+                                        </ul><!-- / .step-field-list -->
                                     </li>
-                                </ul><!-- / .step-field-list -->
+                                    <li class="step-questions__item">
+                                        <p class="step-questions__question">Кто-то уже писал аналогичные статьи в вашей стране на эту тему?</p>
+                                        <ul class="step-form__field-list step-field-list">
+                                            <li class="step-field-list__item">
+                                                <input class="step-field-list__field visually-hidden" id="question-3-yes" type="radio" name="question-3" value="yes">
+                                                <label class="step-field-list__label button button--stroke" for="question-3-yes">Да</label>
+                                            </li>
+                                            <li class="step-field-list__item">
+                                                <input class="step-field-list__field visually-hidden" id="question-3-no" type="radio" name="question-3" value="no">
+                                                <label class="step-field-list__label button button--stroke" for="question-3-no">Нет</label>
+                                            </li>
+                                        </ul><!-- / .step-field-list -->
+                                    </li>
+                                    <li class="step-questions__item">
+                                        <p class="step-questions__question">Можно ли масштабировать вашу статью и тематику на другие страны бывшего СССР?</p>
+                                        <ul class="step-form__field-list step-field-list">
+                                            <li class="step-field-list__item">
+                                                <input class="step-field-list__field visually-hidden" id="question-4-yes" type="radio" name="question-4" value="yes">
+                                                <label class="step-field-list__label button button--stroke" for="question-4-yes">Да</label>
+                                            </li>
+                                            <li class="step-field-list__item">
+                                                <input class="step-field-list__field visually-hidden" id="question-4-no" type="radio" name="question-4" value="no">
+                                                <label class="step-field-list__label button button--stroke" for="question-4-no">Нет</label>
+                                            </li>
+                                        </ul><!-- / .step-field-list -->
+                                    </li>
+                                    <li class="step-questions__item">
+                                        <p class="step-questions__question">Вы уверены, что ваша идея для статьи реализуема с практической точки зрения: вы сможете найти и взять интервью у ее героев, взять комментарии у официальных лиц, собрать и отобразить мнения каждой стороны?</p>
+                                        <ul class="step-form__field-list step-field-list">
+                                            <li class="step-field-list__item">
+                                                <input class="step-field-list__field visually-hidden" id="question-5-yes" type="radio" name="question-5" value="yes">
+                                                <label class="step-field-list__label button button--stroke" for="question-5-yes">Да</label>
+                                            </li>
+                                            <li class="step-field-list__item">
+                                                <input class="step-field-list__field visually-hidden" id="question-5-no" type="radio" name="question-5" value="no">
+                                                <label class="step-field-list__label button button--stroke" for="question-5-no">Нет</label>
+                                            </li>
+                                        </ul><!-- / .step-field-list -->
+                                    </li>
+                                </ul>
                             </div><!-- / .step-form -->
 
                             <div class="step-form__step-content" id="step-2">
-                                <div class="step-form__text content">
-                                    <p><strong>Сформулированы ли главные вопросы, на которые будет отвечать ваш проект? </strong></p>
-                                    <p>
-                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis commodi consequuntur corporis
-                                        harum molestiae officia quas quasi rem sint temporibus.
-                                    </p>
-                                </div>
-                                <ul class="step-form__field-list step-field-list">
-                                    <li class="step-field-list__item">
-                                        <input class="step-field-list__field visually-hidden" id="question-2-yes" type="radio" name="question-2" value="yes">
-                                        <label class="step-field-list__label button button--stroke" for="question-2-yes">Да</label>
+                                <ul class="step-form__questions step-questions">
+                                    <li class="step-questions__item">
+                                        <p class="step-questions__question">Вы знаете, для кого ваш проект? Кто ваш читатель, зритель, слушатель?</p>
+                                        <ul class="step-form__field-list step-field-list">
+                                            <li class="step-field-list__item">
+                                                <input class="step-field-list__field visually-hidden" id="question-6-yes" type="radio" name="question-6" value="yes">
+                                                <label class="step-field-list__label button button--stroke" for="question-6-yes">Да</label>
+                                            </li>
+                                            <li class="step-field-list__item">
+                                                <input class="step-field-list__field visually-hidden" id="question-6-no" type="radio" name="question-6" value="no">
+                                                <label class="step-field-list__label button button--stroke" for="question-6-no">Нет</label>
+                                            </li>
+                                        </ul><!-- / .step-field-list -->
                                     </li>
-                                    <li class="step-field-list__item">
-                                        <input class="step-field-list__field visually-hidden" id="question-2-no" type="radio" name="question-2" value="no">
-                                        <label class="step-field-list__label button button--stroke" for="question-2-no">Нет</label>
+                                    <li class="step-questions__item">
+                                        <p class="step-questions__question">Вы знаете, какими каналами получения информации пользуется ваша аудитория?</p>
+                                        <ul class="step-form__field-list step-field-list">
+                                            <li class="step-field-list__item">
+                                                <input class="step-field-list__field visually-hidden" id="question-7-yes" type="radio" name="question-7" value="yes">
+                                                <label class="step-field-list__label button button--stroke" for="question-7-yes">Да</label>
+                                            </li>
+                                            <li class="step-field-list__item">
+                                                <input class="step-field-list__field visually-hidden" id="question-7-no" type="radio" name="question-7" value="no">
+                                                <label class="step-field-list__label button button--stroke" for="question-7-no">Нет</label>
+                                            </li>
+                                        </ul><!-- / .step-field-list -->
                                     </li>
-                                </ul><!-- / .step-field-list -->
+                                    <li class="step-questions__item">
+                                        <p class="step-questions__question">Вы готовы привести какие-либо аргументы, что ваш материал может быть интересен аудитории в других странах участников проекта?</p>
+                                        <ul class="step-form__field-list step-field-list">
+                                            <li class="step-field-list__item">
+                                                <input class="step-field-list__field visually-hidden" id="question-8-yes" type="radio" name="question-8" value="yes">
+                                                <label class="step-field-list__label button button--stroke" for="question-8-yes">Да</label>
+                                            </li>
+                                            <li class="step-field-list__item">
+                                                <input class="step-field-list__field visually-hidden" id="question-8-no" type="radio" name="question-8" value="no">
+                                                <label class="step-field-list__label button button--stroke" for="question-8-no">Нет</label>
+                                            </li>
+                                        </ul><!-- / .step-field-list -->
+                                    </li>
+                                </ul>
                             </div>
 
                             <div class="step-form__step-content" id="step-3">
-                                <div class="step-form__text content">
-                                    <p><strong>Кто-то уже писал аналогичные статьи в вашей стране на эту тему?</strong></p>
-                                </div>
-                                <ul class="step-form__field-list step-field-list">
-                                    <li class="step-field-list__item">
-                                        <input class="step-field-list__field visually-hidden" id="question-3-yes" type="radio" name="question-3" value="yes">
-                                        <label class="step-field-list__label button button--stroke" for="question-3-yes">Да</label>
+                                <ul class="step-form__questions step-questions">
+                                    <li class="step-questions__item">
+                                        <p class="step-questions__question">У вас есть четкое понимание где, каким СМИ ваш материал будет опубликован?</p>
+                                        <ul class="step-form__field-list step-field-list">
+                                            <li class="step-field-list__item">
+                                                <input class="step-field-list__field visually-hidden" id="question-9-yes" type="radio" name="question-9" value="yes">
+                                                <label class="step-field-list__label button button--stroke" for="question-9-yes">Да</label>
+                                            </li>
+                                            <li class="step-field-list__item">
+                                                <input class="step-field-list__field visually-hidden" id="question-9-no" type="radio" name="question-9" value="no">
+                                                <label class="step-field-list__label button button--stroke" for="question-9-no">Нет</label>
+                                            </li>
+                                        </ul><!-- / .step-field-list -->
                                     </li>
-                                    <li class="step-field-list__item">
-                                        <input class="step-field-list__field visually-hidden" id="question-3-no" type="radio" name="question-3" value="no">
-                                        <label class="step-field-list__label button button--stroke" for="question-3-no">Нет</label>
+                                    <li class="step-questions__item">
+                                        <p class="step-questions__question">Если да, у вас есть предварительная договоренность о публикации с этой редакцией?</p>
+                                        <ul class="step-form__field-list step-field-list">
+                                            <li class="step-field-list__item">
+                                                <input class="step-field-list__field visually-hidden" id="question-10-yes" type="radio" name="question-10" value="yes">
+                                                <label class="step-field-list__label button button--stroke" for="question-10-yes">Да</label>
+                                            </li>
+                                            <li class="step-field-list__item">
+                                                <input class="step-field-list__field visually-hidden" id="question-10-no" type="radio" name="question-10" value="no">
+                                                <label class="step-field-list__label button button--stroke" for="question-10-no">Нет</label>
+                                            </li>
+                                        </ul><!-- / .step-field-list -->
                                     </li>
-                                </ul><!-- / .step-field-list -->
+                                </ul>
                             </div>
 
                             <div class="step-form__step-content" id="step-4">
-                                <div class="step-form__text content">
-                                    <p><strong>Можно ли масштабировать вашу статью и тематику на другие страны бывшего СССР?</strong></p>
-                                </div>
-                                <ul class="step-form__field-list step-field-list">
-                                    <li class="step-field-list__item">
-                                        <input class="step-field-list__field visually-hidden" id="question-4-yes" type="radio" name="question-4" value="yes">
-                                        <label class="step-field-list__label button button--stroke" for="question-4-yes">Да</label>
+                                <ul class="step-form__questions step-questions">
+                                    <li class="step-questions__item">
+                                        <p class="step-questions__question">Вы продумали в каком формате будет проект? Это текст, подкаст, видео или комбинация нескольких форматов?</p>
+                                        <ul class="step-form__field-list step-field-list">
+                                            <li class="step-field-list__item">
+                                                <input class="step-field-list__field visually-hidden" id="question-11-yes" type="radio" name="question-11" value="yes">
+                                                <label class="step-field-list__label button button--stroke" for="question-11-yes">Да</label>
+                                            </li>
+                                            <li class="step-field-list__item">
+                                                <input class="step-field-list__field visually-hidden" id="question-11-no" type="radio" name="question-11" value="no">
+                                                <label class="step-field-list__label button button--stroke" for="question-11-no">Нет</label>
+                                            </li>
+                                        </ul><!-- / .step-field-list -->
                                     </li>
-                                    <li class="step-field-list__item">
-                                        <input class="step-field-list__field visually-hidden" id="question-4-no" type="radio" name="question-4" value="no">
-                                        <label class="step-field-list__label button button--stroke" for="question-4-no">Нет</label>
+                                    <li class="step-questions__item">
+                                        <p class="step-questions__question">Вы знаете, на какой платформе можно будет разместить ваш проект?</p>
+                                        <ul class="step-form__field-list step-field-list">
+                                            <li class="step-field-list__item">
+                                                <input class="step-field-list__field visually-hidden" id="question-12-yes" type="radio" name="question-12" value="yes">
+                                                <label class="step-field-list__label button button--stroke" for="question-12-yes">Да</label>
+                                            </li>
+                                            <li class="step-field-list__item">
+                                                <input class="step-field-list__field visually-hidden" id="question-12-no" type="radio" name="question-12" value="no">
+                                                <label class="step-field-list__label button button--stroke" for="question-12-no">Нет</label>
+                                            </li>
+                                        </ul><!-- / .step-field-list -->
                                     </li>
-                                </ul><!-- / .step-field-list -->
+                                    <li class="step-questions__item">
+                                        <p class="step-questions__question">Ваша аудитория воспринимает этот формат и эту платформу?</p>
+                                        <ul class="step-form__field-list step-field-list">
+                                            <li class="step-field-list__item">
+                                                <input class="step-field-list__field visually-hidden" id="question-13-yes" type="radio" name="question-13" value="yes">
+                                                <label class="step-field-list__label button button--stroke" for="question-13-yes">Да</label>
+                                            </li>
+                                            <li class="step-field-list__item">
+                                                <input class="step-field-list__field visually-hidden" id="question-13-no" type="radio" name="question-13" value="no">
+                                                <label class="step-field-list__label button button--stroke" for="question-13-no">Нет</label>
+                                            </li>
+                                        </ul><!-- / .step-field-list -->
+                                    </li>
+                                </ul>
                             </div>
 
                             <div class="step-form__step-content" id="step-5">
-                                <div class="step-form__text content">
-                                    <p>
-                                        <strong>
-                                            Вы уверены, что ваша идея для статьи реализуема с практической точки зрения: вы сможете найти и взять интервью
-                                            у ее героев, взять комментарии у официальных лиц, собрать и отобразить мнения каждой стороны?
-                                        </strong>
-                                    </p>
-                                </div>
-                                <ul class="step-form__field-list step-field-list">
-                                    <li class="step-field-list__item">
-                                        <input class="step-field-list__field visually-hidden" id="question-5-yes" type="radio" name="question-5" value="yes">
-                                        <label class="step-field-list__label button button--stroke" for="question-5-yes">Да</label>
+                                <ul class="step-form__questions step-questions">
+                                    <li class="step-questions__item">
+                                        <p class="step-questions__question">Вы знаете, сколько человек вам понадобится для реализации проекта и их функционал (дизайнер, фотограф, видео оператор и т.д.)?</p>
+                                        <ul class="step-form__field-list step-field-list">
+                                            <li class="step-field-list__item">
+                                                <input class="step-field-list__field visually-hidden" id="question-14-yes" type="radio" name="question-14" value="yes">
+                                                <label class="step-field-list__label button button--stroke" for="question-14-yes">Да</label>
+                                            </li>
+                                            <li class="step-field-list__item">
+                                                <input class="step-field-list__field visually-hidden" id="question-14-no" type="radio" name="question-14" value="no">
+                                                <label class="step-field-list__label button button--stroke" for="question-14-no">Нет</label>
+                                            </li>
+                                        </ul><!-- / .step-field-list -->
                                     </li>
-                                    <li class="step-field-list__item">
-                                        <input class="step-field-list__field visually-hidden" id="question-5-no" type="radio" name="question-5" value="no">
-                                        <label class="step-field-list__label button button--stroke" for="question-5-no">Нет</label>
+                                    <li class="step-questions__item">
+                                        <p class="step-questions__question">Вы нашли или знаете где найти этих людей?</p>
+                                        <ul class="step-form__field-list step-field-list">
+                                            <li class="step-field-list__item">
+                                                <input class="step-field-list__field visually-hidden" id="question-15-yes" type="radio" name="question-15" value="yes">
+                                                <label class="step-field-list__label button button--stroke" for="question-15-yes">Да</label>
+                                            </li>
+                                            <li class="step-field-list__item">
+                                                <input class="step-field-list__field visually-hidden" id="question-15-no" type="radio" name="question-15" value="no">
+                                                <label class="step-field-list__label button button--stroke" for="question-15-no">Нет</label>
+                                            </li>
+                                        </ul><!-- / .step-field-list -->
                                     </li>
-                                </ul><!-- / .step-field-list -->
+                                    <li class="step-questions__item">
+                                        <p class="step-questions__question">Вы подсчитали, сколько времени может занять реализация вашего проекта?</p>
+                                        <ul class="step-form__field-list step-field-list">
+                                            <li class="step-field-list__item">
+                                                <input class="step-field-list__field visually-hidden" id="question-16-yes" type="radio" name="question-16" value="yes">
+                                                <label class="step-field-list__label button button--stroke" for="question-16-yes">Да</label>
+                                            </li>
+                                            <li class="step-field-list__item">
+                                                <input class="step-field-list__field visually-hidden" id="question-16-no" type="radio" name="question-16" value="no">
+                                                <label class="step-field-list__label button button--stroke" for="question-16-no">Нет</label>
+                                            </li>
+                                        </ul><!-- / .step-field-list -->
+                                    </li>
+                                </ul>
                             </div>
 
                             <div class="step-form__step-content" id="step-6">
@@ -241,8 +381,8 @@
                                     <p><strong>Результаты</strong></p>
                                     <p>
                                         Вы молодец и тщательно все продумали. Скорее всего, вы контролируете весь процесс.
-                                        Чтобы избежать неприятных сюрпризов, советуем почитать наши <a href="#">подсказки</a>
-                                        и примеры удачно реализованных <a href="#">проектов</a>.
+                                        Чтобы избежать неприятных сюрпризов, советуем почитать наши <a href="http://news.one-pix.com/useful">подсказки</a>
+                                        и примеры удачно реализованных <a href="http://news.one-pix.com/cases">проектов</a>.
                                     </p>
                                 </div><!-- / .test-result -->
                                 <div class="step-form__text content test-result test-result--2">

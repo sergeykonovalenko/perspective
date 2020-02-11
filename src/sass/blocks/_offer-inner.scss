@@ -1,5 +1,6 @@
 .offer-inner {
     color: #fff;
+    margin-bottom: auto;
     padding-top: calc(90px + 30px);
     padding-bottom: 70px;
     background: #22273b linear-gradient(45deg, rgba(25,28,43,1) 0%, rgba(62,65,86,1) 100%);
@@ -7,6 +8,8 @@
 
     &--article {
         padding-bottom: 30px;
+        background-repeat: repeat, no-repeat;
+        background-size: auto, cover;
     }
 }
 

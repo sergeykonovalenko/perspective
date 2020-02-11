@@ -1,0 +1,14 @@
+@media screen and (max-width: 992px) {
+    .wp-block-image .aligncenter,
+    .wp-block-image .alignright,
+    .wp-block-image .alignleft {
+        display: block;
+        float: none;
+        margin-right: 0;
+        margin-left: 0;
+    }
+
+    .wp-block-image img {
+        width: 100%;
+    }
+}

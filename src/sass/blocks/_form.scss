@@ -1,0 +1,35 @@
+.form {
+
+}
+
+.form__list {
+    @include reset-list;
+
+    margin-bottom: 15px;
+}
+
+.form__item {
+    margin-bottom: 15px;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
+.form__field-box {
+    position: relative;
+    margin: 0;
+}
+
+.form__field {
+
+}
+
+.form__button {
+    width: 100%;
+
+    &:focus {
+        outline: none;
+    }
+}
+

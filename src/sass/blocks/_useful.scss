@@ -1,0 +1,12 @@
+.useful {
+    padding-top: 65px;
+    padding-bottom: 80px;
+}
+
+.useful__checklist {
+    margin-bottom: 65px;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+}

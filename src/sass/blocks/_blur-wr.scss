@@ -1,4 +1,8 @@
 .blur-wr {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-grow: 1;
     transition: all .15s ease-in;
 
     .show-filter & {

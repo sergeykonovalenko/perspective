@@ -55,6 +55,7 @@ Version: 1.0
 @import "blocks/project-entry";
 @import "blocks/bg-img";
 @import "blocks/content";
+@import "blocks/wp-block-image";
 @import "blocks/alignright";
 @import "blocks/alignleft";
 @import "blocks/aligncenter";
@@ -76,6 +77,7 @@ Version: 1.0
 @import "blocks/useful-experience";
 @import "blocks/task-list";
 @import "blocks/insiders";
+@import "blocks/insiders-list";
 @import "blocks/insider";
 @import "blocks/budget";
 @import "blocks/quotes";
@@ -104,8 +106,16 @@ Version: 1.0
    ========================================================================== */
 @import "blocks/crush-test";
 @import "blocks/step-form";
+@import "blocks/step-questions";
 @import "blocks/step-field-list";
 @import "blocks/test-result";
+
+/* ==========================================================================
+   USEFUL PAGE
+   ========================================================================== */
+@import "blocks/useful";
+@import "blocks/checklist";
+@import "blocks/checklist-form";
 
 /* ==========================================================================
    PRIVACY POLICY
@@ -116,6 +126,13 @@ Version: 1.0
    SEARCH PAGE
    ========================================================================== */
 @import "blocks/search-section";
+
+/* Modal common
+   ========================================================================== */
+@import "blocks/modal-common";
+@import "blocks/form";
+@import "blocks/wpcf7";
+@import "blocks/ajax-loader";
 
 /* ==========================================================================
    ERROR 404

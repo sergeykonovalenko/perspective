@@ -1,0 +1,17 @@
+.step-questions {
+    padding: 0;
+    list-style: none;
+}
+
+.step-questions__item {
+    margin-bottom: 40px;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
+.step-questions__question {
+    margin-top: 0;
+    margin-bottom: 0;
+}

@@ -1,0 +1,47 @@
+.modal-common {
+    width: 650px;
+    padding-top: 55px;
+    padding-bottom: 80px;
+    background-color: #f9f9f9;
+    border-radius: 4px;
+}
+
+.modal-common__title {
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-weight: 600;
+    font-size: 26px;
+    text-align: center;
+}
+
+.modal-common__subtitle {
+    margin-top: 0;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.modal-common__form {
+    width: 350px;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+.fancybox-slide--html .modal-common__close {
+    width: 45px;
+    height: 45px;
+    padding: 15px;
+    opacity: .5;
+    transition: all .15s ease-in;
+
+    &:hover,
+    &:focus {
+        opacity: .9;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .modal-common {
+        padding-right: 15px;
+        padding-left: 15px;
+    }
+}

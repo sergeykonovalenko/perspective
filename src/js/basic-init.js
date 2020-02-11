@@ -53,6 +53,18 @@ $(document).ready(function () {
     $('.authors-tabs').tabs();
     $('.tabs-steps').tabs();
 
+    // init modal
+    $('.btn-modal').fancybox({
+        touch : false,
+        backFocus : false,
+        btnTpl: {
+            smallBtn: `
+                <button class="modal-common__close fancybox-button fancybox-close-small" type="button" data-fancybox-close title="Закрыть">
+                    <svg width="15" height="15" viewBox="0 0 320 320" fill="#000" xmlns="http://www.w3.org/2000/svg"><path d="M207.6 160L315.3 52.3c6.2-6.2 6.2-16.3 0-22.6l-25-25c-6.2-6.2-16.3-6.2-22.6 0L160 112.4 52.3 4.7c-6.2-6.2-16.3-6.2-22.6 0l-25 25c-6.2 6.2-6.2 16.3 0 22.6L112.4 160 4.7 267.7c-6.2 6.2-6.2 16.3 0 22.6l25 25c6.2 6.2 16.3 6.2 22.6 0L160 207.6l107.7 107.7c6.2 6.2 16.3 6.2 22.6 0l25-25c6.2-6.2 6.2-16.3 0-22.6L207.6 160z"/></svg>
+                </button>`
+        },
+    });
+
     // show / hide filter
     let filterShowButton = document.querySelector('.posts__filter-show-button');
     let filterShowButtonMobile = document.querySelector('.actions-posts__filter-show-button');
@@ -77,34 +89,27 @@ $(document).ready(function () {
         });
     }
 
-
     /////////////////////////////////////////////////////////////////////////
     // CRUSH TEST
     let stepForm = $('.step-form');
+    let stepQuestions = $('.step-questions__item');
+    let totalNumberOfQuestions = stepQuestions.length;
+    let stepsFields = $('.step-field-list__field');
+    let rulesObj = {};
+    let messagesObj = {};
+
+    stepsFields.each(function ( index ) {
+        let nameAttribute = $(this).attr('name');
+
+        rulesObj[nameAttribute] = 'required';
+        messagesObj[nameAttribute] = '';
+    });
 
     stepForm.validate({
         // errorLabelContainer: $('.error-holder'),
         // errorPlacement: function errorPlacement(error, element) { element.before(error); },
-        rules: {
-            'question-1': 'required',
-            'question-2': 'required',
-            'question-3': 'required',
-            'question-4': 'required',
-            'question-5': 'required',
-            'question-6': 'required',
-            'question-7': 'required',
-            'question-8': 'required',
-        },
-        messages: {
-            'question-1': '',
-            'question-2': '',
-            'question-3': '',
-            'question-4': '',
-            'question-5': '',
-            'question-6': '',
-            'question-7': '',
-            'question-8': '',
-        }
+        rules: rulesObj,
+        messages: messagesObj
     });
 
     $('#smartwizard').smartWizard({
@@ -126,7 +131,7 @@ $(document).ready(function () {
             let totalPoints = 0;
 
             $.each(data,function() {
-                totalPoints += (this.value === 'yes') ? 3.4 : 0.6;
+                totalPoints += (this.value === 'yes') ? ( 17 / totalNumberOfQuestions ) : ( 3 / totalNumberOfQuestions );
             });
 
             if (totalPoints >= 17) {
@@ -197,9 +202,39 @@ $(document).ready(function () {
             },
             success:function(data){
                 //console.log(data);
+                let doc = new DOMParser().parseFromString(data, 'text/html');
+                let jsCardList = document.querySelector('.js-card-list');
+                let cardListItems = doc.querySelectorAll('.card-list__item');
+                let cardListNoProjects = doc.querySelector('.card-list__no-projects');
+                let wpPagenaviCurrent = document.querySelector('.wp-pagenavi');
+                let wpPagenaviNew = doc.querySelector('.wp-pagenavi');
+
+                // console.log(doc);
+
+                jsCardList.innerHTML = '';
+
+                if (cardListItems) {
+                    cardListItems.forEach(function (item, i, arr) {
+                        jsCardList.append(item);
+                    });
+                }
+
+                if (cardListNoProjects) {
+                    jsCardList.append(cardListNoProjects);
+                }
+
+                if (wpPagenaviCurrent) {
+                    if (wpPagenaviNew) {
+                        wpPagenaviCurrent.replaceWith(wpPagenaviNew);
+                    } else {
+                        wpPagenaviCurrent.style.display = 'none';
+                    }
+                }
+
                 element.classList.remove('show-filter');
                 filter.find('button').text('Показать');
-                $('.js-card-list').html(data);
+
+                // $('.js-card-list').html(data);
             }
         });
         return false;
@@ -224,6 +259,24 @@ $(document).ready(function () {
         return false;
     });
     /////////////////////////////////////////////////////////////////////////
+
+    let redirectUrl;
+
+    $('.checklist__btn-download').on('click', function () {
+
+        // get url for redirection
+        redirectUrl = $(this).attr('data-redirect-url');
+        $('#js-modal-get-checklist').find('#redirect-url').val(redirectUrl);
+
+        let checklistName = $(this).closest('.checklist').find('.checklist-form__title').text();
+        $('#js-modal-get-checklist').find('#checklist-name').val(checklistName);
+    });
+
+    if ( redirectUrl ) { // if need redirect
+        document.addEventListener( 'wpcf7mailsent', function( event ) {
+            location = redirectUrl;
+        }, false );
+    }
 
     // masked input
     $('input[type="tel"]').mask('+7 (999) 999-99-99 ');

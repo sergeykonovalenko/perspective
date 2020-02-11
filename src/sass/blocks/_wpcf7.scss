@@ -1,0 +1,33 @@
+.wpcf7 {
+
+    .modal-common & {
+        width: 350px;
+        max-width: 100%;
+        margin: 0 auto;
+    }
+}
+
+.wpcf7 br {
+    display: none;
+}
+
+.wpcf7 p {
+    margin-top: 0;
+    margin-bottom: 15px;
+
+    &:last-of-type {
+        margin-bottom: 0;
+    }
+}
+
+.wpcf7 .button {
+
+    &:focus {
+        background-color: $color-secondary;
+    }
+}
+
+span.wpcf7-not-valid-tip,
+.wpcf7-validation-errors {
+    font-size: 12px;
+}

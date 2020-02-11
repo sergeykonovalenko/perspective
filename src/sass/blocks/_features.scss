@@ -47,3 +47,9 @@
         margin-bottom: 0;
     }
 }
+
+@media screen and (max-width: 768px) {
+    .features__title {
+        text-align: center;
+    }
+}
