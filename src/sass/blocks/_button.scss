@@ -83,4 +83,25 @@
             background-color: $color-secondary;
         }
     }
+
+    &--with-icon {
+        padding-left: 65px;
+        
+        &::before {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 30px;
+            width: 18px;
+            height: 18px;
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: contain;
+            transform: translate(0, -50%);
+        }
+
+        &--download::before {
+            background-image: url("img/bg/down-arrow.svg");
+        }
+    }
 }

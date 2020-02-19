@@ -1,0 +1,13 @@
+.check-lists {
+    padding-top: 25px;
+    padding-bottom: 80px;
+    background-color: $color-bg;
+}
+
+.check-lists__list {
+    @include reset-list;
+}
+
+.check-lists__item {
+
+}

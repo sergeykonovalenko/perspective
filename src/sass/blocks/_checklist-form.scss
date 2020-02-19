@@ -1,22 +1,9 @@
 .checklist-form {
-    padding: 35px 35px 5px;
-    background-color: #e3f0ff;
-    border-radius: 8px;
-    border: 1px solid #ccd8e5;
-}
 
-.checklist-form__title {
-    margin-top: 0;
-    margin-bottom: 25px;
-    font-weight: 700;
-    font-size: 22px;
-    text-transform: none;
 }
 
 .checklist-form__list {
     @include reset-list;
-
-    border-top: 2px solid #000;
 }
 
 .checklist-form__item {
@@ -27,23 +14,29 @@
     position: relative;
     flex-shrink: 0;
     display: block;
-    width: 25px;
-    height: 25px;
-    margin-top: 3px;
-    margin-right: 12px;
-    border: 1px solid #9b9b9b;
+    width: 30px;
+    height: 30px;
+    margin-top: -2px;
+    margin-right: 40px;
+    background-color: #fff;
+    border: 1px solid $color-secondary;
     border-radius: 3px;
+
+    .checklist-form__field:checked + & {
+        background-color: $color-secondary;
+    }
 
     &::after {
         content: "";
         position: absolute;
-        top: -6px;
-        left: 4px;
+        top: 50%;
+        left: 50%;
         display: none;
-        width: 23px;
-        height: 24px;
-        background: url("img/bg/check-mark.svg") no-repeat 0 0;
+        width: 18px;
+        height: 14px;
+        background: url("img/bg/checkmark.svg") no-repeat 0 0;
         background-size: contain;
+        transform: translate(-50%, -50%);
         
         .checklist-form__field:checked + & {
             display: block;
@@ -55,14 +48,9 @@
     display: flex;
     align-items: flex-start;
     padding: 15px 0;
-    font-weight: 600;
-    font-size: 18px;
-    border-bottom: 1px solid #e6e6e6;
+    font-weight: 300;
+    font-size: 16px;
     cursor: pointer;
-
-    .checklist-form__item:last-child & {
-        border-bottom: none;
-    }
 }
 
 .checklist-form__field {

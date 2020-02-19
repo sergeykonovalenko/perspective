@@ -251,8 +251,25 @@ $(document).ready(function () {
                 $('.loader').addClass('loader--show');
             },
             success:function(data){
-                //console.log(data);
-                $('.js-card-list').html(data);
+                let doc = new DOMParser().parseFromString(data, 'text/html');
+                let jsCardList = document.querySelector('.js-card-list');
+                let cardListItems = doc.querySelectorAll('.card-list__item');
+                let cardListNoProjects = doc.querySelector('.card-list__no-projects');
+
+                jsCardList.innerHTML = '';
+
+                if (cardListItems) {
+                    cardListItems.forEach(function (item, i, arr) {
+                        jsCardList.append(item);
+                    });
+                }
+
+                if (cardListNoProjects) {
+                    jsCardList.append(cardListNoProjects);
+                }
+
+                //$('.js-card-list').html(data);
+
                 $('.loader').removeClass('loader--show');
             }
         });
@@ -260,7 +277,8 @@ $(document).ready(function () {
     });
     /////////////////////////////////////////////////////////////////////////
 
-    let redirectUrl;
+    // checklist redirect
+    let redirectUrl = '';
 
     $('.checklist__btn-download').on('click', function () {
 
@@ -277,6 +295,14 @@ $(document).ready(function () {
             location = redirectUrl;
         }, false );
     }
+
+    // check-lists
+    $('.check-list-item__head').on('click', function () {
+        let currentCheckListItem = $(this).closest('.check-list-item');
+
+        currentCheckListItem.toggleClass('check-list-item--open');
+        currentCheckListItem.find('.check-list-item__body').slideToggle(300);
+    });
 
     // masked input
     $('input[type="tel"]').mask('+7 (999) 999-99-99 ');

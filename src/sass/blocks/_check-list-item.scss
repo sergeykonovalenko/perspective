@@ -1,0 +1,61 @@
+.check-list-item {
+
+}
+
+.check-list-item__head {
+    position: relative;
+    margin: 0;
+    padding: 40px 0 40px 70px;
+    font-weight: 300;
+    font-size: 23px;
+    text-transform: uppercase;
+    border-top: 1px solid #bdbdbd;
+    cursor: pointer;
+
+    .check-lists__item:first-child & {
+        border-top: none;
+    }
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 0;
+        width: 18px;
+        height: 18px;
+        border-width: 3px 3px 0 0;
+        border-style: solid;
+        border-color: $color-secondary;
+        transition: all .3s ease-in-out;
+        transform: translate(0, -50%) rotate(45deg);
+
+        .check-list-item--open & {
+            transform: translate(0, -50%) rotate(135deg);
+        }
+    }
+
+    &:hover {
+        color: $color-secondary;
+    }
+}
+
+.check-list-item__body {
+    display: none;
+    padding-bottom: 54px;
+}
+
+.check-list-item__form {
+
+}
+
+.check-list-item__txt {
+    margin-top: 15px;
+}
+
+.check-list-item__btn-download-box {
+    margin: 0;
+}
+
+.check-list-item__btn-download {
+    margin-top: 25px;
+}

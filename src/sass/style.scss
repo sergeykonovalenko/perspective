@@ -113,8 +113,8 @@ Version: 1.0
 /* ==========================================================================
    USEFUL PAGE
    ========================================================================== */
-@import "blocks/useful";
-@import "blocks/checklist";
+@import "blocks/check-lists";
+@import "blocks/check-list-item";
 @import "blocks/checklist-form";
 
 /* ==========================================================================
@@ -131,8 +131,13 @@ Version: 1.0
    ========================================================================== */
 @import "blocks/modal-common";
 @import "blocks/form";
+@import "blocks/agreement";
 @import "blocks/wpcf7";
 @import "blocks/ajax-loader";
+
+/* Modal get checklist
+   ========================================================================== */
+@import "blocks/modal-get-checklist";
 
 /* ==========================================================================
    ERROR 404

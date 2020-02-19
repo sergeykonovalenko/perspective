@@ -1,0 +1,42 @@
+.agreement {
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+    line-height: 1.25;
+    cursor: pointer;
+}
+
+.agreement__checkbox {
+    display: inline-block;
+    vertical-align: middle;
+    width: auto;
+    margin-top: 2px;
+    margin-right: 5px;
+    cursor: pointer;
+
+    &:focus {
+        box-shadow: none;
+    }
+}
+
+.agreement__text {
+    font-size: 12px;
+}
+
+.agreement__text a {
+    color: $color-secondary;
+    border-bottom: 1px solid $color-secondary;
+    transition: all .15s ease-in;
+    
+    &:hover,
+    &:focus {
+        border-color: transparent;
+    }
+}
+
+.agreement label.error {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+}
