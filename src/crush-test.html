@@ -130,20 +130,21 @@
                     <!-- SmartWizard html -->
                     <div class="step-form__sw-main" id="smartwizard">
                         <ul class="step-form__nav">
-                            <li><a href="#step-1">Шаг 1</a></li>
-                            <li><a href="#step-2">Шаг 2</a></li>
-                            <li><a href="#step-3">Шаг 3</a></li>
-                            <li><a href="#step-4">Шаг 4</a></li>
-                            <li><a href="#step-5">Шаг 5</a></li>
+                            <li><a href="#step-1">Идея для проекта</a></li>
+                            <li><a href="#step-2">Аудитория</a></li>
+                            <li><a href="#step-3">Редакция и будущая публикация</a></li>
+                            <li><a href="#step-4">Формат</a></li>
+                            <li><a href="#step-5">Человеческие ресурсы</a></li>
+                            <li><a href="#step-6">Бюджет</a></li>
                             <li>
-                                <a href="#step-6">
+                                <a href="#step-7">
                                     <svg width="21" height="30" viewBox="0 0 21.25 30" xmlns="http://www.w3.org/2000/svg"><defs><clipPath><path fill="none" d="M4 0h17.25v19.94H4z"></path></clipPath></defs><path class="flagpole" fill="#35394a" d="M0 0h2v30H0z"></path><g clip-path="url(#a)"><path fill="#b54545" d="M4 19.939L21.25 9.98 4 .02v19.919z"></path></g></svg>
                                 </a>
                             </li>
                         </ul>
 
                         <div class="step-form__sw-container">
-                            <div class="step-form__step-content" id="step-1">
+                            <div class="step-form__step-content thematic-block" id="step-1">
                                 <ul class="step-form__questions step-questions">
                                     <li class="step-questions__item">
                                         <p class="step-questions__question">Есть ли у вас идея для проекта?</p>
@@ -213,7 +214,7 @@
                                 </ul>
                             </div><!-- / .step-form -->
 
-                            <div class="step-form__step-content" id="step-2">
+                            <div class="step-form__step-content thematic-block" id="step-2">
                                 <ul class="step-form__questions step-questions">
                                     <li class="step-questions__item">
                                         <p class="step-questions__question">Вы знаете, для кого ваш проект? Кто ваш читатель, зритель, слушатель?</p>
@@ -257,7 +258,7 @@
                                 </ul>
                             </div>
 
-                            <div class="step-form__step-content" id="step-3">
+                            <div class="step-form__step-content thematic-block" id="step-3">
                                 <ul class="step-form__questions step-questions">
                                     <li class="step-questions__item">
                                         <p class="step-questions__question">У вас есть четкое понимание где, каким СМИ ваш материал будет опубликован?</p>
@@ -288,7 +289,7 @@
                                 </ul>
                             </div>
 
-                            <div class="step-form__step-content" id="step-4">
+                            <div class="step-form__step-content thematic-block" id="step-4">
                                 <ul class="step-form__questions step-questions">
                                     <li class="step-questions__item">
                                         <p class="step-questions__question">Вы продумали в каком формате будет проект? Это текст, подкаст, видео или комбинация нескольких форматов?</p>
@@ -332,7 +333,7 @@
                                 </ul>
                             </div>
 
-                            <div class="step-form__step-content" id="step-5">
+                            <div class="step-form__step-content thematic-block" id="step-5">
                                 <ul class="step-form__questions step-questions">
                                     <li class="step-questions__item">
                                         <p class="step-questions__question">Вы знаете, сколько человек вам понадобится для реализации проекта и их функционал (дизайнер, фотограф, видео оператор и т.д.)?</p>
@@ -376,30 +377,222 @@
                                 </ul>
                             </div>
 
-                            <div class="step-form__step-content" id="step-6">
+                            <div class="step-form__step-content thematic-block" id="step-6">
+                                <ul class="step-form__questions step-questions">
+                                    <li class="step-questions__item">
+                                        <p class="step-questions__question">Вы подсчитали, сколько денег вам понадобится на реализацию проекта?</p>
+                                        <ul class="step-form__field-list step-field-list">
+                                            <li class="step-field-list__item">
+                                                <input class="step-field-list__field visually-hidden" id="question-17-yes" type="radio" name="question-17" value="yes">
+                                                <label class="step-field-list__label button button--stroke" for="question-17-yes">Да</label>
+                                            </li>
+                                            <li class="step-field-list__item">
+                                                <input class="step-field-list__field visually-hidden" id="question-17-no" type="radio" name="question-17" value="no">
+                                                <label class="step-field-list__label button button--stroke" for="question-17-no">Нет</label>
+                                            </li>
+                                        </ul><!-- / .step-field-list -->
+                                    </li>
+                                    <li class="step-questions__item">
+                                        <p class="step-questions__question">Ваш бюджет предусматривает расходы на работу команды?</p>
+                                        <ul class="step-form__field-list step-field-list">
+                                            <li class="step-field-list__item">
+                                                <input class="step-field-list__field visually-hidden" id="question-18-yes" type="radio" name="question-18" value="yes">
+                                                <label class="step-field-list__label button button--stroke" for="question-18-yes">Да</label>
+                                            </li>
+                                            <li class="step-field-list__item">
+                                                <input class="step-field-list__field visually-hidden" id="question-18-no" type="radio" name="question-18" value="no">
+                                                <label class="step-field-list__label button button--stroke" for="question-18-no">Нет</label>
+                                            </li>
+                                        </ul><!-- / .step-field-list -->
+                                    </li>
+                                    <li class="step-questions__item">
+                                        <p class="step-questions__question">Ваш бюджет предусматривает расходы на техническую часть: разработку сайта, монтаж видео, верстку?</p>
+                                        <ul class="step-form__field-list step-field-list">
+                                            <li class="step-field-list__item">
+                                                <input class="step-field-list__field visually-hidden" id="question-19-yes" type="radio" name="question-19" value="yes">
+                                                <label class="step-field-list__label button button--stroke" for="question-19-yes">Да</label>
+                                            </li>
+                                            <li class="step-field-list__item">
+                                                <input class="step-field-list__field visually-hidden" id="question-19-no" type="radio" name="question-19" value="no">
+                                                <label class="step-field-list__label button button--stroke" for="question-19-no">Нет</label>
+                                            </li>
+                                        </ul><!-- / .step-field-list -->
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <div class="step-form__step-content" id="step-7">
+                                <div class="step-form__text content test-result test-result--best-result">
+                                    <p><strong>Результаты</strong></p>
+                                    <p>Вы молодец, чувствуется, что все под контролем. Чтобы избежать неприятных сюрпризов на старте, советуем почитать наши полезные подсказки и примеры классных трансграничных кейсов.</p>
+                                </div><!-- / .test-result -->
+                                <div class="step-form__text content test-result test-result--worst-result">
+                                    <p><strong>Результаты</strong></p>
+                                    <p>У вас впереди еще много работы! Чтобы избежать ошибок на старте, советуем почитать наши полезные подсказки и примеры удачно реализованных трансграничных кейсов.</p>
+                                </div><!-- / .test-result -->
                                 <div class="step-form__text content test-result test-result--1">
                                     <p><strong>Результаты</strong></p>
-                                    <p>
-                                        Вы молодец и тщательно все продумали. Скорее всего, вы контролируете весь процесс.
-                                        Чтобы избежать неприятных сюрпризов, советуем почитать наши <a href="http://news.one-pix.com/useful">подсказки</a>
-                                        и примеры удачно реализованных <a href="http://news.one-pix.com/cases">проектов</a>.
-                                    </p>
+                                    <p>Вы на верном пути, но все-таки стоит тщательнее продумать ключевую идею проекта. В помощь вам - наши полезные подсказки и примеры классных трансграничных кейсов.</p>
                                 </div><!-- / .test-result -->
                                 <div class="step-form__text content test-result test-result--2">
                                     <p><strong>Результаты</strong></p>
-                                    <p>Вы готовы на "четверку".</p>
+                                    <p>Вы на верном пути, но все-таки стоит тщательнее продумать работу с будущей аудиторией проекта. В помощь вам - наши полезные подсказки и примеры классных трансграничных кейсов.</p>
                                 </div><!-- / .test-result -->
                                 <div class="step-form__text content test-result test-result--3">
                                     <p><strong>Результаты</strong></p>
-                                    <p>Вы на полпути к успешному проекту, но впереди ещё много работы.</p>
+                                    <p>Вы на верном пути, но все-таки стоит тщательнее продумать взаимодействие со СМИ. В помощь вам - наши полезные подсказки и примеры классных трансграничных кейсов.</p>
                                 </div><!-- / .test-result -->
                                 <div class="step-form__text content test-result test-result--4">
                                     <p><strong>Результаты</strong></p>
-                                    <p>Впереди ещё много работы.</p>
+                                    <p>Вы на верном пути, но все-таки стоит тщательнее продумать формат своего проекта. В помощь вам - наши полезные подсказки и примеры классных трансграничных кейсов.</p>
                                 </div><!-- / .test-result -->
                                 <div class="step-form__text content test-result test-result--5">
                                     <p><strong>Результаты</strong></p>
-                                    <p>Похоже, вы пока не знаете, с чего начать и как реализовать свою задумку.</p>
+                                    <p>Вы на верном пути, но все-таки стоит тщательнее продумать работу в команде. В помощь вам - наши полезные подсказки и примеры классных трансграничных кейсов.</p>
+                                </div><!-- / .test-result -->
+                                <div class="step-form__text content test-result test-result--6">
+                                    <p><strong>Результаты</strong></p>
+                                    <p>Вы на верном пути, но все-таки стоит тщательнее продумать бюджет проекта. В помощь вам - наши полезные подсказки и примеры классных трансграничных кейсов.</p>
+                                </div><!-- / .test-result -->
+                                <div class="step-form__text content test-result test-result--12">
+                                    <p><strong>Результаты</strong></p>
+                                    <p>Вы мыслите в верном направлении, но стоит уделить больше внимания идее и будущей аудитории проекта. В помощь вам - наши полезные подсказки и примеры классных трансграничных кейсов.</p>
+                                </div><!-- / .test-result -->
+                                <div class="step-form__text content test-result test-result--13">
+                                    <p><strong>Результаты</strong></p>
+                                    <p>Вы мыслите в верном направлении, но стоит уделить больше внимания идее и взаимодействию со СМИ. В помощь вам - наши полезные подсказки и примеры классных трансграничных кейсов.</p>
+                                </div><!-- / .test-result -->
+                                <div class="step-form__text content test-result test-result--14">
+                                    <p><strong>Результаты</strong></p>
+                                    <p>Вы мыслите в верном направлении, но стоит уделить больше внимания идее и формату проекта. В помощь вам - наши полезные подсказки и примеры классных трансграничных кейсов.</p>
+                                </div><!-- / .test-result -->
+                                <div class="step-form__text content test-result test-result--15">
+                                    <p><strong>Результаты</strong></p>
+                                    <p>Вы мыслите в верном направлении, но стоит уделить больше внимания идее и формированию команды проекта. В помощь вам - наши полезные подсказки и примеры классных трансграничных кейсов.</p>
+                                </div><!-- / .test-result -->
+                                <div class="step-form__text content test-result test-result--16">
+                                    <p><strong>Результаты</strong></p>
+                                    <p>Вы мыслите в верном направлении, но стоит уделить больше внимания идее и бюджету проекта. В помощь вам - наши полезные подсказки и примеры классных трансграничных кейсов.</p>
+                                </div><!-- / .test-result -->
+                                <div class="step-form__text content test-result test-result--23">
+                                    <p><strong>Результаты</strong></p>
+                                    <p>Вы мыслите в верном направлении, но стоит уделить больше внимания будущей аудитории проекта и взаимодействию со СМИ. В помощь вам - наши полезные подсказки и примеры классных трансграничных кейсов.</p>
+                                </div><!-- / .test-result -->
+                                <div class="step-form__text content test-result test-result--24">
+                                    <p><strong>Результаты</strong></p>
+                                    <p>Вы мыслите в верном направлении, но стоит уделить больше внимания формату и будущей аудитории проекта. В помощь вам - наши полезные подсказки и примеры классных трансграничных кейсов.</p>
+                                </div><!-- / .test-result -->
+                                <div class="step-form__text content test-result test-result--25">
+                                    <p><strong>Результаты</strong></p>
+                                    <p>Вы мыслите в верном направлении, но стоит уделить больше внимания команде и будущей аудитории проекта. В помощь вам - наши полезные подсказки и примеры классных трансграничных кейсов.</p>
+                                </div><!-- / .test-result -->
+                                <div class="step-form__text content test-result test-result--26">
+                                    <p><strong>Результаты</strong></p>
+                                    <p>Вы мыслите в верном направлении, но стоит уделить больше внимания бюджету и взаимодействию с будущей аудиторией проекта. В помощь вам - наши полезные подсказки и примеры классных трансграничных кейсов.</p>
+                                </div><!-- / .test-result -->
+                                <div class="step-form__text content test-result test-result--34">
+                                    <p><strong>Результаты</strong></p>
+                                    <p>Вы мыслите в верном направлении, но стоит уделить больше внимания формату и взаимодействию со СМИ. В помощь вам - наши полезные подсказки и примеры классных трансграничных кейсов.</p>
+                                </div><!-- / .test-result -->
+                                <div class="step-form__text content test-result test-result--35">
+                                    <p><strong>Результаты</strong></p>
+                                    <p>Вы мыслите в верном направлении, но стоит уделить больше внимания формированию команды проекта и взаимодействию со СМИ. В помощь вам - наши полезные подсказки и примеры классных трансграничных кейсов.</p>
+                                </div><!-- / .test-result -->
+                                <div class="step-form__text content test-result test-result--36">
+                                    <p><strong>Результаты</strong></p>
+                                    <p>Вы мыслите в верном направлении, но стоит уделить больше внимания формированию команды проекта и взаимодействию со СМИ. В помощь вам - наши полезные подсказки и примеры классных трансграничных кейсов.</p>
+                                </div><!-- / .test-result -->
+                                <div class="step-form__text content test-result test-result--45">
+                                    <p><strong>Результаты</strong></p>
+                                    <p>Вы мыслите в верном направлении, но стоит уделить больше внимания формату и формированию команды проекта. В помощь вам - наши полезные подсказки и примеры классных трансграничных кейсов.</p>
+                                </div><!-- / .test-result -->
+                                <div class="step-form__text content test-result test-result--46">
+                                    <p><strong>Результаты</strong></p>
+                                    <p>Вы мыслите в верном направлении, но стоит уделить больше внимания бюджету и формату проекта. В помощь вам - наши полезные подсказки и примеры классных трансграничных кейсов.</p>
+                                </div><!-- / .test-result -->
+                                <div class="step-form__text content test-result test-result--56">
+                                    <p><strong>Результаты</strong></p>
+                                    <p>Вы мыслите в верном направлении, но стоит уделить больше внимания бюджету и команде проекта. В помощь вам - наши полезные подсказки и примеры классных трансграничных кейсов.</p>
+                                </div><!-- / .test-result -->
+                                <div class="step-form__text content test-result test-result--123">
+                                    <p><strong>Результаты</strong></p>
+                                    <p>Вы уже многое продумали, но еще есть «слабые» места! Советуем уделить больше внимания идее, формату и взаимодействию со СМИ. В помощь вам - наши полезные подсказки и примеры классных трансграничных кейсов.</p>
+                                </div><!-- / .test-result -->
+                                <div class="step-form__text content test-result test-result--124">
+                                    <p><strong>Результаты</strong></p>
+                                    <p>Вы уже многое продумали, но еще есть «слабые» места! Советуем уделить больше внимания идее, формату и будущей аудитории проекта. В помощь вам - наши полезные подсказки и примеры классных трансграничных кейсов.</p>
+                                </div><!-- / .test-result -->
+                                <div class="step-form__text content test-result test-result--125">
+                                    <p><strong>Результаты</strong></p>
+                                    <p>Вы уже многое продумали, но еще есть «слабые» места! Советуем уделить больше внимания идее, будущей аудитории и команде проекта. В помощь вам - наши полезные подсказки и примеры классных трансграничных кейсов.</p>
+                                </div><!-- / .test-result -->
+                                <div class="step-form__text content test-result test-result--126">
+                                    <p><strong>Результаты</strong></p>
+                                    <p>Вы уже многое продумали, но еще есть «слабые» места! Советуем уделить больше внимания бюджету, идее и будущей аудитории проекта. В помощь вам - наши полезные подсказки и примеры классных трансграничных кейсов.</p>
+                                </div><!-- / .test-result -->
+                                <div class="step-form__text content test-result test-result--134">
+                                    <p><strong>Результаты</strong></p>
+                                    <p>Вы уже многое продумали, но еще есть «слабые» места! Советуем уделить больше внимания идее, формату и взимодействию со СМИ. В помощь вам - наши полезные подсказки и примеры классных трансграничных кейсов.</p>
+                                </div><!-- / .test-result -->
+                                <div class="step-form__text content test-result test-result--135">
+                                    <p><strong>Результаты</strong></p>
+                                    <p>Вы уже многое продумали, но еще есть «слабые» места! Советуем уделить больше внимания идее, команде и взаимодействию со СМИ. В помощь вам - наши полезные подсказки и примеры классных трансграничных кейсов.</p>
+                                </div><!-- / .test-result -->
+                                <div class="step-form__text content test-result test-result--136">
+                                    <p><strong>Результаты</strong></p>
+                                    <p>???</p>
+                                </div><!-- / .test-result -->
+                                <div class="step-form__text content test-result test-result--145">
+                                    <p><strong>Результаты</strong></p>
+                                    <p>Вы уже многое продумали, но еще есть «слабые» места! Советуем уделить больше внимания идее, формату и команде проекта. В помощь вам - наши полезные подсказки и примеры классных трансграничных кейсов.</p>
+                                </div><!-- / .test-result -->
+                                <div class="step-form__text content test-result test-result--146">
+                                    <p><strong>Результаты</strong></p>
+                                    <p>Вы уже многое продумали, но еще есть «слабые» места! Советуем уделить больше внимания идее, формату и бюджету проекта. В помощь вам - наши полезные подсказки и примеры классных трансграничных кейсов.</p>
+                                </div><!-- / .test-result -->
+                                <div class="step-form__text content test-result test-result--156">
+                                    <p><strong>Результаты</strong></p>
+                                    <p>Вы уже многое продумали, но еще есть «слабые» места! Советуем уделить больше внимания идее, бюджету и формированию команды. В помощь вам - наши полезные подсказки и примеры классных трансграничных кейсов.</p>
+                                </div><!-- / .test-result -->
+                                <div class="step-form__text content test-result test-result--234">
+                                    <p><strong>Результаты</strong></p>
+                                    <p>Вы уже многое продумали, но еще есть «слабые» места! Советуем уделить больше внимания взимодействию со СМИ, формату и будущей аудитории проекта. В помощь вам - наши полезные подсказки и примеры классных трансграничных кейсов.</p>
+                                </div><!-- / .test-result -->
+                                <div class="step-form__text content test-result test-result--235">
+                                    <p><strong>Результаты</strong></p>
+                                    <p>Вы уже многое продумали, но еще есть «слабые» места! Советуем уделить больше внимания взаимодействию со СМИ, будущей аудитории и команде проекта. В помощь вам - наши полезные подсказки и примеры классных трансграничных кейсов.</p>
+                                </div><!-- / .test-result -->
+                                <div class="step-form__text content test-result test-result--236">
+                                    <p><strong>Результаты</strong></p>
+                                    <p>Вы уже многое продумали, но еще есть «слабые» места! Советуем уделить больше внимания бюджету, будущей аудитории проекта и взаимодействию со СМИ. В помощь вам - наши полезные подсказки и примеры классных трансграничных кейсов.</p>
+                                </div><!-- / .test-result -->
+                                <div class="step-form__text content test-result test-result--245">
+                                    <p><strong>Результаты</strong></p>
+                                    <p>Вы уже многое продумали, но еще есть «слабые» места! Советуем уделить больше внимания формату, будущей аудитории и команде проекта. В помощь вам - наши полезные подсказки и примеры классных трансграничных кейсов.</p>
+                                </div><!-- / .test-result -->
+                                <div class="step-form__text content test-result test-result--246">
+                                    <p><strong>Результаты</strong></p>
+                                    <p>Вы уже многое продумали, но еще есть «слабые» места! Советуем уделить больше внимания бюджету, формату и будущей аудитории проекта. В помощь вам - наши полезные подсказки и примеры классных трансграничных кейсов.</p>
+                                </div><!-- / .test-result -->
+                                <div class="step-form__text content test-result test-result--256">
+                                    <p><strong>Результаты</strong></p>
+                                    <p>Вы уже многое продумали, но еще есть «слабые» места! Советуем уделить больше внимания бюджету, команде и будущей аудитории проекта. В помощь вам - наши полезные подсказки и примеры классных трансграничных кейсов.</p>
+                                </div><!-- / .test-result -->
+                                <div class="step-form__text content test-result test-result--345">
+                                    <p><strong>Результаты</strong></p>
+                                    <p>Вы уже многое продумали, но еще есть «слабые» места! Советуем уделить больше внимания взаимодействию со СМИ, формату и команде проекта. В помощь вам - наши полезные подсказки и примеры классных трансграничных кейсов.</p>
+                                </div><!-- / .test-result -->
+                                <div class="step-form__text content test-result test-result--346">
+                                    <p><strong>Результаты</strong></p>
+                                    <p>Вы уже многое продумали, но еще есть «слабые» места! Советуем уделить больше внимания команде, бюджету и взаимодействию со СМИ. В помощь вам - наши полезные подсказки и примеры классных трансграничных кейсов.</p>
+                                </div><!-- / .test-result -->
+                                <div class="step-form__text content test-result test-result--356">
+                                    <p><strong>Результаты</strong></p>
+                                    <p>Вы уже многое продумали, но еще есть «слабые» места! Советуем уделить больше внимания бюджету, команде проекта и взаимодействию со СМИ. В помощь вам - наши полезные подсказки и примеры классных трансграничных кейсов.</p>
+                                </div><!-- / .test-result -->
+                                <div class="step-form__text content test-result test-result--456">
+                                    <p><strong>Результаты</strong></p>
+                                    <p>Вы уже многое продумали, но еще есть «слабые» места! Советуем уделить больше внимания формату, команде и бюджету. В помощь вам - наши полезные подсказки и примеры классных трансграничных кейсов.</p>
                                 </div><!-- / .test-result -->
                             </div>
                         </div>

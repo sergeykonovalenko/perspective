@@ -127,32 +127,47 @@ $(document).ready(function () {
 
         // events for the last step
         if ( (stepNumber + 1) === totalSteps ) {
-            let data = $('.step-form').serializeArray();
-            let totalPoints = 0;
+            // общее количество блоков
+            let thematicBlocks = $('.thematic-block');
+            let totalBlocks = thematicBlocks.length;
+            // предел количества отрицательных блоков (больше половины)
+            let limitFailedBlocks = Math.floor(totalBlocks / 2) + 1;
+            // общее количество отрицательных блоков
+            let totalFailedBlocks = 0;
+            // идентификатор показываемого блока с результатами теста
+            let resultIdentifier = '';
 
-            $.each(data,function() {
-                totalPoints += (this.value === 'yes') ? ( 17 / totalNumberOfQuestions ) : ( 3 / totalNumberOfQuestions );
+            $('.test-result').hide();
+
+            thematicBlocks.each(function (index) {
+                let totalBlockFields = $(this).find('.step-field-list__field:checked');
+
+                // определить общее количество отрицательных ответов блока
+                let totalFailedBlockAnswers = 0;
+                totalBlockFields.each(function () {
+                    if ( $(this).val() === 'no' ) totalFailedBlockAnswers++;
+                });
+
+                // если пользователь дал 2 и больше отрицательных ответов на вопросы блока
+                if (totalFailedBlockAnswers >= 2) {
+                    totalFailedBlocks++;
+                    resultIdentifier += (index + 1);
+                }
             });
 
-            if (totalPoints >= 17) {
-                showResults(1);
-            } else if (totalPoints >=12 && totalPoints < 17) {
-                showResults(2);
-            } else if (totalPoints >=9 && totalPoints < 12) {
-                showResults(3);
-            } else if (totalPoints >=4 && totalPoints < 9) {
-                showResults(4);
+            if (totalFailedBlocks === 0) {
+                // если количество отрицательных блоков равно нулю
+                $('.test-result--best-result').show();
+            } else if (totalFailedBlocks >= limitFailedBlocks) {
+                // если количество отрицательных блоков равно или больше допустимого предела
+                $('.test-result--worst-result').show();
             } else {
-                showResults(5);
-            }
-
-            function showResults(index) {
-                let resultModifier = `.test-result--${index}`;
-                $('.test-result').hide();
-                $(resultModifier).show();
+                // если нужно использовать другую доступную комбинацию
+                $(`.test-result--${resultIdentifier}`).show();
             }
 
             $('.sw-btn-next').text('Финиш');
+
         } else {
             $('.sw-btn-next').text('Далее');
         }
