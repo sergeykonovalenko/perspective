@@ -1,3 +1,3 @@
-# Перспектива
-Официальный сайт компании «Перспектива»
-[https://www.perspective.com](https://www.perspective.com)
+# «Перспективы»
+Официальный сайт новостного проекта «Перспективы»
+[http://news.one-pix.com](http://news.one-pix.com)

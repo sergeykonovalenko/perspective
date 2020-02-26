@@ -1,6 +1,8 @@
 $(document).ready(function () {
     'use strict';
 
+    // [1, 2, 3].map(n => n**2);
+
     const element = document.documentElement;
 
     // is mobile
@@ -105,12 +107,20 @@ $(document).ready(function () {
         messagesObj[nameAttribute] = '';
     });
 
-    stepForm.validate({
+    let validator = stepForm.validate({
         // errorLabelContainer: $('.error-holder'),
         // errorPlacement: function errorPlacement(error, element) { element.before(error); },
         rules: rulesObj,
         messages: messagesObj
     });
+
+    // $('.sw-btn-prev').on('click', function () {
+    //     console.log(55);
+    // });
+    //
+    // let test = $('.sw-btn-prev');
+    // console.log(test);
+
 
     $('#smartwizard').smartWizard({
         showStepURLhash: false,
@@ -216,14 +226,14 @@ $(document).ready(function () {
                 filter.find('button').text('Загружаю...');
             },
             success:function(data){
-                //console.log(data);
                 let doc = new DOMParser().parseFromString(data, 'text/html');
                 let jsCardList = document.querySelector('.js-card-list');
                 let cardListItems = doc.querySelectorAll('.card-list__item');
                 let cardListNoProjects = doc.querySelector('.card-list__no-projects');
-                let wpPagenaviCurrent = document.querySelector('.wp-pagenavi');
-                let wpPagenaviNew = doc.querySelector('.wp-pagenavi');
+                let wpPageNaviCurrent = document.querySelector('.wp-pagenavi');
+                let wpPageNaviNew = doc.querySelector('.wp-pagenavi');
 
+                // console.log(data);
                 // console.log(doc);
 
                 jsCardList.innerHTML = '';
@@ -238,11 +248,11 @@ $(document).ready(function () {
                     jsCardList.append(cardListNoProjects);
                 }
 
-                if (wpPagenaviCurrent) {
-                    if (wpPagenaviNew) {
-                        wpPagenaviCurrent.replaceWith(wpPagenaviNew);
+                if (wpPageNaviCurrent) {
+                    if (wpPageNaviNew) {
+                        wpPageNaviCurrent.replaceWith(wpPageNaviNew);
                     } else {
-                        wpPagenaviCurrent.style.display = 'none';
+                        wpPageNaviCurrent.style.display = 'none';
                     }
                 }
 
@@ -295,21 +305,21 @@ $(document).ready(function () {
     // checklist redirect
     let redirectUrl = '';
 
-    $('.checklist__btn-download').on('click', function () {
-
+    $('.check-list-item__btn-download').on('click', function () {
         // get url for redirection
         redirectUrl = $(this).attr('data-redirect-url');
+
         $('#js-modal-get-checklist').find('#redirect-url').val(redirectUrl);
 
-        let checklistName = $(this).closest('.checklist').find('.checklist-form__title').text();
+        let checklistName = $(this).closest('.check-list-item').find('.check-list-item__head').text();
         $('#js-modal-get-checklist').find('#checklist-name').val(checklistName);
-    });
 
-    if ( redirectUrl ) { // if need redirect
-        document.addEventListener( 'wpcf7mailsent', function( event ) {
-            location = redirectUrl;
-        }, false );
-    }
+        if ( redirectUrl ) { // if need redirect
+            document.addEventListener( 'wpcf7mailsent', function( event ) {
+                location = redirectUrl;
+            }, false );
+        }
+    });
 
     // check-lists
     $('.check-list-item__head').on('click', function () {

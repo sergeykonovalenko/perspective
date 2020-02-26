@@ -7,7 +7,7 @@
 'use strict';
 
 /* Подключение необходимых плагинов */
-let gulp = require('gulp'),
+const gulp = require('gulp'),
     del = require('del'),
     plumber = require('gulp-plumber'),
     sass = require('gulp-sass'),
@@ -21,7 +21,9 @@ let gulp = require('gulp'),
     svgstore = require('gulp-svgstore'),
     posthtml = require('gulp-posthtml'),
     include = require('posthtml-include'),
-    server = require('browser-sync').create();
+    server = require('browser-sync').create(),
+    babel = require('gulp-babel'),
+    minifyJs = require('gulp-babel-minify');
 
 /* Clean */
 gulp.task('clean', function () {
@@ -127,13 +129,25 @@ gulp.task('sprite', function () {
 });
 
 /* JS */
+// gulp.task('js', function () {
+//     return gulp.src('src/js/*.js')
+//         .pipe(plumber())
+//         .pipe(gulp.dest('build/js'))
+//         .pipe(uglify())
+//         .pipe(rename({ suffix: '.min' }))
+//         .pipe(gulp.dest('build/js'));
+// });
+
 gulp.task('js', function () {
     return gulp.src('src/js/*.js')
         .pipe(plumber())
+        .pipe(babel())
+        .pipe(minifyJs({
+            mangle: {
+                keepClassName: true
+            }
+        }))
         .pipe(gulp.dest('build/js'))
-        .pipe(uglify())
-        .pipe(rename({ suffix: '.min' }))
-        .pipe(gulp.dest('build/js'));
 });
 
 gulp.task('js-vendor', function () {

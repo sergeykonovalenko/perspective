@@ -84,6 +84,11 @@ textarea.wpcf7-not-valid {
     }
 }
 
+// hide arrow in IE
+select::-ms-expand {
+    display: none;
+}
+
 ::placeholder {
     color: #adadad;
 }
