@@ -122,8 +122,10 @@
 }
 
 // sw-toolbar
-.sw-theme-default .sw-toolbar {
+.step-form .btn-toolbar {
     position: relative;
+    display: flex;
+    justify-content: flex-end;
     padding: 0 0 50px 55px;
     background-color: #fff;
 
@@ -139,10 +141,18 @@
     }
 }
 
-.sw-btn-group {
+.step-form .btn-group {
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-end;
+
+    &:nth-child(n + 2) {
+        margin-left: 20px;
+    }
+
+    &.sw-btn-group-extra {
+        display: none;
+    }
 }
 
 .step-form .btn {
@@ -169,7 +179,6 @@
     }
 
     &.sw-btn-prev {
-        margin-right: 20px;
         padding: 25px 35px 25px 80px;
         background-color: #f0f0f0;
 
@@ -196,6 +205,7 @@
 
         &.disabled {
             background-color: #f0f0f0;
+            cursor: default;
 
             &:hover {
                 background-color: #f0f0f0;
@@ -208,6 +218,7 @@
     }
 
     &.sw-btn-next {
+        margin-left: 20px;
         padding: 25px 80px 25px 35px;
         color: #000;
         background-color: $color-accent;
@@ -242,6 +253,19 @@
             &::after {
                 display: none;
             }
+        }
+    }
+
+    &.my-btn-finish {
+        min-width: 160px;
+        padding: 25px 35px;
+        color: #000;
+        background-color: $color-accent;
+        box-shadow: 0 2px 15px rgba(9, 12, 18, .15);
+
+        &:hover {
+            background-color: #fedf7a;
+            box-shadow: 0 2px 15px rgba(9, 12, 18, 0);
         }
     }
 }
@@ -281,20 +305,36 @@
         margin-right: -15px;
     }
 
-    .step-form .btn.sw-btn-prev {
-        margin-right: 15px;
-        padding-left: 40px;
+    .step-form .btn-group {
+        flex-grow: 1;
 
-        &::after {
-            left: 20px;
+        &:nth-child(n + 2) {
+            margin-left: 15px;
         }
     }
 
-    .step-form .btn.sw-btn-next {
-        padding-right: 40px;
+    .step-form .btn {
 
-        &::after {
-            right: 20px;
+        &.sw-btn-prev {
+            padding-left: 40px;
+
+            &::after {
+                left: 20px;
+            }
+        }
+
+        &.sw-btn-next {
+            margin-left: 15px;
+            padding-right: 40px;
+
+            &::after {
+                right: 20px;
+            }
+        }
+
+        &.my-btn-finish {
+            width: 100%;
+            min-width: auto;
         }
     }
 }

@@ -1,8 +1,6 @@
 $(document).ready(function () {
     'use strict';
 
-    // [1, 2, 3].map(n => n**2);
-
     const element = document.documentElement;
 
     // is mobile
@@ -107,20 +105,21 @@ $(document).ready(function () {
         messagesObj[nameAttribute] = '';
     });
 
-    let validator = stepForm.validate({
+    stepForm.validate({
         // errorLabelContainer: $('.error-holder'),
         // errorPlacement: function errorPlacement(error, element) { element.before(error); },
         rules: rulesObj,
         messages: messagesObj
     });
 
-    // $('.sw-btn-prev').on('click', function () {
-    //     console.log(55);
-    // });
-    //
-    // let test = $('.sw-btn-prev');
-    // console.log(test);
-
+    let btnFinish = $('<button type="button"></button>').text('Финиш')
+        .addClass('btn my-btn-finish')
+        .on('click', function(e) {
+            e.preventDefault();
+            location.reload();
+            element.scrollIntoView(top);
+            $('.step-field-list__field').prop('checked', false);
+        });
 
     $('#smartwizard').smartWizard({
         showStepURLhash: false,
@@ -129,6 +128,22 @@ $(document).ready(function () {
             next: 'Далее',
             previous: 'Назад'
         },
+        toolbarSettings: {
+            // toolbarPosition: 'right',
+            toolbarExtraButtons: [btnFinish]
+        },
+    });
+
+    // Initialize the leaveStep event
+    $('#smartwizard').on('leaveStep', function (e, anchorObject, stepNumber, stepDirection) {
+        stepForm.validate().settings.ignore = ":disabled,:hidden";
+
+        // валидация будет учитываться только при движенее вперед, но не назад
+        if (stepDirection === 'forward') {
+            return stepForm.valid();
+        }
+
+        return true;
     });
 
     // Initialize the showStep event
@@ -176,17 +191,14 @@ $(document).ready(function () {
                 $(`.test-result--${resultIdentifier}`).show();
             }
 
-            $('.sw-btn-next').text('Финиш');
-
+            // $('.sw-btn-next').text('Финиш');
+            $('.sw-btn-next').hide();
+            $('.sw-btn-group-extra').show();
         } else {
-            $('.sw-btn-next').text('Далее');
+            $('.sw-btn-next').show();
+            $('.sw-btn-group-extra').hide();
+            // $('.sw-btn-next').text('Далее');
         }
-    });
-
-    // Initialize the leaveStep event
-    $('#smartwizard').on('leaveStep', function (e, anchorObject, stepNumber, stepDirection) {
-        stepForm.validate().settings.ignore = ":disabled,:hidden";
-        return stepForm.valid();
     });
 
     /*
